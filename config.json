@@ -12,8 +12,8 @@
 		"d": "日常知识总结、前端资源汇总、Android、iOS、jQuery、Node.js"
 	},
 	"deploy": {
-		"repo": "git@git.coding.net:iplucky/iplucky.git",
-		"branch": "coding-pages",
+		"repo": "git@github.com:Pluckypan/searchdoc.git",
+		"branch": "gh-pages",
 		"message": "Compiler generation page "
 	}
 }
