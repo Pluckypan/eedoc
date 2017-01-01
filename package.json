@@ -1,0 +1,49 @@
+{
+	"name": "eedoc",
+	"version": "1.0.0",
+	"description": "simple document generation tool with a local search engine",
+	"main": "index.js",
+	"_args": [
+		[
+			"eedoc",
+			""
+		]
+	],
+	"bin": {
+		"eedoc": "bin/eedoc.js"
+	},
+	"dependencies": {
+		"ejs": "^2.5.5",
+		"gh-pages": "^0.12.0",
+		"highlight.js": "^9.9.0",
+		"colors-cli": "^1.0.7",
+		"marked": "^0.3.6",
+		"loading-cli": "^1.0.2",
+		"path": "^0.12.7",
+		"uglify-js": "^2.7.5",
+		"inquirer": "^0.9.0",
+		"watch": "^1.0.1",
+		"semver": "^5.1.0",
+		"ssr": "^1.0.15",
+		"stylus": "^0.54.5"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Pluckypan/searchdoc.git"
+	},
+	"keywords": [
+		"eedoc",
+		"markdown",
+		"nodejs"
+	],
+	"author": "plucky",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Pluckypan/searchdoc/issues"
+	},
+	"homepage": "https://github.com/Pluckypan/searchdoc#readme"
+}
