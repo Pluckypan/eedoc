@@ -1,4 +1,3 @@
-var exec = require('child_process').exec;
 var path = require('path');
 var init = require('./lib/init');
 var build = require('./lib/build');
@@ -9,10 +8,6 @@ var cmd_path = path.join(root, "command/");
 var pub_path = path.join(root, "public/");
 
 module.exports = function(commander) {
-	if(commander.V) {
-		console.log("eedoc version:" + commander._version);
-	}
-
 	if(commander.init) {
 		init(commander);
 	} else if(commander.build) {

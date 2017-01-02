@@ -6,18 +6,17 @@ var eedoc = require('..');
 
 commander
 	.usage('[options]')
-	.description('Simple document generation tool with a local search engine\nversion: ' + appInfo.version)
+	.description('Simple document generation tool with a local search engine(version: ' + appInfo.version + ')')
 	.version(appInfo.version);
 
 commander
-	.option("-v", "App version information.")
 	.option("-b, build", "build static html page.")
 	.option("-s, server", "run the page at http://127.0.0.1:1991")
 	.option("-w, watch", "watch file state.")
 	.option('-i, init', 'Init a documentation.');
 
 commander.on('--help', function() {
-	console.log('    $ eedoc init');
+
 });
 
 commander.parse(process.argv);
