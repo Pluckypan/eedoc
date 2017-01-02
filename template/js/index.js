@@ -14,6 +14,7 @@
 			if(elm_path) {
 				var elm_val = elm_path.value;
 				elm_val = elm_val.replace(/\\/g, "/");
+				console.log(elm_val);
 				return url.replace(elm_val,"").replace(/\/$/, '');
 			} else {
 				return '';
@@ -26,18 +27,11 @@
 		this.page_size = 50; //每页显示20条
 
 		this.init()
-		this.goToIndex()
 	}
 
 	Commands.prototype = {
 		$$: function(id) {
 			return document.getElementById(id)
-		},
-		goToIndex: function() {
-			var elma = document.getElementsByTagName('A');
-			for(var i = 0; i < elma.length; i++) {
-				if(elma[i].pathname === '/') elma[i].href = this.root_path + '/';
-			}
 		},
 		bindEvent: function(elm, type, handle) {
 			if(elm.addEventListener) {
@@ -77,6 +71,7 @@
 			})
 		},
 		createKeyworldsHTML: function(json, keywolds, islist) {
+			console.log(json);
 			var name = json.n,
 				des = json.d,
 				self = this,
