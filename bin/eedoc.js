@@ -4,7 +4,7 @@ var eedoc = require('..');
 
 commander
 	.usage('[options]')
-	.description('Simple document generation tool with a local search engine(version: ' + appInfo.version + ')')
+	.description('a simple document generation tool with a local search engine(version: ' + appInfo.version + ')')
 	.version(appInfo.version);
 
 commander
