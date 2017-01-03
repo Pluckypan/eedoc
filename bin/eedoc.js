@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var commander = require('commander');
 var appInfo = require('../package');
 var eedoc = require('..');
