@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eedoc</title>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            eedoc
+        
+    </div>
+<ul><li class="active"><a href="index.html">说明</a></li></ul></div>
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0﻿eedoc">﻿eedoc</a><ul><li><a href="#t1安装">安装</a></li><li><a href="#t2使用方法">使用方法</a></li><li><a href="#t3注意事项: markdown格式如下">注意事项: markdown格式如下</a></li><li><a href="#t4测试javascript">测试javascript</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0&#xFEFF;eedoc">&#xFEFF;eedoc <a href="#t0&#xFEFF;eedoc"> # </a></h1>
+<p>&#x57FA;&#x4E8E;Markdown&#x3001;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x7684;&#x6587;&#x6863;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</p>
+<h3 id="t1&#x5B89;&#x88C5;">&#x5B89;&#x88C5; <a href="#t1&#x5B89;&#x88C5;"> # </a></h3>
+<pre><code>npm install eedoc -g  #&#x521B;&#x5EFA;&#x5168;&#x5C40;eedoc
+sudo npm install eedoc -g  #mac&#x4E0B;&#x4EE5;root&#x6743;&#x9650;&#x8FD0;&#x884C;
+</code></pre><h3 id="t2&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5; <a href="#t2&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"> # </a></h3>
+<pre><code>eedoc -V #&#x67E5;&#x770B;&#x7248;&#x672C;
+eedoc -i #&#x521D;&#x59CB;&#x5316;&#x6587;&#x6863;
+eedoc -b #&#x521B;&#x5EFA;&#x9759;&#x6001;
+eedoc -s #&#x8FD0;&#x884C;&#x670D;&#x52A1;
+</code></pre><h3 id="t3&#x6CE8;&#x610F;&#x4E8B;&#x9879;: markdown&#x683C;&#x5F0F;&#x5982;&#x4E0B;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;: markdown&#x683C;&#x5F0F;&#x5982;&#x4E0B; <a href="#t3&#x6CE8;&#x610F;&#x4E8B;&#x9879;: markdown&#x683C;&#x5F0F;&#x5982;&#x4E0B;"> # </a></h3>
+<pre><code>&#x6807;&#x9898;
+===
+&#x63CF;&#x8FF0;
+
+### &#x4EE5;&#x4E0B;&#x90FD;&#x662F;&#x5185;&#x5BB9;
+</code></pre><h3 id="t4&#x6D4B;&#x8BD5;javascript">&#x6D4B;&#x8BD5;javascript <a href="#t4&#x6D4B;&#x8BD5;javascript"> # </a></h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> url = <span class="hljs-string">&apos;ws://127.0.0.1:8000/&apos;</span>;
+socket = <span class="hljs-keyword">new</span> WebSocket(url);
+socket.onopen = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    log(<span class="hljs-string">&apos;&#x8FDE;&#x63A5;&#x6210;&#x529F;&apos;</span>)
+}
+socket.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+    log(<span class="hljs-string">&apos;&#x83B7;&#x5F97;&#x6D88;&#x606F;:&apos;</span> + msg.data);
+    <span class="hljs-built_in">console</span>.log(msg);
+}
+socket.onclose = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    log(<span class="hljs-string">&apos;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&apos;</span>)
+}
+</code></pre>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>
