@@ -10,10 +10,10 @@ commander
 	.version(appInfo.version);
 
 commander
+	.option('-i, init', 'Init a documentation.')
 	.option("-b, build", "build static html page.")
 	.option("-s, server", "run the page at http://127.0.0.1:1991")
-	.option("-w, watch", "watch file state.")
-	.option('-i, init', 'Init a documentation.');
+	.option("-w, watch", "watch file state.");
 
 commander.on('--help', function() {
 
