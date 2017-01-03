@@ -10,9 +10,9 @@ sudo npm install eedoc -g  #mac下以root权限运行
 ### 使用方法
 ```
 eedoc -V #查看版本
-eedoc -i #初始化文档
-eedoc -b #创建静态
-eedoc -s #运行服务
+eedoc -i,init    #初始化文档
+eedoc -b,build   #创建静态
+eedoc -s,server  #运行服务
 ```
 ### 注意事项: markdown格式如下
 ```
@@ -22,3 +22,7 @@ eedoc -s #运行服务
 
 ### 以下都是内容
 ```
+
+### todo
+-[] eedoc -d,deploy   # 提交至git版本库 （coding.net、github.com、oschina.net）
+-[] eedoc -f,ftp      # 通过ftp提交至服务器
