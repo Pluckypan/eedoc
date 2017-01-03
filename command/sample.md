@@ -5,6 +5,7 @@ eedoc
 ### 安装
 ```
 npm install eedoc -g  #创建全局eedoc
+sudo npm install eedoc -g  #mac下以root权限运行
 ```
 ### 使用方法
 ```
