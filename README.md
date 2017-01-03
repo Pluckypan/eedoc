@@ -24,5 +24,5 @@ eedoc -s,server  #运行服务
 ```
 
 ### todo
--[] eedoc -d,deploy   # 提交至git版本库 （coding.net、github.com、oschina.net）
--[] eedoc -f,ftp      # 通过ftp提交至服务器
+1 eedoc -d,deploy   # 提交至git版本库 （coding.net、github.com、oschina.net）
+2 eedoc -f,ftp      # 通过ftp提交至服务器
