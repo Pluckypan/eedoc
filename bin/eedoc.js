@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 var commander = require('commander');
 var appInfo = require('../package');
 var eedoc = require('..');
@@ -12,10 +13,16 @@ commander
 	.option('-i, init', 'Init a documentation.')
 	.option("-b, build", "build static html page.")
 	.option("-s, server", "run the page at http://127.0.0.1:1991")
+	.option("-d, deploy", "publish static page to git repo.")
 	.option("-w, watch", "watch file state.");
 
 commander.on('--help', function() {
-
+	console.log("------------Sample-------------");
+	console.log("$ eedoc -i");
+	console.log("$ eedoc -b");
+	console.log("$ eedoc -s");
+	console.log("$ eedoc -d");
+	console.log("more -> http://www.echo.engineer");
 });
 
 commander.parse(process.argv);
