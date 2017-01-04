@@ -31,6 +31,7 @@ module.exports = function(commander) {
 		deploy(commander);
 	} else if(commander.clean) {
 		eeutils.deleteFolderRecursive(_cache);
+		eeutils.deleteFolderRecursive(pub_path);
 	} else if(commander.watch) {
 		watcher(commander);
 	}

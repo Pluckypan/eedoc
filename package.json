@@ -1,6 +1,6 @@
 {
 	"name": "eedoc",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"description": "a simple document generation tool with a local search engine",
 	"main": "index.js",
 	"_args": [
