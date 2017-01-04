@@ -1,7 +1,7 @@
 var path = require('path');
 var init = require('./lib/init');
 var build = require('./lib/build');
-var depoly = require('./lib/depoly');
+var deploy = require('./lib/deploy');
 var watch = require('watch');
 var server = require('ssr');
 var root = process.cwd();
@@ -20,7 +20,7 @@ module.exports = function(commander) {
 		});
 		watcher(commander);
 	}else if(commander.deploy){
-		depoly(commander);
+		deploy(commander);
 	} else if(commander.watch) {
 		watcher(commander);
 	}
