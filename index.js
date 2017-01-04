@@ -19,8 +19,10 @@ module.exports = function(commander) {
 			port: 1991
 		});
 		watcher(commander);
-	}else if(commander.deploy){
+	} else if(commander.deploy) {
 		deploy(commander);
+	} else if(commander.clean) {
+		exec('rm -rf public');
 	} else if(commander.watch) {
 		watcher(commander);
 	}
