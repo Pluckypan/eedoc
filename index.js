@@ -2,11 +2,13 @@ var path = require('path');
 var init = require('./lib/init');
 var build = require('./lib/build');
 var deploy = require('./lib/deploy');
+var exec = require('child_process').exec;
 var watch = require('watch');
 var server = require('ssr');
 var root = process.cwd();
 var cmd_path = path.join(root, "command/");
 var pub_path = path.join(root, "public/");
+var _cache = path.join(root, '.cache/');
 
 module.exports = function(commander) {
 	if(commander.init) {
@@ -22,7 +24,7 @@ module.exports = function(commander) {
 	} else if(commander.deploy) {
 		deploy(commander);
 	} else if(commander.clean) {
-		exec('rm -rf public');
+		exec('rm -rf ' + _cache);
 	} else if(commander.watch) {
 		watcher(commander);
 	}
