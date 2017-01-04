@@ -33,7 +33,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Pluckypan/searchdoc.git"
+		"url": "git+https://github.com/Pluckypan/eedoc.git"
 	},
 	"keywords": [
 		"eedoc",
@@ -43,7 +43,7 @@
 	"author": "plucky",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/Pluckypan/searchdoc/issues"
+		"url": "https://github.com/Pluckypan/eedoc/issues"
 	},
-	"homepage": "https://github.com/Pluckypan/searchdoc#readme"
+	"homepage": "https://github.com/Pluckypan/eedoc#readme"
 }
