@@ -5,6 +5,8 @@ var deploy = require('./lib/deploy');
 var exec = require('child_process').exec;
 var watch = require('watch');
 var server = require('ssr');
+var eeutils = require("./eeutils");
+
 var root = process.cwd();
 var cmd_path = path.join(root, "command/");
 var pub_path = path.join(root, "public/");
@@ -16,15 +18,19 @@ module.exports = function(commander) {
 	} else if(commander.build) {
 		build(commander);
 	} else if(commander.server) {
-		process.chdir(pub_path);
-		server({
-			port: 1991
-		});
-		watcher(commander);
+		if(eeutils.exists(pub_path)) {
+			process.chdir(pub_path);
+			server({
+				port: 1991
+			});
+			watcher(commander);
+		} else {
+			console.log("floder 'public' not exist, please run 'eedoc -b' first!");
+		}
 	} else if(commander.deploy) {
 		deploy(commander);
 	} else if(commander.clean) {
-		exec('rm -rf ' + _cache);
+		eeutils.deleteFolderRecursive(_cache);
 	} else if(commander.watch) {
 		watcher(commander);
 	}
