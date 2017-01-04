@@ -19,12 +19,12 @@ commander
 
 commander.on('--help', function() {
 	console.log("------------Sample-------------");
-	console.log("      $ eedoc -i      ");
-	console.log("      $ eedoc -b      ");
-	console.log("      $ eedoc -s      ");
-	console.log("      $ eedoc -d      ");
-	console.log("      $ eedoc -c      ");
-	console.log("more -> http://www.echo.engineer");
+	console.log(" $ eedoc -i      ");
+	console.log(" $ eedoc -b      ");
+	console.log(" $ eedoc -s      ");
+	console.log(" $ eedoc -d      ");
+	console.log(" $ eedoc -c      ");
+	console.log(" more -> http://www.echo.engineer");
 });
 
 commander.parse(process.argv);

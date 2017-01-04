@@ -15,9 +15,11 @@
 		"n": "搜索",
 		"d": "simple document generation tool with a local search engine"
 	},
-	"deploy": {
-		"repo": "",
-		"branch": "gh-pages",
-		"message": "Compiler generation page "
-	}
+	"deploys": [
+		{
+			"repo": "****",
+			"branch": "master",
+			"message": "Compiler generation page "
+		}
+	]
 }
