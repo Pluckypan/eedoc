@@ -5,7 +5,7 @@ var deploy = require('./lib/deploy');
 var exec = require('child_process').exec;
 var watch = require('watch');
 var server = require('ssr');
-var eeutils = require("./eeutils");
+var eeutils = require("./lib/eeutils");
 
 var root = process.cwd();
 var cmd_path = path.join(root, "command/");
