@@ -1,6 +1,6 @@
 {
 	"name": "eedoc",
-	"version": "1.2.6",
+	"version": "1.2.8",
 	"description": "a simple document generation tool with a local search engine",
 	"main": "index.js",
 	"_args": [
@@ -14,7 +14,7 @@
 	},
 	"dependencies": {
 		"ejs": "^2.5.5",
-		"gh-pages": "^0.12.0",
+		"ee-gitpage": "^0.0.1",
 		"highlight.js": "^9.9.0",
 		"colors-cli": "^1.0.7",
 		"marked": "^0.3.6",
