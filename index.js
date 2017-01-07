@@ -2,6 +2,7 @@ var path = require('path');
 var init = require('./lib/init');
 var build = require('./lib/build');
 var deploy = require('./lib/deploy');
+var ftp = require('./lib/ftp');
 var exec = require('child_process').exec;
 var watch = require('watch');
 var server = require('ssr');
@@ -34,6 +35,8 @@ module.exports = function(commander) {
 		eeutils.deleteFolderRecursive(pub_path);
 	} else if(commander.watch) {
 		watcher(commander);
+	}else if(commander.ftp) {
+		ftp(commander);
 	}
 }
 

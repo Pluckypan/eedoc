@@ -14,6 +14,7 @@ commander
 	.option("-b, build", "build static html page.")
 	.option("-s, server", "run the page at http://127.0.0.1:1991")
 	.option("-d, deploy", "publish static page to git repo.")
+	.option("-f, ftp", "publish static page to ftp server.")
 	.option("-c, clean", "clean the public floder.")
 	.option("-w, watch", "watch file state.");
 
@@ -23,6 +24,7 @@ commander.on('--help', function() {
 	console.log(" $ eedoc -b      ");
 	console.log(" $ eedoc -s      ");
 	console.log(" $ eedoc -d      ");
+	console.log(" $ eedoc -f      ");
 	console.log(" $ eedoc -c      ");
 	console.log(" more -> http://www.echo.engineer");
 });

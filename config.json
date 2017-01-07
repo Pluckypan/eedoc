@@ -21,5 +21,11 @@
 			"branch": "master",
 			"message": "Compiler generation page "
 		}
-	]
+	],
+	"ftp": {
+		"host": "",
+		"port": 21,
+		"user": "",
+		"password": ""
+	}
 }
