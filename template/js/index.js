@@ -46,7 +46,7 @@
 		},
 		isSreachIndexOF: function(oldstr, kw) {
 			var istrue = false;
-			if(oldstr && toString.call(oldstr) === '[object Array]') {
+			if(oldstr && Object.prototype.toString.call(oldstr) === '[object Array]') {
 				for(var i = 0; i < oldstr.length; i++) {
 					oldstr[i].toLowerCase() === kw.toLowerCase() ? istrue = true : null;
 				}
@@ -105,7 +105,7 @@
 				page_size = arr.length,
 				arrResultHTML = [],
 				show_list_count = islist ? this.page_size : this.query_size;
-			if(arr && arr.length && toString.call(arr).indexOf('Array') > -1) {
+			if(arr && arr.length && Object.prototype.toString.call(arr).indexOf('Array') > -1) {
 				var count = 0
 				for(; i < page_size; i++) {
 					if(!arr[i]) break;
@@ -136,6 +136,7 @@
 		init: function() {
 			var self = this;
 			var kw = self.getQueryString('kw');
+			kw = kw && kw.length > 0 ? kw : '';
 			var timer = null
 			this.elm_query.value = kw;
 			this.query = kw || '';
