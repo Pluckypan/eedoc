@@ -10,12 +10,16 @@
 		// 获取根路径
 		this.root_path = (function() {
 			var elm_path = $$('current_path');
+			if(!window.location.origin) {
+				window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+			}
 			var url = window.location.origin + window.location.pathname;
+
 			if(elm_path) {
 				var elm_val = elm_path.value;
 				elm_val = elm_val.replace(/\\/g, "/");
 				console.log(elm_val);
-				return url.replace(elm_val,"").replace(/\/$/, '');
+				return url.replace(elm_val, "").replace(/\/$/, '');
 			} else {
 				return '';
 			}
