@@ -10,7 +10,7 @@ commander
 	.version(appInfo.version);
 
 commander
-	.option('-i, init', 'Init a documentation.')
+	.option('-i, init', 'init a documentation.')
 	.option("-b, build", "build static html page.")
 	.option("-s, server", "run the page at http://127.0.0.1:1991")
 	.option("-d, deploy", "publish static page to git repo.")

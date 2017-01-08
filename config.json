@@ -26,7 +26,7 @@
 		"host": "",
 		"port": 21,
 		"user": "",
-		"password": "",
-		"pub_path":""
+		"pass": "",
+		"cwd":""
 	}
 }

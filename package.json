@@ -25,7 +25,7 @@
 		"watch": "^1.0.1",
 		"semver": "^5.1.0",
 		"ssr": "^1.0.15",
-		"ftp": "^0.3.10",
+		"jsftp": "^1.5.4",
 		"stylus": "^0.54.5"
 	},
 	"devDependencies": {},
