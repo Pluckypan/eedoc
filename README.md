@@ -3,6 +3,12 @@ eedoc
 基于Markdown、搜索引擎的文档管理系统
 
 [预览界面](https://pluckypan.github.io)
+
+### 截图
+![主界面](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/main.pic.jpg)
+![搜索](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/search.pic.jpg)
+![文章详情页](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/article.pic.jpg)
+
 ### 安装
 ```
 npm install eedoc -g  #创建全局eedoc
