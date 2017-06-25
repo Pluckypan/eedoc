@@ -5,9 +5,9 @@ eedoc
 [预览界面](https://pluckypan.github.io)
 
 ### 截图
-<div style="width:400px;"><img src="https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/main.jpg"  alt="主界面" /></div>
-<div style="width:400px;"><img src="https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/search.jpg"  alt="搜索" /></div>
-<div style="width:400px;"><img src="https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/article.jpg" alt="文章详情页" /></div>
+![主界面](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/main_thumb.jpg)
+![搜索](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/search_thumb.jpg)
+![文章详情页](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/article_thumb.jpg)
 
 ### 安装
 ```
