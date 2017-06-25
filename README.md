@@ -8,7 +8,6 @@ eedoc
 ![主界面](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/main_thumb.jpg)
 ![搜索](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/search_thumb.jpg)
 ![文章详情页](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/article_thumb.jpg)
-<img src="http://img.blog.csdn.net/20151129213701642" width="50%" height="50%" />
 
 ### 安装
 ```
