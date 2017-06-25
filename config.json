@@ -27,6 +27,10 @@
 		"port": 21,
 		"user": "",
 		"pass": "",
-		"cwd":""
+		"cwd": ""
+	},
+	"changyan": {
+		"appid": "",
+		"conf": ""
 	}
 }
