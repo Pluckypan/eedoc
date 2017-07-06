@@ -32,5 +32,8 @@
 	"changyan": {
 		"appid": "",
 		"conf": ""
+	},
+	"wumii": {
+		"sitePrefix": ""
 	}
 }

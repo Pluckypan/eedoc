@@ -7,4 +7,12 @@
 		"conf": "<%=cmtKey%>"
 	});
 </script>
-<% } %>
+<% } else if(cmtSitePrefix){ %>
+<script type="text/javascript" id="wumiiComments">
+	var wumiiPermaLink = window.location.href;
+	var wumiiTitle = "<%=describe.n?describe.n+' - ':''%><%=title%>";
+	var wumiiSitePrefix = "<%=cmtSitePrefix%>";
+	var wumiiCommentParams = "&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.cn/ext/cw/widget"></script>
+<%}%>
