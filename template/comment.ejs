@@ -9,9 +9,13 @@
 </script>
 <% } else if(cmtSitePrefix){ %>
 <script type="text/javascript" id="wumiiComments">
-	var wumiiPermaLink = window.location.href;
+	var siteUrl = "<%=cmtSitePrefix%>";
+	var curPath = "<%=current_path%>";
+	var lastIdx = siteUrl.lastIndexOf("/");
+	var wumiiPermaLink = (lastIdx == siteUrl.length - 1) ? (siteUrl + curPath) : (siteUrl + '/' + curPath);
+	console.log(wumiiPermaLink);
 	var wumiiTitle = "<%=describe.n?describe.n+' - ':''%><%=title%>";
-	var wumiiSitePrefix = "<%=cmtSitePrefix%>";
+	var wumiiSitePrefix = siteUrl;
 	var wumiiCommentParams = "&pf=JAVASCRIPT";
 </script>
 <script type="text/javascript" src="http://widget.wumii.cn/ext/cw/widget"></script>
