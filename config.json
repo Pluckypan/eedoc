@@ -35,5 +35,6 @@
 	},
 	"wumii": {
 		"sitePrefix": ""
-	}
+	},
+	"cname": "www.echo.engineer"
 }
