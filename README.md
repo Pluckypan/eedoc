@@ -1,6 +1,11 @@
 eedoc
 ===
-基于Markdown、搜索引擎的文档管理系统
+基于Node.js Markdown静态网站生成器 支持全站搜索 支持评论
+
+### 功能
+- 支持全站搜索
+- 支持代码高亮
+- 支持评论
 
 [预览界面](https://pluckypan.github.io)
 
