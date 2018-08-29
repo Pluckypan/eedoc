@@ -9,16 +9,12 @@ eedoc
 
 [预览界面](https://pluckypan.github.io)
 
-### 截图
-![主界面](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/main_thumb.jpg)
-![搜索](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/search_thumb.jpg)
-![文章详情页](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/article_thumb.jpg)
-
 ### 安装
 ```
 npm install eedoc -g  #创建全局eedoc
 sudo npm install eedoc -g  #mac下以root权限运行
 ```
+
 ### 使用方法
 ```
 eedoc -V #查看版本
@@ -29,6 +25,7 @@ eedoc -d #发布至git版本库(publish static page to git repo.)
 eedoc -f #发布至ftp服务器(publish static page to ftp server.)
 eedoc -c #清除缓存及静态页(clean the public floder.)
 ```
+
 ### 注意事项: markdown格式如下
 ```
 标题
@@ -37,7 +34,8 @@ eedoc -c #清除缓存及静态页(clean the public floder.)
 
 ### 以下都是内容
 ```
-### 测试javascript
+
+### 代码块解析(javascript)
 ```
 var url = 'ws://127.0.0.1:8000/';
 socket = new WebSocket(url);
@@ -52,3 +50,39 @@ socket.onclose = function() {
     log('断开连接')
 }
 ```
+
+### 完整配置
+```
+{
+	"title": "eedoc 网站标题",
+	"description": "simple document generation tool with a local search engine 网站描述",
+	"github": "http://www.a.c 网站链接",
+	"deploys": [
+		{
+			"repo": "**** github或者其他git网站仓库地址",
+			"branch": "master 分支",
+			"message": "Compiler generation page"
+		}
+	],
+	"ftp": {
+		"host": "需要上传ftp服务器ip地址",
+		"port": 21,
+		"user": "",
+		"pass": "",
+		"cwd": ""
+	},
+	"changyan": {
+		"appid": "",
+		"conf": ""
+	},
+	"wumii": {
+		"sitePrefix": ""
+	},
+	"cname": "www.echo.engineer cname用于设置自己的个性域名"
+}
+```
+
+### 截图
+![主界面](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/main_thumb.jpg)
+![搜索](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/search_thumb.jpg)
+![文章详情页](https://raw.githubusercontent.com/Pluckypan/eedoc/master/screenshoot/article_thumb.jpg)
