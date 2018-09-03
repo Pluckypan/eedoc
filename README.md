@@ -76,7 +76,7 @@ socket.onclose = function() {
 		"conf": ""
 	},
 	"wumii": {
-		"sitePrefix": ""
+		"sitePrefix": "无秘评论 已废弃"
 	},
 	"cname": "www.echo.engineer cname用于设置自己的个性域名"
 }
