@@ -19,14 +19,14 @@
 	var wumiiCommentParams = "&pf=JAVASCRIPT";
 </script>
 <script type="text/javascript" src="http://widget.wumii.cn/ext/cw/widget"></script>
-<%}%> else if(gitalk){ %>
+<%} else if(gitalk){ %>
 	<div class="gitalk_container">
 	      <style type="text/css">
 
 	        .gitalk_container {
 	          margin: 0 auto;
 	          padding-bottom: 60px;
-	          max-width: 720px;
+	          max-width: 85%;
 	          color: #6190E8;
 	          font-family: "PingFang SC", Helvetica, "Microsoft YaHei", Arial, sans-serif;
 	        }
@@ -41,12 +41,12 @@
 	      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 	      <script type="text/javascript">
 	        var gitalk = new Gitalk({
-	          clientID: gitalk.clientID,
-	          clientSecret: gitalk.clientSecret,
-	          repo: gitalk.repo,
-	          owner: gitalk.owner,
-	          admin: gitalk.admin,
-	          distractionFreeMode: gitalk.distractionFreeMode
+	          clientID: "<%=gitalk.clientID%>",
+	          clientSecret: "<%=gitalk.clientSecret%>",
+	          repo: "<%=gitalk.repo%>",
+	          owner: "<%=gitalk.owner%>",
+	          admin: "<%=gitalk.admin%>",
+	          distractionFreeMode: "<%=gitalk.distractionFreeMode%>"
 	        });
 	        gitalk.render('gitalk-container');
 	      </script>
