@@ -78,6 +78,15 @@ socket.onclose = function() {
 	"wumii": {
 		"sitePrefix": "无秘评论 已废弃"
 	},
+  "gitalk":{
+    //gitalk 评论 具体参考 https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+		"clientID": "xxx",
+    "clientSecret": "xxx",
+    "repo": "xxx",
+    "owner": "xxx",
+    "admin": ["xxx"],
+    "distractionFreeMode": true
+	},
 	"cname": "www.echo.engineer cname用于设置自己的个性域名"
 }
 ```
