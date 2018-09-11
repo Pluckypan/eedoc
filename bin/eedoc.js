@@ -16,6 +16,8 @@ commander
 	.option("-d, deploy", "publish static page to git repo.")
 	.option("-f, ftp", "publish static page to ftp server.")
 	.option("-c, clean", "clean the public floder.")
+	.option("-t, time", "generate timestamp for special article.")
+	.option("-n, new", "generate a new article.")
 	.option("-w, watch", "watch file state.");
 
 commander.on('--help', function() {
@@ -26,6 +28,8 @@ commander.on('--help', function() {
 	console.log(" $ eedoc -d      ");
 	console.log(" $ eedoc -f      ");
 	console.log(" $ eedoc -c      ");
+	console.log(" $ eedoc -t      ");
+	console.log(" $ eedoc -n      ");
 	console.log(" more -> http://www.echo.engineer");
 });
 
