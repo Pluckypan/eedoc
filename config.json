@@ -44,5 +44,6 @@
     "admin": ["xxx"],
     "distractionFreeMode": true
 	},
-	"cname": "www.echo.engineer"
+	"cname": "www.echo.engineer",
+	"theme":"rookie"
 }
