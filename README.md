@@ -71,6 +71,7 @@ eedoc -n #新建文章(generate a new article.)
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
+	"docImage": "image",
 	"deploys": [{
 		"repo": "",
 		"branch": "gh-pages",
@@ -100,6 +101,7 @@ eedoc -n #新建文章(generate a new article.)
 			"distractionFreeMode": true
 		}
 	},
+	"theme": "default",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -110,4 +112,5 @@ eedoc -n #新建文章(generate a new article.)
 		}
 	}
 }
+
 ```

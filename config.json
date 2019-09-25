@@ -6,6 +6,7 @@
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
+	"docImage": "image",
 	"deploys": [{
 		"repo": "",
 		"branch": "gh-pages",
@@ -35,6 +36,7 @@
 			"distractionFreeMode": true
 		}
 	},
+	"theme": "default",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
