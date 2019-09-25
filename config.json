@@ -1,27 +1,16 @@
 {
 	"title": "eedoc",
 	"description": "simple document generation tool with a local search engine",
-	"github": "http://www.a.c",
+	"home": "http://1991th.com",
 	"version": "0.0.1",
 	"licenses": "MIT",
-	"eedoc": {},
-	"index": {
-		"p": "/index.html",
-		"n": "eedoc",
-		"d": "simple document generation tool with a local search engine"
-	},
-	"list": {
-		"p": "/list.html",
-		"n": "搜索",
-		"d": "simple document generation tool with a local search engine"
-	},
-	"deploys": [
-		{
-			"repo": "****",
-			"branch": "master",
-			"message": "Compiler generation page "
-		}
-	],
+	"doc": "doc",
+	"out": "i",
+	"deploys": [{
+		"repo": "",
+		"branch": "gh-pages",
+		"message": "Compiler generation page "
+	}],
 	"ftp": {
 		"host": "",
 		"port": 21,
@@ -29,21 +18,30 @@
 		"pass": "",
 		"cwd": ""
 	},
-	"changyan": {
-		"appid": "",
-		"conf": ""
+	"cname": "",
+	"comment": {
+		"changyan": {
+			"appid": null,
+			"conf": "***"
+		},
+		"gitalk": {
+			"clientID": null,
+			"clientSecret": "***",
+			"repo": "***",
+			"owner": "***",
+			"admin": [
+				"***"
+			],
+			"distractionFreeMode": true
+		}
 	},
-	"wumii": {
-		"sitePrefix": ""
-	},
-	"gitalk":{
-		"clientID": "xxx",
-    "clientSecret": "xxx",
-    "repo": "xxx",
-    "owner": "xxx",
-    "admin": ["xxx"],
-    "distractionFreeMode": true
-	},
-	"cname": "www.echo.engineer",
-	"theme":"rookie"
+	"page": {
+		"index.ejs": {
+			"name": "首页",
+			"path": "index.html"
+		},
+		"list.ejs": {
+			"name": "搜索"
+		}
+	}
 }
