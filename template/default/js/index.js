@@ -15,12 +15,13 @@
 					':' + window.location.port : '');
 			}
 			var url = window.location.origin + window.location.pathname;
-
 			if (elm_path) {
 				var elm_val = elm_path.value;
 				elm_val = elm_val.replace(/\\/g, "/");
+				elm_val =encodeURI(elm_val);
 				console.log(elm_val);
-				return url.replace(elm_val, "").replace(/\/$/, '');
+				var res = url.replace(elm_val, "").replace(/\/$/, '');
+				return res;
 			} else {
 				return '';
 			}

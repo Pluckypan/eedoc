@@ -4,7 +4,8 @@
 	_ejs:['index.ejs'], // 要渲染的页面 对应渲染到 public 目录下,同名 index.html
 	_js:['js/index.js','js/scroll.js'], // 要压缩的js 对应渲染到 public 目录下,js/index.js
 	_css:['css/index.styl'], // 要渲染的样式 对应渲染到 public 目录下,css/index.css
-	_copy:['img/','favicon.icon']//拷贝资源文字,可以是文件夹,也可以是文件,如果是文件夹,则默认不拷贝 _ejs,_js,_css中包含的文件
+	_copy:['img/','favicon.icon'],//拷贝资源文字,可以是文件夹,也可以是文件,如果是文件夹,则默认不拷贝 _ejs,_js,_css中包含的文件
+	postTpl:"detail.ejs"// 文章页需要单独渲染 所以需要单独设置渲染模板
 }
 ```
 
