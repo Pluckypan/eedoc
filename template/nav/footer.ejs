@@ -1,0 +1,30 @@
+<footer class="site-footer">
+				<div class="site-info clearfix">
+					<div class="container">
+						<div class="credit"> &copy; <span class="year">2019</span>
+							<a href="#"><%=config.cname%></a> 
+							<%if(config.icp&&config.icp.length>0){%>
+							| <%=config.icp%>
+							<%}%>
+						</div>
+						<%if(config.links&&config.links.length>0){%>
+							<div class="footer-links"> 友情链接：
+							<%config.links.forEach(function(l,i){%>
+								<a rel="nofollow" target="_blank" href="<%=l.link%>"><%=l.name%></a>
+							<%})%>
+							</div>
+						<%}%>
+					</div>
+				</div>
+			</footer>
+			<div class="none"></div>
+			<a href="#" id="scroll-to-top">
+				<span class="icon-rocket"></span>
+			</a>
+		</div>
+		<script src="js/script.js"></script>
+		<script>
+			pangu.spacingElementById('main');
+		</script>
+	</body>
+</html>

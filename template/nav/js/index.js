@@ -8,6 +8,7 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+	$('.year').html(new Date().getFullYear());
 });
 $(function() {
 	$('a.nav-item').click(function(e) {

@@ -15,5 +15,29 @@
 3. 理论上可以在 config.json 中定义任意你想定义的参数,这样在模板中就能取到
 4. 可以在任意页面取到 `eedoc` 对象,主要存储一些统计参数,{"total":1}
 
+### 不同模板关于 page 标准字段的定义
+一般情况下 页面(非post),渲染方式分为3种
+1. 最简单的静态页面,只取一些基本信息,如 title,description,icp,links,此时 render 可不填
+2. 如果想在单页面配置不同的数据,可配置当前页面数据为 xxx.json
+3. 如果想在单页面填充markdown数据,可配置为 xxx.md
+4. 不管是 xxx.json 或 xxx.md 最终都会渲染为 _render 字段。供各个页面渲染时使用。
+5. 在模板引擎中直接使用 <%=describe._render%>
+```
+{
+	"page": {
+		"index.ejs": {
+			"name": "首页",
+			"path": "index.html",
+			"render": "index.json"
+		},
+		"list.ejs": {
+			"name": "搜索",
+			"render": "index.md"
+		}
+	}
+}
+```
+
+
 ### Markdown 说明
 1. 所有被加粗的都会被搜索引擎列为关键字

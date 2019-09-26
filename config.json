@@ -1,12 +1,33 @@
 {
-	"title": "eedoc",
-	"description": "simple document generation tool with a local search engine",
+	"title": "风之谷",
+	"description": "念念不忘,必有回响",
 	"home": "http://1991th.com",
 	"version": "0.0.1",
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
-	"docImage": "image",
+	"icp": "鲁ICP备 16017369号",
+	"user": {
+		"name": "User",
+		"desc": "I'm a boy.",
+		"avatar": "",
+		"email": "user@echo.engineer",
+		"social": [{
+			"link": "https://www.sigoo.com/",
+			"name": "极像素",
+			"desc": "超高像素看世界",
+			"logo": "http://www.sigoo.com/favicon.png",
+			"image": ""
+		}]
+	},
+	"links": [{
+		"link": "https://www.sigoo.com/",
+		"name": "极像素",
+		"desc": "超高像素看世界",
+		"logo": "http://www.sigoo.com/favicon.png",
+		"image": ""
+	}],
+	"statics": "assets",
 	"deploys": [{
 		"repo": "",
 		"branch": "gh-pages",
@@ -36,14 +57,19 @@
 			"distractionFreeMode": true
 		}
 	},
-	"theme": "default",
+	"theme": "nav",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
-			"path": "index.html"
+			"path": "index.html",
+			"render": "index.json"
 		},
 		"list.ejs": {
-			"name": "搜索"
+			"name": "搜索",
+			"render": "index.md"
 		}
+	},
+	"nav": {
+		"busuanzi": true
 	}
 }

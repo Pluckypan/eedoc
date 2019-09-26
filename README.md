@@ -71,6 +71,24 @@ eedoc -n #新建文章(generate a new article.)
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
+	"icp": "鲁ICP备 16017369号",
+	"user": {
+		"name": "User",
+		"desc": "I'm a boy.",
+		"email": "user@echo.engineer",
+		"social": [{
+			"logo": "",
+			"name": "",
+			"desc": "",
+			"link": ""
+		}]
+	},
+	"links": [{
+		"logo": "",
+		"name": "",
+		"desc": "",
+		"link": ""
+	}],
 	"docImage": "image",
 	"deploys": [{
 		"repo": "",
@@ -101,16 +119,20 @@ eedoc -n #新建文章(generate a new article.)
 			"distractionFreeMode": true
 		}
 	},
-	"theme": "default",
+	"theme": "nav",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
-			"path": "index.html"
+			"path": "index.html",
+			"render": "index.json"
 		},
 		"list.ejs": {
-			"name": "搜索"
+			"name": "搜索",
+			"render": "index.md"
 		}
+	},
+	"nav": {
+		"busuanzi": true
 	}
 }
-
 ```

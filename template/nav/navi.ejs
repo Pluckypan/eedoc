@@ -1,0 +1,42 @@
+<div class="top-bar">
+				<div class="container">
+					<div class="m_nav-list" data-cssclass="m_nav-close">
+						<a href="javascript:;" data-action="toggle" data-args="body" class="lines js-m-navlist">
+							<span class="line first-line"></span>
+							<span class="line second-line"></span>
+							<span class="line third-line"></span>
+						</a>
+					</div>
+					<div class="top-bar-left pull-left">
+						<nav class="top-bar-navigation">
+							<ul class="top-bar-menu">
+								<li class="menu-item">
+									<a href="<%=config.home%>" class="home-title"><%=config.title%></a>
+								</li>
+							</ul>
+							<div id="sidebar-toggle" class="sidebar-toggle">
+								<span></span>
+							</div>
+						</nav>
+					</div>
+					<div class="top-bar-right pull-right text-right">
+						<div class="top-admin"> 
+						<i class="icon-stats"></i> 
+						<a href="javascript:;" id="mStats" class="stats_click">统计 
+							<div class="stats">
+								<ul>
+									<li>收录站点：<%=describe._render.length%> 条</li>
+									<li>建站日期：2013-05-13</li>
+									<li>最后更新：8月21日</li>
+									<%if(config.nav&&config.nav.busuanzi&&config.nav.busuanzi==true){%>
+									<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+									<li>当前访问：<span id="busuanzi_value_site_pv">0</span></li>
+									<li>站点访问：<span id="busuanzi_value_site_uv">0</span></li>
+									<%}%>
+								</ul>
+							</div> 
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
