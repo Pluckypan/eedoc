@@ -6,25 +6,25 @@
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
-	"icp": "鲁ICP备 16017369号",
+	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
 		"desc": "I'm a boy.",
-		"avatar": "",
+		"avatar": "http://img.1991th.com/tuchongeter/statics/logo.png",
 		"email": "user@echo.engineer",
 		"social": [{
-			"link": "https://www.sigoo.com/",
-			"name": "极像素",
-			"desc": "超高像素看世界",
-			"logo": "http://www.sigoo.com/favicon.png",
+			"link": "http://www.1991th.com/",
+			"name": "风之谷",
+			"desc": "Take it Easy & Make it Happen",
+			"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
 			"image": ""
 		}]
 	},
 	"links": [{
-		"link": "https://www.sigoo.com/",
-		"name": "极像素",
-		"desc": "超高像素看世界",
-		"logo": "http://www.sigoo.com/favicon.png",
+		"link": "http://www.1991th.com/",
+		"name": "风之谷",
+		"desc": "Take it Easy & Make it Happen",
+		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
 		"image": ""
 	}],
 	"statics": "assets",

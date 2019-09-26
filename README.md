@@ -64,32 +64,35 @@ eedoc -n #新建文章(generate a new article.)
 ### 完整配置
 ```
 {
-	"title": "eedoc",
-	"description": "simple document generation tool with a local search engine",
+	"title": "风之谷",
+	"description": "念念不忘,必有回响",
 	"home": "http://1991th.com",
 	"version": "0.0.1",
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
-	"icp": "鲁ICP备 16017369号",
+	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
 		"desc": "I'm a boy.",
+		"avatar": "http://img.1991th.com/tuchongeter/statics/logo.png",
 		"email": "user@echo.engineer",
 		"social": [{
-			"logo": "",
-			"name": "",
-			"desc": "",
-			"link": ""
+			"link": "http://www.1991th.com/",
+			"name": "风之谷",
+			"desc": "Take it Easy & Make it Happen",
+			"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
+			"image": ""
 		}]
 	},
 	"links": [{
-		"logo": "",
-		"name": "",
-		"desc": "",
-		"link": ""
+		"link": "http://www.1991th.com/",
+		"name": "风之谷",
+		"desc": "Take it Easy & Make it Happen",
+		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"image": ""
 	}],
-	"docImage": "image",
+	"statics": "assets",
 	"deploys": [{
 		"repo": "",
 		"branch": "gh-pages",
