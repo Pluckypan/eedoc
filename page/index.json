@@ -1,5 +1,20 @@
 [{
 	"category": "常用导航",
+	"banner": true,
+	"links": [{
+			"link": "https://www.sigoo.com/",
+			"name": "极像素",
+			"desc": "超高像素看世界",
+			"image": "http://img.1991th.com/tuchongeter/navpic/20190109171657e.jpg"
+		},{
+				"link": "https://tuchong.com/",
+				"name": "图虫",
+				"desc": "图虫网 - 优质摄影师交流社区",
+				"image": "../assets/tuchong.png"
+			}
+	]
+}, {
+	"category": "推荐站点",
 	"banner": false,
 	"links": [{
 			"link": "https://www.sigoo.com/",
