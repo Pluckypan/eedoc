@@ -10,19 +10,21 @@
 					<div class="top-bar-left pull-left">
 						<nav class="top-bar-navigation">
 							<ul class="top-bar-menu">
-								<li class="menu-item">
-									<%if(config.nav&&config.nav.topLinks&&config.nav.topLinks.length>0){%>
-										<%config.nav.topLinks.forEach(function(l,i){%>
+								<%if(config.nav&&config.nav.topLinks&&config.nav.topLinks.length>0){%>
+									<%config.nav.topLinks.forEach(function(l,i){%>
+										<li class="menu-item">
 											<a href="<%=l.link%>" class="home-title" target="<%=l.target%>">
 												<%=l.name%>
 											</a>
-										<%})%>
-									<%} else {%>
+										</li>	
+									<%})%>
+								<%} else {%>
+									<li class="menu-item">
 										<a href="<%=config.home%>" class="home-title">
 											<%=config.title%>
 										</a>
-									<%}%>
-								</li>
+									</li>									
+								<%}%>
 							</ul>
 							<div id="sidebar-toggle" class="sidebar-toggle">
 								<span></span>
@@ -41,8 +43,8 @@
 										<%linkCount+=l.links.length;%>
 										<%})%>
 										<li>收录站点：<%=linkCount%> 条</li>
-										<li>建站日期：2013-05-13</li>
-										<li>最后更新：8月21日</li>
+										<li>建站日期：<%=describe.createTime%></li>
+										<li>最后更新：<%=describe.updateTime%></li>
 										<%if(config.nav&&config.nav.busuanzi&&config.nav.busuanzi==true){%>
 										<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 										<li>当前访问：<span id="busuanzi_value_site_pv">0</span></li>

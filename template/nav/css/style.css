@@ -1926,6 +1926,7 @@ li.menu-item:nth-of-type(3) a:after {
 .mod-column-body img {
 	width: 40px;
 	height: 40px;
+	object-fit: contain;
 	border-radius: 36px
 }
 
@@ -1986,7 +1987,7 @@ li.menu-item:nth-of-type(3) a:after {
 	border-radius: 8px;
 	overflow: hidden;
 	width: 214px;
-	object-fit: scale-down;
+	object-fit: contain;
 	height: 146px;
 }
 
