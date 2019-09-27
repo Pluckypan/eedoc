@@ -1986,7 +1986,7 @@ li.menu-item:nth-of-type(3) a:after {
 	border-radius: 8px;
 	overflow: hidden;
 	width: 214px;
-	object-fit: none;
+	object-fit: scale-down;
 	height: 146px;
 }
 
