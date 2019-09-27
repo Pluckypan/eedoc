@@ -43,7 +43,12 @@
 ```
 {
 	"nav": {
-		"busuanzi": true
+		"busuanzi": true,
+		"topLinks": [{
+			"link": "http://www.1991th.com/",
+			"name": "首页",
+			"target": "_self"
+		}]
 	}
 }
 ```

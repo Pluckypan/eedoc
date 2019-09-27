@@ -11,7 +11,17 @@
 						<nav class="top-bar-navigation">
 							<ul class="top-bar-menu">
 								<li class="menu-item">
-									<a href="<%=config.home%>" class="home-title"><%=config.title%></a>
+									<%if(config.nav&&config.nav.topLinks&&config.nav.topLinks.length>0){%>
+										<%config.nav.topLinks.forEach(function(l,i){%>
+											<a href="<%=l.link%>" class="home-title" target="<%=l.target%>">
+												<%=l.name%>
+											</a>
+										<%})%>
+									<%} else {%>
+										<a href="<%=config.home%>" class="home-title">
+											<%=config.title%>
+										</a>
+									<%}%>
 								</li>
 							</ul>
 							<div id="sidebar-toggle" class="sidebar-toggle">

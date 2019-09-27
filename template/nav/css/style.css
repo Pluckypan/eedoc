@@ -339,10 +339,9 @@ input[type=submit]:hover {
 }
 
 a.home-title {
-	font-size: 20px;
+	font-size: 15px;
 	line-height: 50px;
-	font-weight: 400;
-	color: #333;
+	color: #555;
 }
 
 .page .hentry,
