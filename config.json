@@ -57,7 +57,7 @@
 			"distractionFreeMode": true
 		}
 	},
-	"theme": "nav",
+	"theme": "default",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
