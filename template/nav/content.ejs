@@ -7,44 +7,48 @@
 				<div class="nav-sidebar col-md-2">
 					<nav class="nav">
 						<ul class="nav-list">
-							<%describe._render.forEach(function(c, i) {%>
-								<li class="nav-list-item">
-									<a href="#div-<%=i%>" class="nav-item <%=i==0?'active':''%>"><%=c.category%></a>
-								</li>
-							<%})%>
+							<%if(describe._render&&describe._render.length>0){%>
+								<%describe._render.forEach(function(c, i) {%>
+									<li class="nav-list-item">
+										<a href="#div-<%=i%>" class="nav-item <%=i==0?'active':''%>"><%=c.category%></a>
+									</li>
+								<%})%>							
+							<%}%>
 						</ul>
 					</nav>
 				</div>
 				<div class="nav-main col-md-10">
-					<%describe._render.forEach(function(c, i) {%>
-						<div id="div-<%=i%>" class="mod-column column-nav">
-							<div class="mod-column-head">
-								<h2 class="mod-column-title"><%=c.category%></h2>
-								<div class="mod-column-tool">
-									<span></span>
+					<%if(describe._render&&describe._render.length>0){%>
+						<%describe._render.forEach(function(c, i) {%>
+							<div id="div-<%=i%>" class="mod-column column-nav">
+								<div class="mod-column-head">
+									<h2 class="mod-column-title"><%=c.category%></h2>
+									<div class="mod-column-tool">
+										<span></span>
+									</div>
+								</div>
+								<div class="<%=c.banner?'big-':''%>mod-column-body">
+									<ul class="mod-list row">
+										<%c.links.forEach(function(p, j) {%>
+											<li class="mod-list-item col-md-3 col-xs-6 col-sm-3">
+												<a href="<%=p.link%>" target="_blank" class="product-info">
+													<div class="product-image">
+														<img src="<%=c.banner?p.image:p.logo%>" alt="<%=p.name%>">
+													</div>
+													<div class="product-content">
+														<h2 class="product-title"><%=p.name%></h2>
+														<div class="product-<%=c.banner?'meta':'desc'%>">
+															<span class="product-meta-item"><%=p.desc%></span>
+														</div>
+													</div>
+												</a>
+											</li>									
+										<%})%>
+									</ul>
 								</div>
 							</div>
-							<div class="<%=c.banner?'big-':''%>mod-column-body">
-								<ul class="mod-list row">
-									<%c.links.forEach(function(p, j) {%>
-										<li class="mod-list-item col-md-3 col-xs-6 col-sm-3">
-											<a href="<%=p.link%>" target="_blank" class="product-info">
-												<div class="product-image">
-													<img src="<%=c.banner?p.image:p.logo%>" alt="<%=p.name%>">
-												</div>
-												<div class="product-content">
-													<h2 class="product-title"><%=p.name%></h2>
-													<div class="product-<%=c.banner?'meta':'desc'%>">
-														<span class="product-meta-item"><%=p.desc%></span>
-													</div>
-												</div>
-											</a>
-										</li>									
-									<%})%>
-								</ul>
-							</div>
-						</div>
-					<%})%>
+						<%})%>					
+					<%}%>
 				</div>
 			</div>
 		</div>

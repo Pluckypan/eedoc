@@ -25,17 +25,19 @@
 						<a href="javascript:;" id="mStats" class="stats_click">统计 
 							<div class="stats">
 								<ul>
-									<%var linkCount=0;%>
-									<%describe._render.forEach(function(l,i){%>
-									<%linkCount+=l.links.length;%>
-									<%})%>
-									<li>收录站点：<%=linkCount%> 条</li>
-									<li>建站日期：2013-05-13</li>
-									<li>最后更新：8月21日</li>
-									<%if(config.nav&&config.nav.busuanzi&&config.nav.busuanzi==true){%>
-									<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-									<li>当前访问：<span id="busuanzi_value_site_pv">0</span></li>
-									<li>站点访问：<span id="busuanzi_value_site_uv">0</span></li>
+									<%if(describe._render&&describe._render.length>0){%>
+										<%var linkCount=0;%>
+										<%describe._render.forEach(function(l,i){%>
+										<%linkCount+=l.links.length;%>
+										<%})%>
+										<li>收录站点：<%=linkCount%> 条</li>
+										<li>建站日期：2013-05-13</li>
+										<li>最后更新：8月21日</li>
+										<%if(config.nav&&config.nav.busuanzi&&config.nav.busuanzi==true){%>
+										<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+										<li>当前访问：<span id="busuanzi_value_site_pv">0</span></li>
+										<li>站点访问：<span id="busuanzi_value_site_uv">0</span></li>
+										<%}%>									
 									<%}%>
 								</ul>
 							</div> 
