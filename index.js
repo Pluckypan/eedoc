@@ -7,17 +7,14 @@ var ftp = require('./lib/ftp');
 var exec = require('child_process').exec;
 var watch = require('watch');
 var server = require('ssr');
+var color = require('colors-cli/safe');
 var eeutils = require("./lib/eeutils");
+var error = color.red.bold;
 
 var root = process.cwd();
-var _configFile = path.join(root, "config.json");
-if (!eeutils.isFile(_configFile)) {
-	console.log(error("config.json not exist,please run eedoc -i first!"));
-	return;
-}
-config = JSON.parse(fs.readFileSync(_configFile));
+var config = parseConfig();
 var docPath = "command";
-if (config.doc) {
+if (config && config.doc) {
 	docPath = config.doc;
 }
 var cmd_path = path.join(root, docPath);
@@ -28,7 +25,7 @@ module.exports = function(commander) {
 	if (commander.init) {
 		init(commander);
 	} else if (commander.build) {
-		build(commander,null,config);
+		build(commander, null, config);
 	} else if (commander.server) {
 		if (eeutils.exists(pub_path)) {
 			process.chdir(pub_path);
@@ -40,17 +37,29 @@ module.exports = function(commander) {
 			console.log("floder 'public' not exist, please run 'eedoc -b' first!");
 		}
 	} else if (commander.deploy) {
-		deploy(commander,config);
+		deploy(commander, config);
 	} else if (commander.clean) {
 		eeutils.deleteFolderRecursive(_cache);
 		eeutils.deleteFolderRecursive(pub_path);
 	} else if (commander.watch) {
 		watcher(commander);
 	} else if (commander.ftp) {
-		ftp(commander,config);
-	}else{
+		ftp(commander, config);
+	} else {
 		console.log('coming soon.')
 	}
+}
+
+function parseConfig() {
+	var _configFile = path.join(root, "config.json");
+	if (eeutils.isFile(_configFile)) {
+		try {
+			return JSON.parse(fs.readFileSync(_configFile));
+		} catch (e) {
+			return null;
+		}
+	}
+	return null;
 }
 
 function watcher(commander) {
@@ -60,21 +69,21 @@ function watcher(commander) {
 			process.chdir(root);
 			build(commander, function(isOK) {
 				process.chdir(pub_path);
-			},config);
+			}, config);
 		});
 		monitor.on("changed", function(f, curr, prev) {
 			console.log("changed ->" + f);
 			process.chdir(root);
 			build(commander, function(isOK) {
 				process.chdir(pub_path);
-			},config);
+			}, config);
 		});
 		monitor.on("removed", function(f, stat) {
 			console.log("removed ->" + f);
 			process.chdir(root);
 			build(commander, function(isOK) {
 				process.chdir(pub_path);
-			}),config;
+			}), config;
 		});
 		//monitor.stop();
 	})
