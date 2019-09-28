@@ -161,15 +161,13 @@ $('.entry-content').find('a').each(function() {
 });
 
 function getQueryString(name) {
-	var query = window.location.search.substring(1);
-	var vars = query.split("&");
-	for (var i = 0; i < vars.length; i++) {
-		var pair = vars[i].split("=");
-		if (pair[0] == variable) {
-			return pair[1];
-		}
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) {
+		return unescape(r[2]);
 	}
-	return (false);
+	return null;
+	return false;
 }
 
 // 文章目录锚链接滑动
