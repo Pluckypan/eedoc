@@ -10,7 +10,11 @@
 						<%if(config.links&&config.links.length>0){%>
 							<div class="footer-links"> 友情链接：
 							<%config.links.forEach(function(l,i){%>
-								<a rel="nofollow" target="_blank" href="<%=l.link%>"><%=l.name%></a>
+								<%if(l.visibleTag&&l.visibleTag.length>0){%>
+									<a rel="nofollow" class="<%=l.visibleTag?'visibleTag':''%>" target="_blank" style="display:none;" visibleTag="<%=l.visibleTag%>" href="<%=l.link%>"><%=l.name%></a>
+								<%}else{%>
+									<a rel="nofollow" target="_blank" href="<%=l.link%>"><%=l.name%></a>
+								<%} %>
 							<%})%>
 							</div>
 						<%}%>

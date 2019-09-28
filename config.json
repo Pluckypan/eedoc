@@ -26,6 +26,13 @@
 		"desc": "Take it Easy & Make it Happen",
 		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
 		"image": ""
+	}, {
+		"link": "http://www.echo.engineer/",
+		"name": "回声嘹亮",
+		"desc": "I'm an Engineer",
+		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"image": "",
+		"visibleTag": "echo"
 	}],
 	"statics": "assets",
 	"deploys": [{

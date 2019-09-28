@@ -56,5 +56,18 @@
 ### Markdown 说明
 1. 所有被加粗的都会被搜索引擎列为关键字
 
+### 链接一般格式
+这里所说的链接包括但不限：友情链接、导航链接等 格式如下,`visibleTag` 作用为特定情况下才显示该链接
+```
+{
+	"link": "https://www.sigoo.com/",
+	"name": "极像素",
+	"desc": "超高像素看世界",
+	"logo": "http://www.sigoo.com/favicon.png",
+	"image": "",
+	"visibleTag":"hub"
+}
+```
+
 ### 参考
 - eedoc 参考主题 [flex-blog](http://infinitythemes.ge/flex-blog/)

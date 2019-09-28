@@ -160,6 +160,14 @@ $('.entry-content').find('a').each(function() {
 	}
 });
 
+function getQueryString(name) {
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) {
+		return unescape(r[2]);
+	}
+	return null;
+}
 
 // 文章目录锚链接滑动
 $(document).ready(function() {
@@ -175,6 +183,15 @@ $(document).ready(function() {
 					500);
 				return false;
 			}
+		}
+	});
+
+	$(".visibleTag").each(function() {
+		const tag = $(this).attr("visibleTag");
+		if (getQueryString(tag)) {
+			$(this).css("display", "");
+		} else {
+			$(this).css("display", "none");
 		}
 	});
 });
