@@ -55,3 +55,6 @@
 
 ### Markdown 说明
 1. 所有被加粗的都会被搜索引擎列为关键字
+
+### 参考
+- eedoc 参考主题 [flex-blog](http://infinitythemes.ge/flex-blog/)
