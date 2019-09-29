@@ -10,14 +10,28 @@
 	"user": {
 		"name": "User",
 		"desc": "I'm a boy.",
-		"avatar": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"avatar": "http://img.1991th.com/tuchongeter/statics/default_avatar.jpg",
 		"email": "user@echo.engineer",
 		"social": [{
-			"link": "http://www.1991th.com/",
-			"name": "风之谷",
-			"desc": "Take it Easy & Make it Happen",
-			"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
-			"image": ""
+			"link": "mailto:plucky@echo.engineer",
+			"name": "邮箱",
+			"icon": "icon-email",
+			"target": "_blank"
+		}, {
+			"link": "https://space.bilibili.com/362980071",
+			"name": "B站",
+			"icon": "icon-bilibili",
+			"target": "_blank"
+		}, {
+			"link": "http://plucky.tuchong.com/",
+			"name": "图虫",
+			"icon": "icon-tuchong",
+			"target": "_blank"
+		}, {
+			"link": "https://github.com/Pluckypan",
+			"name": "Github",
+			"icon": "icon-github",
+			"target": "_blank"
 		}]
 	},
 	"links": [{
@@ -64,7 +78,11 @@
 			"distractionFreeMode": true
 		}
 	},
-	"theme": "nav",
+	"iconfont": {
+		"link": "https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css",
+		"family": "engineer"
+	},
+	"theme": "echo",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -83,5 +101,23 @@
 			"name": "首页",
 			"target": "_self"
 		}]
+	},
+	"echo": {
+		"stars": {
+			"name": "星球",
+			"links": [{
+				"link": "#",
+				"name": "解忧杂货铺",
+				"target": "_self"
+			},{
+				"link": "#",
+				"name": "影单",
+				"target": "_self"
+			},{
+				"link": "#",
+				"name": "歌单",
+				"target": "_self"
+			}]
+		}
 	}
 }

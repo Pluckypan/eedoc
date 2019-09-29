@@ -1,0 +1,53 @@
+<%- include('header',{'type':'message'});%>
+		<!-- begin content -->
+		<div id="content-wrap" class="message">
+			<div class="row wide">
+				<div class="col-eight tab-full add-bottom">
+					<div>
+						<img src="https://pandapro.demo.nicetheme.xyz/wp-content/uploads/2019/07/2019072006470679.png" style="width: 100%;" />
+					</div>
+					<div class="message-card">
+						<div class="message-body">
+							<div class="message-header animate-this">
+								<h1 class="h3">留言</h1>
+							</div>
+							<div class="message-content animate-this">
+								<p>
+									所有的伟大,都源于一个勇敢的开始
+								</p>
+							</div>
+						</div>
+					</div>
+					<%if(config.comment&&config.comment.gitalk&&config.comment.gitalk.clientID){%>
+						<%- include('comment');%>
+					<%}%>
+				</div>
+				<div class="col-four tab-full">
+					<div class="message-card no-padding">
+						<div class="article-daily">
+							<img class="article-daily-background" src="http://img.1991th.com/tuchongeter/statics/photo-daily.jpg!600" />
+							<div class="overlay"></div>
+							<div class="date">
+								<h1 class="day">
+									<a href="#" title="">18</a>
+								</h1>
+								<ul class="month">
+									<li>7月,2019</li>
+								</ul>
+							</div>
+							<div class="words">
+								<p>
+									生活嘛，就是一个不断逃离，最后发现自己回到原点的过程。from 陈谌《南极姑娘》
+								</p>
+							</div>
+							<div class="daily-action">
+								<span class="badge">每日一言</span>
+								<i class="engineer icon-refresh"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end content -->	
+<%- include('footer');%>	

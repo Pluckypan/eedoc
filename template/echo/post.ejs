@@ -1,0 +1,159 @@
+<%- include('header',{'type':'post'});%>
+		<!-- begin content -->
+		<div id="content-wrap" class="post">
+			<div class="row wide">
+				<div class="col-eight tab-full">
+					<div class="post-container message-card">
+						<img src="http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg" draggable="false">
+						<div class="overlay"></div>
+						<div class="post-content">
+							<h1 class="post-title">
+								<a href="post.html" title="">永远不要停止前进的脚步...</a>
+							</h1>
+							<ul class="post-date">
+								<li>2019-07-18 22:15</li>
+								<li><span>旅拍</span></li>
+							</ul>
+						</div>
+					</div>
+					<article class="post-body message-card">
+						<h2>每日精选</h2>
+						<blockquote cite="http://where-i-got-my-info-from.com">
+							<p>
+								没有不可治愈的伤痛，没有不能结束的沉沦，所有失去的，会以另一种方式归来。
+							</p>
+							<cite>
+								约翰•肖尔斯《许愿树》
+							</cite>
+						</blockquote>
+						<h2>文字</h2>
+						<p>
+							前几天在 google 应用市场电影专区看到了《惊奇队长》上线了，不过价格有点高，港币 28 元。价格贵倒不说，我还不知道怎么充值。但是我就算知道怎么充值我也不会去充值 28 港元去看一部电影。
+						</p>
+						<h2>图片</h2>
+						<p>
+							<img src="images/shutterbug.jpg" alt="">
+						</p>
+						<h2>画廊</h2>
+						<div class="format-gallery">
+							<div class="content-media">
+								<div class="post-slider flexslider">
+									<ul class="slides">
+										<li>
+											<img src="images/thumbs/single/gallery/single-gallery-01.jpg">
+										</li>
+										<li>
+											<img src="images/thumbs/single/gallery/single-gallery-02.jpg">
+										</li>
+										<li>
+											<img src="images/thumbs/single/gallery/single-gallery-03.jpg">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<h2>链接</h2>
+						<p>
+							<a href="#">天空之城</a>以另一种视角看世界<strong>我去看世界</strong><strong>风之谷</strong>
+						</p>
+						<h2>列表</h2>
+						<div class="table-responsive">
+							<table>
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Age</th>
+										<th>Sex</th>
+										<th>Location</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>William</td>
+										<td>16</td>
+										<td>男</td>
+										<td>中国.大陆</td>
+									</tr>
+									<tr>
+										<td>Sofia</td>
+										<td>18</td>
+										<td>女</td>
+										<td>西班牙.马德里</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<h2>代码</h2>
+						<pre>
+							<code>
+code {
+   font-size: 1.4rem;
+   margin: 0 .2rem;
+   padding: .2rem .6rem;
+   white-space: nowrap;
+   background: #F1F1F1;
+   border: 1px solid #E1E1E1;	
+   border-radius: 3px;
+}								
+							</code>
+						</pre>
+						<h2>首字母强调</h2>
+						<p class="drop-cap">
+							上帝在给你关上一扇门的同时，另一扇门也在悄悄为你打开。自从天地生成以来，任何事的发展变化过程中必然会出现缝隙，这是我们不可不留心观察的。生活中的任何困难如同缝隙，只要我们根据自然规律和社会规律仔细观察研究，再大的困难都不是事。
+						</p>
+
+						<h2>有序列表</h2>
+						<ol>
+							<li>调音师</li>
+							<li>我们的父辈</li>
+							<li>爆裂鼓手</li>
+							<li>狩猎</li>
+						</ol>
+						<h2>无序列表</h2>
+						<ul>
+							<li>调音师</li>
+							<li>我们的父辈</li>
+							<li>爆裂鼓手</li>
+							<li>狩猎</li>
+						</ul>
+						<h2>视频</h2>
+						<div class="fluid-video-wrapper">
+							<iframe src="https://player.bilibili.com/player.html?aid=64229242&cid=111520559&page=1" frameborder="0"
+							 webkitallowfullscreen mozallowfullscreen allowfullscreen>
+							</iframe>
+						</div>
+						<h2>后续</h2>
+						<p>
+							最近出的《蜘蛛侠：英雄远征》还没去看，准备今晚去看看，或者明天去看看。不能漏了，再漏又特么要去找枪版了。这种滋味不太好受。看了评分说是挺高的，要去看一下了。周边买不起，电影那还是看得起的。朋友圈里总是有人晒他们的漫威周边，一个模型快过万了，我特么心里看着难受，买不起买不起。
+						</p>
+					</article>
+					<%if(config.comment&&config.comment.gitalk&&config.comment.gitalk.clientID){%>
+						<%- include('comment');%>
+					<%}%>
+				</div>
+				<div class="col-four tab-full">
+					<div class="infinity-widget widget_categories">
+						<div class="widget-title">
+							<h3>KeyWords</h3>
+						</div>
+						<p class="category">
+							<a href="#" class="current">全部</a>
+							<a href="#">旅拍(10)</a>
+							<a href="#">心情(36)</a>
+							<a href="#">杂文(6)</a>
+							<a href="#">系列(12)</a>
+							<a href="#">剪辑(6)</a>
+							<a href="#">音乐(3)</a>
+							<a href="#">电影(6)</a>
+							<a href="#">其他(11)</a>
+						</p>
+					</div>
+					<div>
+						<img src="https://pandapro.demo.nicetheme.xyz/wp-content/uploads/2019/07/2019072006470679.png" style="width: 100%;" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end content -->	
+<%- include('footer');%>	

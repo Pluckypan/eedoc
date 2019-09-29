@@ -56,8 +56,22 @@
 ### Markdown 说明
 1. 所有被加粗的都会被搜索引擎列为关键字
 
+### iconfont 属性说明
+为了让用户选择自己的图标库(目前支持iconfont),link&family直接从 iconfont 后台拷贝即可
+```
+{
+"iconfont": {
+	"link": "https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css",
+	"family": "engineer"
+}
+}
+```
 ### 链接一般格式
-这里所说的链接包括但不限：友情链接、导航链接等 格式如下,`visibleTag` 作用为特定情况下才显示该链接
+这里所说的链接包括但不限：友情链接、导航链接等 格式如下；
+- `visibleTag` 作用为特定情况下才显示该链接
+- `image` 属性一般用作大图时显示
+- `icon` 一般使用矢量小图标 直接使用 iconfont 的 symbol class
+
 ```
 {
 	"link": "https://www.sigoo.com/",
@@ -65,7 +79,9 @@
 	"desc": "超高像素看世界",
 	"logo": "http://www.sigoo.com/favicon.png",
 	"image": "",
-	"visibleTag":"hub"
+	"visibleTag":"hub",
+	"icon":"icon-email",
+	"target":"_self"
 }
 ```
 

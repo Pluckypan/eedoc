@@ -1,0 +1,147 @@
+<%- include('header',{type: "index"}); %>		
+		<!-- begin content -->
+		<div id="content-wrap">
+			<div class="row wide">
+				<div class="col-eight tab-full">
+					<div class="brick entry featured-grid animate-this">
+						<div class="entry-content">
+							<div id="featured-post-slider" class="flexslider">
+								<ul class="slides">
+									<li>
+										<div class="featured-post-slide">
+											<img src="images/thumbs/featured/featured-1.jpg" class="post-background">
+											<div class="overlay"></div>
+											<div class="post-content">
+												<ul class="entry-meta">
+													<li>August 29, 2016</li>
+													<li><a href="#">Sasuke Uchiha</a></li>
+												</ul>
+												<h1 class="slide-title">
+													<a href="post.html" title="">Enhancing Your Designs with Negative Space</a>
+												</h1>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="featured-post-slide">
+											<img src="images/thumbs/featured/featured-2.jpg" class="post-background">
+											<div class="overlay"></div>
+											<div class="post-content">
+												<ul class="entry-meta">
+													<li>August 29, 2016</li>
+													<li><a href="#">Sasuke Uchiha</a></li>
+												</ul>
+												<h1 class="slide-title">
+													<a href="post.html" title="">Enhancing Your Designs with Negative Space</a>
+												</h1>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row add-bottom">
+						<article class="col-six tab-full article animate-this">
+							<div class="entry-media">
+								<a href="post.html" target="_self">
+									<img src="images/thumbs/featured/featured-2.jpg" alt="" style="width: 100%;height: 200px; object-fit:cover;">
+								</a>
+							</div>
+							<div class="entry-body">
+								<div class="entry-header">
+									<div class="meta-categories">
+										<span class="category-prefix">#</span>
+										<a href="category.html" rel="category tag">
+											旅拍
+										</a>
+									</div>
+									<h1 class="post-title">
+										<a href="post.html" target="">想辞职出去浪一把了</a>
+									</h1>
+									<div class="meta-author-date">
+										<span class="meta-date">December 9, 2016</span>
+									</div>
+								</div>
+								<div class="entry-content">
+									<p>
+										那一天前还对什么都有希望，动力满满的，折腾也乐此不疲。发生变故后，真的是特别消极，意外和明天哪一个会先到，我们谁都不知道。
+									</p>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="col-four tab-full">
+					<div class="infinity-widget animate-this">
+						<div class="textwidget">
+							<img src="<%=config.user.avatar%>" class="avatar" alt="">
+							<h6 style="text-align:center;font-size:16px; letter-spacing:1.5px; margin-bottom:4px;">
+								<%=config.user.name%>
+							</h6>
+							<p style="text-align:center"><%=config.user.desc%></p>
+
+							<img src="images/infinityx1.png" alt="" style="margin:10px auto 0px auto;width:40px;">
+						</div>
+					</div>
+					<div class="infinity-widget infinity_social_widget animate-this">
+						<div class="widget-title">
+							<h3>Follow Me</h3>
+						</div>
+						<div class="social-icons">
+							<%if(config.user.social&&config.user.social.length>0){%>
+								<%config.user.social.forEach(function(l,i){%>
+									<a href="<%=l.link%>" target="<%=l.target%>">
+										<i class="<%=config.iconfont.family%> <%=l.icon%>"></i>
+									</a>
+								<%})%>
+							<%}%>
+						</div>
+					</div>
+					<div class="infinity-widget widget_categories animate-this">
+						<div class="widget-title">
+							<h3>Categories</h3>
+						</div>
+						<p class="category">
+							<a href="category.html">全部</a>
+							<a href="category.html">旅拍(10)</a>
+							<a href="category.html">心情(36)</a>
+							<a href="category.html">杂文(6)</a>
+							<a href="category.html">系列(12)</a>
+							<a href="category.html">剪辑(6)</a>
+							<a href="category.html">音乐(3)</a>
+							<a href="category.html">电影(6)</a>
+							<a href="category.html">其他(11)</a>
+						</p>
+					</div>
+					<div class="infinity-widget animate-this">
+						<div class="widget-title">
+							<h3>photograph</h3>
+						</div>
+						<div class="textwidget">
+							<ul class="instagram-feed">
+								<li>
+									<a target="_blank" href="http://infinitythemes.ge/images/instagram/5.jpg">
+										<img src="http://infinitythemes.ge/images/instagram/5.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://infinitythemes.ge/images/instagram/6.jpg">
+										<img src="http://infinitythemes.ge/images/instagram/6.jpg" alt="">
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://infinitythemes.ge/images/instagram/7.jpg">
+										<img src="http://infinitythemes.ge/images/instagram/7.jpg" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end content -->
+<%- include('footer'); %>
+		
+		
