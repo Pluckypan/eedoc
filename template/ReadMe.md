@@ -5,15 +5,27 @@
 	_js:['js/index.js','js/scroll.js'], // 要压缩的js 对应渲染到 public 目录下,js/index.js
 	_css:['css/index.styl'], // 要渲染的样式 对应渲染到 public 目录下,css/index.css
 	_copy:['img/','favicon.icon'],//拷贝资源文字,可以是文件夹,也可以是文件,如果是文件夹,则默认不拷贝 _ejs,_js,_css中包含的文件
-	postTpl:"detail.ejs"// 文章页需要单独渲染 所以需要单独设置渲染模板
+	postTpl:"detail.ejs",// 文章页需要单独渲染 所以需要单独设置渲染模板	
+	renderIntro:false // 是否渲染 postTpl 文档的前三行(一般用作标题,简述)
+	iframeTpl:"_iframe.ejs",  // markdown 中通过 [iframe](xxx) 即可渲染 iframe 标签
+	galleryTpl:"_gallery.ejs" // markdown 中通过 ![gallery](xxx1) ![gallery](xxx2) ![gallery](xxx3) 即可渲染Banner
 }
 ```
 
 ### 页面取值说明
+```
+relative_path // 当前文件相对于根目录的相对路径
+current_path // 当前 html 路径
+describe // 当前 md 的描述
+config // 传入所有配置,各个主体可以自行取值 配置中可以有自己的配置字段
+eedoc // eedoc
+```
 1. 模板最终是通过 ejs 渲染成 html的，具体语法请参考:[链接](https://ejs.bootcss.com/)
 2. 在模板中可以取到 config 对象(来自工程目录下 config.json)
 3. 理论上可以在 config.json 中定义任意你想定义的参数,这样在模板中就能取到
 4. 可以在任意页面取到 `eedoc` 对象,主要存储一些统计参数,{"total":1}
+5. `<%=relative_path%>` 可以获取当前页面相对于根目录的路径,一般文章详情页会需要用到(因为路径问题)
+6. `{{content}}` 可以获取当前 markdown 渲染 html 结果
 
 ### 不同模板关于 page 标准字段的定义
 一般情况下 页面(非post),渲染方式分为3种
@@ -40,6 +52,7 @@
 
 ### 各主题自定义配置说明
 一般情况下,主题的自定义配置,在工程目录下 config.json 中按照主题名称添加字段.如主题 `nav`,配置如下
+
 ```
 {
 	"nav": {

@@ -306,13 +306,13 @@ pre {
 }
 
 pre {
-	padding: 2.4rem 3rem 3rem;
+	padding: 2rem;
 	background: #EAEAEA;
-	margin: 4.2rem 0;
+	margin: 0rem;
 }
 
 code {
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	margin: 0 .2rem;
 	padding: .3rem .6rem;
 	white-space: nowrap;
@@ -322,9 +322,9 @@ code {
 pre>code {
 	display: block;
 	white-space: pre;
-	line-height: 2;
-	padding: 0;
-	margin: 0;
+	line-height: 1.6;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 pre.prettyprint>code {
@@ -4145,12 +4145,6 @@ h7 {
 
 .post-body table tbody tr td {
 	padding: 1rem 2rem;
-}
-
-.post-body pre {
-	margin-top: 2rem;
-	padding: 0rem 4rem 0rem 4rem;
-	margin-bottom: 2rem;
 }
 
 .post-body ol {
