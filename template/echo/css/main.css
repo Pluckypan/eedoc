@@ -2345,6 +2345,10 @@ header .logo a {
 	margin-bottom: 4.8rem;
 }
 
+.about-body .content-media {
+	margin-bottom: 3.125rem !important;
+}
+
 #content-wrap .content-media img {
 	vertical-align: bottom;
 }
@@ -2864,7 +2868,7 @@ footer ul li {
 }
 
 .blog-single .author-profile {
-	margin-top: 1rem;
+	margin-top: 0rem;
 	padding-left: 9rem;
 	position: relative;
 }

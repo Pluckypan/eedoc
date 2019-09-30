@@ -1,0 +1,19 @@
+{
+	"adv": {
+		"link": "http://www.1991th.com/",
+		"name": "天猫导流",
+		"desc": "天猫2019双十一.火热进行中",
+		"image": "assets/default-adv.png",
+		"target": "blank"
+	},
+	"words": [{
+		"time": 1569918163,
+		"desc": "生活嘛，就是一个不断逃离，最后发现自己回到原点的过程。from 陈谌《南极姑娘》",
+		"image": "assets/single-01.jpg"
+	}, {
+		"time": 1569918163,
+		"desc": "1996注定是一个不平凡的一年,尽管当时的他们还是那个热闹世界失意的人.",
+		"image": "assets/single-02.jpg"
+	}],
+	"message": "所有的伟大,都源于一个勇敢的开始"
+}

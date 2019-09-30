@@ -4,7 +4,11 @@
 			<div class="row wide">
 				<div class="col-eight tab-full add-bottom">
 					<div>
-						<img src="https://pandapro.demo.nicetheme.xyz/wp-content/uploads/2019/07/2019072006470679.png" style="width: 100%;" />
+						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
+						<%const advImage=describe._render&&describe._render.adv?describe._render.adv.image:null%>	
+						<a href="<%=describe._render&&describe._render.adv?describe._render.adv.link:'#'%>" target="<%=describe._render&&describe._render.adv?describe._render.adv.target:'_self'%>">
+							<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>" style="width: 100%;max-height:140px;object-fit:cover;" draggable="false" alt="<%=config.user.name%>"/>
+						</a>
 					</div>
 					<div class="message-card">
 						<div class="message-body">
@@ -13,7 +17,7 @@
 							</div>
 							<div class="message-content animate-this">
 								<p>
-									所有的伟大,都源于一个勇敢的开始
+									<%-describe._render.message%>
 								</p>
 							</div>
 						</div>
@@ -25,29 +29,54 @@
 				<div class="col-four tab-full">
 					<div class="message-card no-padding">
 						<div class="article-daily">
-							<img class="article-daily-background" src="http://img.1991th.com/tuchongeter/statics/photo-daily.jpg!600" />
+							<%const words=describe._render&&describe._render.words&&describe._render.words.length>0?describe._render.words:null%>
+							<%const word=words?words[Math.floor(Math.random()*(words.length))]:null%>
+							<%const time=word&&word.time?word.time:new Date().getTime()%>	
+							<img class="article-daily-background" src="<%=word.image%>" data-src="<%=word.image?word.image:placeholder%>" />
 							<div class="overlay"></div>
 							<div class="date">
 								<h1 class="day">
-									<a href="#" title="">18</a>
+									<a href="#" title="" id="#day"><%=new Date(time*1000).getDate()%></a>
 								</h1>
 								<ul class="month">
-									<li>7月,2019</li>
+									<li><span id="month"><%=new Date(time*1000).getMonth()+1%></span>月,
+									<span id="year"><%=new Date(time*1000).getFullYear()%></span></li>
 								</ul>
 							</div>
 							<div class="words">
-								<p>
-									生活嘛，就是一个不断逃离，最后发现自己回到原点的过程。from 陈谌《南极姑娘》
+								<p id="words">
+									<%=word.desc%>
 								</p>
 							</div>
 							<div class="daily-action">
 								<span class="badge">每日一言</span>
-								<i class="engineer icon-refresh"></i>
+								<i class="engineer icon-refresh" id="daily-action"></i>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			var words='<%-JSON.stringify(describe._render&&describe._render.words&&describe._render.words.length>0?describe._render.words:[])%>';
+			 words=JSON.parse(words);
+			 function randomWord(){
+			 	return words[Math.floor(Math.random()*(words.length))];
+			 }
+			 function renderWord(){
+			 	const word=randomWord();
+			 	const time=new Date(word.time*1000);
+			 	$("#day").html(time.getDate());
+			 	$("#month").html(time.getMonth()+1);
+			 	$("#year").html(time.getFullYear());
+			 	$("#words").html(word.desc);
+			 }
+			 $(function(){
+			 	renderWord();
+			 });
+			 $(".overlay").click(function(){
+			 	renderWord();
+			 });
+		</script>
 		<!-- end content -->	
 <%- include('footer');%>	

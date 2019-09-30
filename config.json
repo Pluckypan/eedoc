@@ -95,6 +95,10 @@
 		"about.ejs": {
 			"name": "关于我",
 			"render": "about.md"
+		},
+		"message.ejs": {
+			"name": "留言板",
+			"render": "message.json"
 		}
 	},
 	"nav": {
@@ -122,6 +126,6 @@
 				"target": "_self"
 			}]
 		},
-		"galleryAbout": ["./assets/single-01.jpg","./assets/single-02.jpg"]
+		"galleryAbout": ["./assets/single-01.jpg", "./assets/single-02.jpg"]
 	}
 }
