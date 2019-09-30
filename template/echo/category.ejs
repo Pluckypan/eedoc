@@ -1,37 +1,10 @@
-<%- include('header',{'type':'category'});%>
+<%- include('header',{'type':'category','pname':'分类'});%>
 		<!-- begin content -->
 		<div id="content-wrap" class="styles">
 			<div class="row wide">
 				<div class="col-eight tab-full">
 					<div class="row add-bottom">
-						<article class="col-six tab-full article animate-this">
-							<div class="entry-media">
-								<a href="post.html" target="_self">
-									<img src="images/thumbs/featured/featured-2.jpg" alt="" style="width: 100%;height: 200px; object-fit:cover;">
-								</a>
-							</div>
-							<div class="entry-body">
-								<div class="entry-header">
-									<div class="meta-categories">
-										<span class="category-prefix">#</span>
-										<a href="category.html" rel="category tag">
-											旅拍
-										</a>
-									</div>
-									<h1 class="post-title">
-										<a href="post.html" target="">想辞职出去浪一把了</a>
-									</h1>
-									<div class="meta-author-date">
-										<span class="meta-date">December 9, 2016</span>
-									</div>
-								</div>
-								<div class="entry-content">
-									<p>
-										那一天前还对什么都有希望，动力满满的，折腾也乐此不疲。发生变故后，真的是特别消极，意外和明天哪一个会先到，我们谁都不知道。
-									</p>
-								</div>
-							</div>
-						</article>
+						<%-include('article',{'article':2})%>
 					</div>
 				</div>
 				<div class="col-four tab-full">
@@ -52,7 +25,11 @@
 						</p>
 					</div>
 					<div>
-						<img src="https://pandapro.demo.nicetheme.xyz/wp-content/uploads/2019/07/2019072006470679.png" style="width: 100%;" />
+						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
+						<%const advImage=config.adv?config.adv.image:null%>	
+						<a href="<%=config.adv?config.adv.link:'#'%>" target="<%=config.adv?config.adv.target:'_self'%>">
+							<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>" style="width: 100%;max-height:140px;object-fit:cover;" draggable="false" alt="<%=config.user.name%>"/>
+						</a>
 					</div>
 				</div>
 			</div>

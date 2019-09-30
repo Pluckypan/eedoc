@@ -1,11 +1,4 @@
 {
-	"adv": {
-		"link": "http://www.1991th.com/",
-		"name": "天猫导流",
-		"desc": "天猫2019双十一.火热进行中",
-		"image": "assets/default-adv.png",
-		"target": "blank"
-	},
 	"words": [{
 		"time": 1569918163,
 		"desc": "生活嘛，就是一个不断逃离，最后发现自己回到原点的过程。from 陈谌《南极姑娘》",

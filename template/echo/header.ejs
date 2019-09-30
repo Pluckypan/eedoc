@@ -6,9 +6,9 @@
 	<!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title>首页 - 风之谷</title>
-		<meta name="description" content="Plucky.Pan,Plucky,plucky@echo.engineer">
-		<meta name="author" content="Plucky">
+		<title><%=describe.name?describe.name:pname%> - <%=config.title%></title>
+		<meta name="description" content="<%=describe.desc%>">
+		<meta name="author" content="<%=config.user.name%>">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -36,19 +36,19 @@
 				<nav id="main-nav-wrap">
 					<ul class="main-navigation sf-menu">
 						<li class="<%=type=='index'?'current':''%>">
-							<a href="<%=type!='index'?'index.html':'#'%>" title="">首页</a>	
+							<a href="<%=type!='index'?relative_path+'index.html':'#'%>" title="">首页</a>	
 						</li>
 						<li class="<%=type=='category'?'current':''%>">
-							<a href="<%=type!='category'?'category.html':'#'%>" title="">分类</a>
+							<a href="<%=type!='category'?relative_path+'category.html':'#'%>" title="">分类</a>
 						</li>
 						<li class="<%=type=='archives'?'current':''%>">
-							<a href="<%=type!='archives'?'archives.html':'#'%>" title="">存档</a>
+							<a href="<%=type!='archives'?relative_path+'archives.html':'#'%>" title="">存档</a>
 						</li>
 						<li class="<%=type=='message'?'current':''%>">
-							<a href="<%=type!='message'?'message.html':'#'%>" title="">留言板</a>
+							<a href="<%=type!='message'?relative_path+'message.html':'#'%>" title="">留言板</a>
 						</li>
 						<li class="<%=type=='about'?'current':''%>">
-							<a href="<%=type!='about'?'about.html':'#'%>" title="">关于</a>	
+							<a href="<%=type!='about'?relative_path+'about.html':'#'%>" title="">关于</a>	
 						</li>
 						<%if(config.echo.stars.links&&config.echo.stars.links.length>0){%>
 							<li class="has-children">

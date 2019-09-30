@@ -1,12 +1,12 @@
-<%- include('header',{'type':'message'});%>
+<%- include('header',{'type':'message','pname':'留言板'});%>
 		<!-- begin content -->
 		<div id="content-wrap" class="message">
 			<div class="row wide">
 				<div class="col-eight tab-full add-bottom">
 					<div>
 						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
-						<%const advImage=describe._render&&describe._render.adv?describe._render.adv.image:null%>	
-						<a href="<%=describe._render&&describe._render.adv?describe._render.adv.link:'#'%>" target="<%=describe._render&&describe._render.adv?describe._render.adv.target:'_self'%>">
+						<%const advImage=config.adv?config.adv.image:null%>	
+						<a href="<%=config.adv?config.adv.link:'#'%>" target="<%=config.adv?config.adv.target:'_self'%>">
 							<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>" style="width: 100%;max-height:140px;object-fit:cover;" draggable="false" alt="<%=config.user.name%>"/>
 						</a>
 					</div>

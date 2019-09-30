@@ -82,6 +82,13 @@
 		"link": "https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css",
 		"family": "engineer"
 	},
+	"adv": {
+		"link": "http://www.1991th.com/",
+		"name": "天猫导流",
+		"desc": "天猫2019双十一.火热进行中",
+		"image": "assets/default-adv.png",
+		"target": "blank"
+	},
 	"theme": "echo",
 	"page": {
 		"index.ejs": {

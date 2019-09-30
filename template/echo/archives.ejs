@@ -1,4 +1,4 @@
-<%- include('header',{'type':'archives'});%>
+<%- include('header',{'type':'archives','pname':'存档'});%>
 		<!-- begin content -->
 		<div id="content-wrap" class="styles">
 			<div class="row wide">
@@ -86,6 +86,13 @@
 							<a href="#2013" title="2013">2013</a>
 							<a href="#2012" title="2012">2012</a>
 						</p>
+					</div>
+					<div>
+						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
+						<%const advImage=config.adv?config.adv.image:null%>	
+						<a href="<%=config.adv?config.adv.link:'#'%>" target="<%=config.adv?config.adv.target:'_self'%>">
+							<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>" style="width: 100%;max-height:140px;object-fit:cover;" draggable="false" alt="<%=config.user.name%>"/>
+						</a>
 					</div>
 				</div>
 			</div>
