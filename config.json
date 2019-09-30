@@ -90,8 +90,11 @@
 			"render": "index.json"
 		},
 		"list.ejs": {
-			"name": "搜索",
-			"render": "index.md"
+			"name": "搜索"
+		},
+		"about.ejs": {
+			"name": "关于我",
+			"render": "about.md"
 		}
 	},
 	"nav": {
@@ -118,6 +121,7 @@
 				"name": "歌单",
 				"target": "_self"
 			}]
-		}
+		},
+		"galleryAbout": ["./assets/single-01.jpg","./assets/single-02.jpg"]
 	}
 }

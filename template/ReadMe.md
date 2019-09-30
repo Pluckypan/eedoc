@@ -34,6 +34,7 @@ eedoc // eedoc
 3. 如果想在单页面填充markdown数据,可配置为 xxx.md
 4. 不管是 xxx.json 或 xxx.md 最终都会渲染为 _render 字段。供各个页面渲染时使用。
 5. 在模板引擎中直接使用 <%=describe._render%>
+6. 当页面由 xxx.md 驱动时,页面取值：注意是 `<%-%>` 不是 `<%=%>`，否则会显示一堆字符串
 ```
 {
 	"page": {

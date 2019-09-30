@@ -2,53 +2,65 @@
 		<!-- begin content -->
 		<div id="content-wrap" class="styles">
 			<div class="row">
-				<div class="col-full format-gallery">
-					<div class="content-media">
-						<div class="post-slider flexslider">
-							<ul class="slides">
-								<li>
-									<img src="images/thumbs/single/gallery/single-gallery-01.jpg">
-								</li>
-								<li>
-									<img src="images/thumbs/single/gallery/single-gallery-02.jpg">
-								</li>
-								<li>
-									<img src="images/thumbs/single/gallery/single-gallery-03.jpg">
-								</li>
-							</ul>
+				<%if(config.echo&&config.echo.galleryAbout&&config.echo.galleryAbout.length>0){%>
+					<div class="col-full format-gallery">
+						<div class="content-media">
+							<div class="post-slider flexslider">
+								<ul class="slides">
+								<%config.echo.galleryAbout.forEach(function(img,i){%>
+									<li>
+										<img src="<%=img%>">
+									</li>					
+								<%});%>
+								</ul>
+							</div>
 						</div>
-					</div>
-				</div>
+					</div>					
+				<%}%>
 				<div class="col-full blog-single">
 					<div class="author-profile">
-						<img src="http://img.1991th.com/tuchongeter/statics/me-280x274.jpg" alt="Plucky">
+						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
+						<img src="<%=config.user.avatar%>" data-src="<%=config.user&&config.user.avatar&&config.user.avatar.length>0?'':placeholder%>" draggable="false" alt="<%=config.user.name%>">
 						<div class="about">
-							<h4><a href="#">Plucky.Pan</a></h4>
-							<p>
-								Hi,欢迎来到<strong>风之谷</strong>.我出生在1991年农历二月花开的季节<a href="https://baike.baidu.com/item/%E8%8A%B1%E6%9C%9D/1625494" target="_blank">花朝节</a>,由于很喜欢
-												<a href="https://hanyu.baidu.com/shici/detail?pid=9215f1d72e2f48a8b8bbf0a5907ed885&from=kg0&highlight=%E4%BA%8C%E6%9C%88%E6%98%A5%E9%A3%8E%E4%BC%BC%E5%89%AA%E5%88%80"
-												 target="_blank">不知细叶谁裁出,二月春风似剪刀</a>
-												,所以这里被叫做 <strong>风之谷(The Valley of The Winds)</strong>.我是这里的主人 <strong>贰月的風</strong>.从2016年04月22日开始运作以来,<strong>1991th.com[风之谷]</strong>
-											主要用于记录生活点点滴滴[摄影,日志,音乐,视频].
-							</p>
-							<ul class="author-social animate-this">
-								<li><a href="mailto:plucky@echo.engineer" target="_blank">邮箱</a></li>
-								<li><a href="https://space.bilibili.com/362980071" target="_blank">B站</a></li>
-								<li><a href="http://plucky.tuchong.com/" target="_blank">图虫摄影</a></li>
-								<li><a href="https://github.com/Pluckypan" target="_blank">Github</a></li>
-							</ul>
+							<h4>
+								<a href="#"><%=config.user.name%></a>
+								<span style="color:#999;font-size:12px!important;display:block;">
+									<%=config.user.desc%>
+								</span>
+							</h4>
+							<div class="post-body">
+								<%-describe._render%>
+							</div>
+							<%if(config.user&&config.user.social&&config.user.social.length>0){%>
+								<ul class="author-social animate-this">
+									<%config.user.social.forEach(function(l,i){%>
+										<li><a href="<%=l.link%>" target="<%=l.target%>"><%=l.name%></a></li>
+									<%});%>
+								</ul>
+							<%}%>
 						</div>
 					</div>
 				</div>
-				<div class="col-full blog-single animate-this">
-					<p class="tags">
-						<span>友情链接 :</span>
-						<a href="https://www.vmovier.com/" target="_blank">场库</a>
-						<a href="https://www.rui123.com/" target="_blank">凡高的耳朵.音乐</a>
-						<a href="https://500px.me/" target="_blank">500px.me</a>
-						<a href="https://www.skypixel.com/" target="_blank">天空之城</a>
-					</p>
-				</div>
+				<%if(config.links&&config.links.length>0){%>
+					<div class="col-full blog-single animate-this">
+						<p class="tags">
+							<span>友情链接 :</span>
+							<%config.links.forEach(function(l,i){%>
+								<%if(l.visibleTag&&l.visibleTag.length>0){%>
+									<a class="<%=l.visibleTag?'visibleTag':''%>" 
+									target="<%=l.target?l.target:'_blank'%>" style="display:none;" 
+									visibleTag="<%=l.visibleTag%>" href="<%=l.link%>">
+										<%=l.name%>
+									</a>
+								<%}else{%>
+									<a target="<%=l.target?l.target:'_blank'%>" href="<%=l.link%>">
+										<%=l.name%>
+									</a>
+								<%} %>
+							<%})%>
+						</p>
+					</div>
+				<%}%>
 			</div>
 		</div>
 		<!-- end content -->	

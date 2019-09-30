@@ -317,6 +317,8 @@ code {
 	padding: .3rem .6rem;
 	white-space: nowrap;
 	background: #EAEAEA;
+	color: #f75f00;
+	border-radius: 4px;
 }
 
 pre>code {
@@ -2862,7 +2864,7 @@ footer ul li {
 }
 
 .blog-single .author-profile {
-	margin-top: 9rem;
+	margin-top: 1rem;
 	padding-left: 9rem;
 	position: relative;
 }
@@ -4090,7 +4092,7 @@ footer ul li {
 	font-family: "muli-regular", sans-serif;
 	font-size: 1.7rem;
 	color: rgba(0, 0, 0, 0.6);
-	line-height: 2rem;
+	line-height: 2.4rem;
 	letter-spacing: 3px;
 }
 
@@ -4126,16 +4128,16 @@ h7 {
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.post-body p a {
+.post-body a {
 	color: #666 !important;
 	border-bottom: 1px dashed #999;
 }
 
-.post-body p a:after {
+.post-body a:after {
 	content: " ";
 }
 
-.post-body p a:before {
+.post-body a:before {
 	content: " ";
 }
 
