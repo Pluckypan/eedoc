@@ -1,6 +1,6 @@
 {
 	"name": "eedoc",
-	"version": "1.6.6",
+	"version": "1.6.7",
 	"description": "a simple document generation tool with a local search engine",
 	"main": "index.js",
 	"_args": [
@@ -26,7 +26,8 @@
 		"semver": "^5.7.0",
 		"ssr": "^1.1.1",
 		"jsftp": "^1.5.5",
-		"stylus": "^0.54.7"
+		"stylus": "^0.54.7",
+		"crypto": "^1.0.1"
 	},
 	"devDependencies": {},
 	"scripts": {

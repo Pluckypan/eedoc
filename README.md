@@ -71,6 +71,7 @@ eedoc -n #新建文章(generate a new article.)
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
+	"pash": true,
 	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
