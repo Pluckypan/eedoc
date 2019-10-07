@@ -18,7 +18,7 @@
 			if (elm_path) {
 				var elm_val = elm_path.value;
 				elm_val = elm_val.replace(/\\/g, "/");
-				elm_val =encodeURI(elm_val);
+				elm_val = encodeURI(elm_val);
 				console.log(elm_val);
 				var res = url.replace(elm_val, "").replace(/\/$/, '');
 				return res;
@@ -94,7 +94,7 @@
 				rootp + '/$out$$url$.html"><strong>$name$</strong> - $des$</a>';
 			return this.simple(str, {
 				name: name,
-				url: json.path,
+				url: json.pash ? ("/" + json.pash) : json.path,
 				des: des,
 				out: config.out
 			});

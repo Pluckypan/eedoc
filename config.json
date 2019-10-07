@@ -90,7 +90,7 @@
 		"image": "assets/default-adv.png",
 		"target": "blank"
 	},
-	"theme": "echo",
+	"theme": "default",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
