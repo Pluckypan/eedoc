@@ -1339,6 +1339,7 @@ input::-moz-focus-inner {
 	width: 100%;
 	height: 100%;
 	background-size: cover;
+	object-fit: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -3662,6 +3663,12 @@ footer ul li {
 	font-size: 16px;
 	letter-spacing: 2px;
 	line-height: 20px;
+	overflow: hidden;
+	height: 80px;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
 }
 
 .nav-span {

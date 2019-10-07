@@ -6,7 +6,7 @@
 	"licenses": "MIT",
 	"doc": "doc",
 	"out": "i",
-	"pash": true,
+	"pash": false,
 	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
@@ -90,7 +90,7 @@
 		"image": "assets/default-adv.png",
 		"target": "blank"
 	},
-	"theme": "default",
+	"theme": "echo",
 	"page": {
 		"index.ejs": {
 			"name": "首页",

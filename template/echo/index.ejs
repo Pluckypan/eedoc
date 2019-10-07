@@ -1,49 +1,43 @@
-<%- include('header',{type: "index",'pname':'首页'}); %>		
+<%- include('header',{type: "index",'pname':'首页'}); %>
+		<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
 		<!-- begin content -->
 		<div id="content-wrap">
 			<div class="row wide">
 				<div class="col-eight tab-full">
-					<div class="brick entry featured-grid animate-this">
-						<div class="entry-content">
-							<div id="featured-post-slider" class="flexslider">
-								<ul class="slides">
-									<li>
-										<div class="featured-post-slide">
-											<img src="assets/single-01.jpg" class="post-background">
-											<div class="overlay"></div>
-											<div class="post-content">
-												<ul class="entry-meta">
-													<li>August 29, 2016</li>
-													<li><a href="#">Sasuke Uchiha</a></li>
-												</ul>
-												<h1 class="slide-title">
-													<a href="post.html" title="">Enhancing Your Designs with Negative Space</a>
-												</h1>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="featured-post-slide">
-											<img src="assets/single-02.jpg" class="post-background">
-											<div class="overlay"></div>
-											<div class="post-content">
-												<ul class="entry-meta">
-													<li>August 29, 2016</li>
-													<li><a href="#">Sasuke Uchiha</a></li>
-												</ul>
-												<h1 class="slide-title">
-													<a href="post.html" title="">Enhancing Your Designs with Negative Space</a>
-												</h1>
-											</div>
-										</div>
-									</li>
-								</ul>
+					<%if(bannerPost&&bannerPost.length>0){%>
+						<div class="brick entry featured-grid animate-this">
+							<div class="entry-content">
+								<div id="featured-post-slider" class="flexslider">
+									<ul class="slides">
+										<%bannerPost.forEach(function(post){%>
+											<li>
+												<div class="featured-post-slide">
+													<img src="<%=post.cover%>" data-src="<%=post.cover?post.cover:placeholder%>" draggable="false" class="post-background">
+													<div class="overlay"></div>
+													<div class="post-content">
+														<ul class="entry-meta">
+															<li><%=post.create_time%></li>
+															<li><a href="#"><%=post.category%></a></li>
+														</ul>
+														<h1 class="slide-title">
+															<a href="<%=relative_path%><%=post.url%>" title=""><%=post.name%></a>
+														</h1>
+													</div>
+												</div>
+											</li>
+										<%})%>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row add-bottom">
-						<%-include('article',{'article':1})%>
-					</div>
+					<%}%>
+					<%if(allPost&&allPost.length>0){%>
+						<div class="row add-bottom">
+							<%allPost.slice(0,10).forEach(function(post){%>
+								<%-include('article',{'post':post,'type':'index'})%>
+							<%})%>
+						</div>					
+					<%}%>
 				</div>
 				<div class="col-four tab-full">
 					<div class="infinity-widget animate-this">

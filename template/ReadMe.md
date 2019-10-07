@@ -99,5 +99,35 @@ eedoc // eedoc
 }
 ```
 
+### Markdown 自定义参数
+```
+<!-- eedoc {
+	"banner":true,
+	"create_time":"2019-07-18 21:45",
+	"update_time":"2019-10-07 20:01",
+	"cover":"../assets/single-01.jpg",	
+	"category":"旅拍",
+	"tags":["分镜","人物"]
+} eedoc -->
+```
+- banner 是否设定为首页banner文章或置顶文章
+- create_time、update_time 分别为文章的创建时间或更新时间,如果不指定则读取 markdown 原始的时间
+- cover 为文章的封面图片
+
+### 特殊功能 eedoc 主题
+```
+## 设置文章封面
+![cover](../assets/single-01.jpg)
+
+## 视频
+[iframe](https://player.bilibili.com/player.html?aid=64229242&cid=111520559&page=1)
+
+## 画廊
+![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg)
+![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-02.jpg)
+![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-03.jpg)
+```
+
+
 ### 参考
 - eedoc 参考主题 [flex-blog](http://infinitythemes.ge/flex-blog/)

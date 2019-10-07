@@ -2,6 +2,17 @@
 ===
 那一天前还对什么都有希望，动力满满的，折腾也乐此不疲。发生变故后，真的是特别消极，意外和明天哪一个会先到，我们谁都不知道...
 
+<!-- eedoc {
+	"banner":true,
+	"create_time":"2019-07-18 21:45",
+	"update_time":"2019-10-07 20:01",
+	"category":"旅拍",
+	"cover":"../assets/single-01.jpg",
+	"tags":["分镜","人物"]
+} eedoc -->
+
+![cover](../assets/single-01.jpg)
+
 ## 每日精选
 > 没有不可治愈的伤痛，没有不能结束的沉沦，所有失去的，会以另一种方式归来。<cite>约翰•肖尔斯《许愿树》</cite>
 
@@ -32,7 +43,7 @@ code {
    padding: .2rem .6rem;
    white-space: nowrap;
    background: #F1F1F1;
-   border: 1px solid #E1E1E1;	
+   border: 1px solid #E1E1E1;
    border-radius: 3px;
 }
 ```

@@ -2,6 +2,12 @@ eedoc
 ===
 基于Node.js Markdown静态网站生成器 支持全站搜索 支持评论
 
+<!-- eedoc {
+	"banner":true
+} eedoc -->
+
+![cover](http://img.1991th.com/tuchongeter/statics/single-gallery-03.jpg)
+
 ### 功能
 - 支持全站搜索
 - 支持代码高亮

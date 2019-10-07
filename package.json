@@ -13,21 +13,22 @@
 		"eedoc": "bin/eedoc.js"
 	},
 	"dependencies": {
+		"colors-cli": "^1.0.26",
+		"crypto": "^1.0.1",
 		"ejs": "^2.7.1",
 		"gh-pages": "^1.2.0",
 		"highlight.js": "^9.15.10",
-		"colors-cli": "^1.0.26",
-		"marked": "^0.3.19",
-		"loading-cli": "^1.0.8",
-		"path": "^0.12.7",
-		"uglify-js": "^2.8.29",
 		"inquirer": "^0.9.0",
-		"watch": "^1.0.2",
+		"jsftp": "^1.5.5",
+		"loading-cli": "^1.0.8",
+		"marked": "^0.3.19",
+		"moment": "^2.24.0",
+		"path": "^0.12.7",
 		"semver": "^5.7.0",
 		"ssr": "^1.1.1",
-		"jsftp": "^1.5.5",
 		"stylus": "^0.54.7",
-		"crypto": "^1.0.1"
+		"uglify-js": "^2.8.29",
+		"watch": "^1.0.2"
 	},
 	"devDependencies": {},
 	"scripts": {
