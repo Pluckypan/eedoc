@@ -26,6 +26,7 @@ eedoc // eedoc
 4. 可以在任意页面取到 `eedoc` 对象,主要存储一些统计参数,{"total":1}
 5. `<%=relative_path%>` 可以获取当前页面相对于根目录的路径,一般文章详情页会需要用到(因为路径问题)
 6. `{{content}}` 可以获取当前 markdown 渲染 html 结果
+7. 关于 post 相关取值：`bannerPost`(热门post),`allPost`(全部post),`archivePost`(按年份分组post),`categoryPost`(按分类分组post)
 
 ### 不同模板关于 page 标准字段的定义
 一般情况下 页面(非post),渲染方式分为3种

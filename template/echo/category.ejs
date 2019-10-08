@@ -14,14 +14,11 @@
 						</div>
 						<p class="category">
 							<a href="#" class="current">全部</a>
-							<a href="#">旅拍(10)</a>
-							<a href="#">心情(36)</a>
-							<a href="#">杂文(6)</a>
-							<a href="#">系列(12)</a>
-							<a href="#">剪辑(6)</a>
-							<a href="#">音乐(3)</a>
-							<a href="#">电影(6)</a>
-							<a href="#">其他(11)</a>
+							<%if(categoryPost&&categoryPost.length>0){%>
+								<%categoryPost.forEach(function(grp){%>
+									<a href="#" id="<%=grp.group%>"><%=grp.items[0].category%>(<%=grp.items.length%>)</a>
+								<%});%>
+							<%}%>
 						</p>
 					</div>
 					<div>
