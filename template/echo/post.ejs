@@ -27,18 +27,16 @@
 				<div class="col-four tab-full">
 					<div class="infinity-widget widget_categories">
 						<div class="widget-title">
-							<h3>KeyWords</h3>
+							<h3>TAGS</h3>
 						</div>
 						<p class="category">
-							<a href="#" class="current">全部</a>
-							<a href="#">旅拍(10)</a>
-							<a href="#">心情(36)</a>
-							<a href="#">杂文(6)</a>
-							<a href="#">系列(12)</a>
-							<a href="#">剪辑(6)</a>
-							<a href="#">音乐(3)</a>
-							<a href="#">电影(6)</a>
-							<a href="#">其他(11)</a>
+						<%if(describe.tags&&describe.tags.length>0){%>							
+							<%describe.tags.forEach(function(tag){%>
+								<a href="#"><%=tag%></a>
+							<%});%>
+						<%} else {%>
+							<a href="#">无</a>
+						<%}%>
 						</p>
 					</div>
 					<div>
