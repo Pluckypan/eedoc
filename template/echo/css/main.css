@@ -3610,7 +3610,9 @@ footer ul li {
 	font-style: italic;
 	margin-right: 2px;
 }
-
+.meta-categories{
+	min-height: 20px;
+}
 .meta-categories a {
 	position: relative;
 	font-size: 12px;

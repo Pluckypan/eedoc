@@ -8,10 +8,12 @@
 	<div class="entry-body">
 		<div class="entry-header">
 			<div class="meta-categories">
-				<span class="category-prefix">#</span>
-				<a href="category.html" rel="category tag">
-					<%=post.category%>
-				</a>
+				<%if(post.category){%>
+					<span class="category-prefix">#</span>
+					<a href="category.html" rel="category tag">
+						<%=post.category%>
+					</a>
+				<%}%>
 			</div>
 			<h1 class="post-title">
 				<a href="<%=relative_path%><%=post.url%>" target=""><%=post.name%></a>
