@@ -3,8 +3,8 @@
 		<div id="content-wrap" class="styles">
 			<div class="row wide">
 				<div class="col-eight tab-full">
-					<div class="row add-bottom">
-						<%-include('article',{'post':{},'type':'category'})%>
+					<div id="resultBox" class="row add-bottom">
+
 					</div>
 				</div>
 				<div class="col-four tab-full">
@@ -13,10 +13,10 @@
 							<h3>Categories</h3>
 						</div>
 						<p class="category">
-							<a href="#" class="current">全部</a>
+							<a href="#" class="categoryClick current">全部</a>
 							<%if(categoryPost&&categoryPost.length>0){%>
 								<%categoryPost.forEach(function(grp){%>
-									<a href="#" id="<%=grp.group%>"><%=grp.items[0].category%>(<%=grp.items.length%>)</a>
+									<a href="#" id="<%=grp.group%>" class="categoryClick"><%=grp.items[0].category%>(<%=grp.items.length%>)</a>
 								<%});%>
 							<%}%>
 						</p>
@@ -31,20 +31,19 @@
 				</div>
 			</div>
 			<div class="row">
-				<nav class="pagination">
-					<span class="page-numbers prev inactive">Prev</span>
-					<span class="page-numbers current">1</span>
-					<a href="#" class="page-numbers">2</a>
-					<a href="#" class="page-numbers">3</a>
-					<a href="#" class="page-numbers">4</a>
-					<a href="#" class="page-numbers">5</a>
-					<a href="#" class="page-numbers">6</a>
-					<a href="#" class="page-numbers">7</a>
-					<a href="#" class="page-numbers">8</a>
-					<a href="#" class="page-numbers">9</a>
-					<a href="#" class="page-numbers next">Next</a>
+				<nav id="paging" class="pagination">
+					<a class="page-numbers first">First</a>
+					<a class="page-numbers prev">Prev</a>
+					<ul class="list" style="display:inline-block;margin-left:0px;"></ul>
+					<a class="page-numbers next">Next</a>
+					<a class="page-numbers last">Last</a>
 				</nav>
 			</div>
+			<script>
+				var relative_path='<%=relative_path%>';
+			</script>
+			<script src="<%=relative_path%>js/ejs.min.js"></script>
+			<script src="<%=relative_path%>js/paging.js"></script>
 		</div>
 		<!-- end content -->	
 <%- include('footer');%>

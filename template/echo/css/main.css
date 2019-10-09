@@ -1135,6 +1135,7 @@ input::-moz-focus-inner {
 	margin-right: 6px;
 	margin-bottom: 9px;
 	color: #2b2b2b;
+	cursor: pointer;
 	background-color: #dbdbdb;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -1146,6 +1147,10 @@ input::-moz-focus-inner {
 .pagination .page-numbers:hover {
 	background: #000000;
 	color: white;
+}
+
+.pagination .num {
+	width: 50px;
 }
 
 .pagination .current,
@@ -3610,9 +3615,11 @@ footer ul li {
 	font-style: italic;
 	margin-right: 2px;
 }
-.meta-categories{
+
+.meta-categories {
 	min-height: 20px;
 }
+
 .meta-categories a {
 	position: relative;
 	font-size: 12px;
@@ -3666,10 +3673,10 @@ footer ul li {
 	letter-spacing: 2px;
 	line-height: 20px;
 	overflow: hidden;
-	height: 80px;
+	height: 60px;
 	text-overflow: ellipsis;
 	display: -webkit-box;
-	-webkit-line-clamp: 4;
+	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 }
 
