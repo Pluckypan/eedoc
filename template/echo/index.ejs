@@ -71,14 +71,11 @@
 						</div>
 						<p class="category">
 							<a href="category.html">全部</a>
-							<a href="category.html">旅拍(10)</a>
-							<a href="category.html">心情(36)</a>
-							<a href="category.html">杂文(6)</a>
-							<a href="category.html">系列(12)</a>
-							<a href="category.html">剪辑(6)</a>
-							<a href="category.html">音乐(3)</a>
-							<a href="category.html">电影(6)</a>
-							<a href="category.html">其他(11)</a>
+							<%if(categoryPost&&categoryPost.length>0){%>
+								<%categoryPost.forEach(function(grp){%>
+									<a href="category.html#<%=grp.group%>"><%=grp.items[0].category%>(<%=grp.items.length%>)</a>
+								<%});%>
+							<%}%>
 						</p>
 					</div>
 					<div class="infinity-widget animate-this">
