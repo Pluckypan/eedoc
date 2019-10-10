@@ -1,12 +1,14 @@
 function parsePost(url) {
 	var arr = url.split("#");
 	var books = [];
-	//console.log(arr);
+	$(".category a").removeClass("current");
+	var cid="allCat";
 	if (arr && arr.length > 1) {
 		var tmp = categoryPost.find(function(item) {
 			return item.group == arr[arr.length - 1];
-		});
+		});		
 		if (tmp) {
+			cid=arr[arr.length - 1];
 			books = books.concat(tmp.items);
 		} else {
 			categoryPost.forEach(function(itm) {
@@ -18,24 +20,31 @@ function parsePost(url) {
 			books = books.concat(itm.items);
 		});
 	}
+	$(".category ."+cid).addClass("current");
 	return books;
 }
 
 function doPaging(dataArr) {
 	$(".list").html("");
+	const _num=6;
 	$('#paging').paging({
 		nowPage: 1,
-		allPages: Math.ceil(dataArr.length / 6),
-		displayPage: 10,
+		allPages: Math.ceil(dataArr.length / _num),
+		displayPage: 6,
 		callBack: function(now) {
-			var currentPages = now * 6 < dataArr.length ? 6 : dataArr.length - (now - 1) * 6;
+			var currentPages = now * _num < dataArr.length ? _num : dataArr.length - (now - 1) * _num;
 			$('#resultBox').html('');
 			for (var i = 0; i < currentPages; i++) {
-				var num = (now - 1) * 6 + i;
+				var num = (now - 1) * _num + i;
 				var post = dataArr[num];
-				var html = ejs.render(ejsTmp, {'post':post,'type':'category','relative_path':relative_path});
+				var html = ejs.render(ejsTmp, {
+					'post': post,
+					'type': 'category',
+					'relative_path': relative_path
+				});
 				$('#resultBox').append(html);
 			}
+			Holder.run();
 		}
 	});
 }
@@ -43,9 +52,7 @@ $(function() {
 	var books = parsePost(window.location.href);
 	doPaging(books)
 	$(".categoryClick").click(function() {
-		$(".category a").removeClass("current");
-		$(this).addClass("current");
-		doPaging(parsePost("id=#" + this.id))
+		doPaging(parsePost("cid=" + this.href))
 	});
 });;
 (function($, window, document, undefined) {
@@ -206,11 +213,12 @@ $(function() {
 })(jQuery, window, document, undefined);
 
 var ejsTmp = "";
-ejsTmp += "<article class=\"col-six tab-full article animate-this animated fadeInUp\">";
+ejsTmp += "<article class=\"col-six tab-full article animate-this animated fadeIn\">";
 ejsTmp += "	<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>	";
 ejsTmp += "	<div class=\"entry-media\">";
 ejsTmp += "		<a href=\"<%=relative_path%><%=post.url%>\" target=\"_self\">";
-ejsTmp += "			<img src=\"<%=post.cover%>\" data-src=\"<%=post.cover?post.cover:placeholder%>\" draggable=\"false\" alt=\"\" style=\"width: 100%;height: 200px; object-fit:cover;\">";
+ejsTmp +=
+	"			<img src=\"<%=post.cover%>\" data-src=\"<%=post.cover?post.cover:placeholder%>\" draggable=\"false\" alt=\"\" style=\"width: 100%;height: 200px; object-fit:cover;\" id=\"placeholder\">";
 ejsTmp += "		</a>";
 ejsTmp += "	</div>";
 ejsTmp += "	<div class=\"entry-body\">";

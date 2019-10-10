@@ -2,7 +2,7 @@
 	<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>	
 	<div class="entry-media">
 		<a href="<%=relative_path%><%=post.url%>" target="_self">
-			<img src="<%=post.cover%>" data-src="<%=post.cover?post.cover:placeholder%>" draggable="false" alt="" style="width: 100%;height: 200px; object-fit:cover;">
+			<img src="<%=post.cover%>" data-src="<%=post.cover?post.cover:placeholder%>" draggable="false" alt="" style="width: 100%;height: 200px; object-fit:cover;" id="placeholder">
 		</a>
 	</div>
 	<div class="entry-body">
