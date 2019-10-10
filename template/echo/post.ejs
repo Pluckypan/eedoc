@@ -21,7 +21,7 @@
 						{{content}}
 					</article>
 					<%if(config.comment&&config.comment.gitalk&&config.comment.gitalk.clientID){%>
-						<%- include('comment');%>
+						<%- include('comment',{type: "post",'pname':'文章'});%>
 					<%}%>
 				</div>
 				<div class="col-four tab-full">
