@@ -78,30 +78,26 @@
 							<%}%>
 						</p>
 					</div>
-					<div class="infinity-widget animate-this">
-						<div class="widget-title">
-							<h3>photograph</h3>
+					<%if(config.echo&&config.echo.photograph){%>
+						<div class="infinity-widget animate-this">
+							<div class="widget-title">
+								<h3><%=config.echo.photograph.name%></h3>
+							</div>
+							<div class="textwidget">
+								<ul class="instagram-feed">
+								<%if(config.echo.photograph.links&&config.echo.photograph.links.length>0){%>
+									<%config.echo.photograph.links.forEach(function(l){%>
+										<li>
+											<a target="<%=l.target%>" href="<%=l.link%>">
+												<img src="<%=l.image%>" alt="<%=l.name%>">
+											</a>
+										</li>
+									<%});%>
+								<%}%>
+								</ul>
+							</div>
 						</div>
-						<div class="textwidget">
-							<ul class="instagram-feed">
-								<li>
-									<a target="_blank" href="http://infinitythemes.ge/images/instagram/5.jpg">
-										<img src="http://infinitythemes.ge/images/instagram/5.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a target="_blank" href="http://infinitythemes.ge/images/instagram/6.jpg">
-										<img src="http://infinitythemes.ge/images/instagram/6.jpg" alt="">
-									</a>
-								</li>
-								<li>
-									<a target="_blank" href="http://infinitythemes.ge/images/instagram/7.jpg">
-										<img src="http://infinitythemes.ge/images/instagram/7.jpg" alt="">
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+					<%}%>
 				</div>
 			</div>
 		</div>

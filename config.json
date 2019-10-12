@@ -90,7 +90,7 @@
 		"image": "assets/default-adv.png",
 		"target": "blank"
 	},
-	"theme": "echo",
+	"theme": "default",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -132,6 +132,15 @@
 				"link": "#",
 				"name": "歌单",
 				"target": "_self"
+			}]
+		},
+		"photograph":{
+			"name": "photograph",
+			"links": [{
+				"link": "http://www.1991th.com/photos/index.html",
+				"name": "香山红叶落满天",
+				"target": "_blank",
+				"image":"http://infinitythemes.ge/images/instagram/5.jpg"
 			}]
 		},
 		"galleryAbout": ["./assets/single-01.jpg", "./assets/single-02.jpg"]

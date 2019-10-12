@@ -1,13 +1,13 @@
 eedoc
 ===
-基于Node.js Markdown静态网站生成器 支持全站搜索 支持评论
+基于Node.js Markdown静态网站生成器;专注于创作
 
 ### 功能
 - 支持全站搜索
 - 支持代码高亮
 - 支持评论
 
-[预览界面](https://pluckypan.github.io)
+[预览界面](http://www.1991th.com/blog/)
 
 ### 安装
 ```
@@ -28,27 +28,22 @@ eedoc -t #为指定文章生成时间戳(generate timestamp for special article.
 eedoc -n #新建文章(generate a new article.)
 ```
 
-### 新指令说明 `since 1.5.5`
-1. `1.5.5`版本新增归档列表 会按年月日归档文章
-2. 由于老版本未统计时间戳,则需要对老的文章进行时间戳补全。方式有几种:
-   - 使用 `eedoc -t` 指令,如果文章在 `git`版本库中 则取当前文件第一次提交时间 取不到则取当前时间
-   - 手动添加,在文章最顶部添加如下代码，其中数字部分为文章时间戳 `[date]:1477757698`
-3. 建议今后使用 `eedoc -n` 创建文章，会默认补全参数，用户可以将精力放在书写文章上
-
 ### gitalk 评论功能 `since 1.5.4`
 目前支持 `畅言` `gitalk` 两种评论插件，在配置文件中添加相应的参数即可,其中 `gitalk` 基于 github issues,具体说明请自行参考  [gitalk](https://github.com/gitalk/gitalk/blob/master/readme-cn.md)
 ```
-"changyan": {
-  "appid": "",
-  "conf": ""
-},
-"gitalk":{
-  "clientID": "xxx",
-  "clientSecret": "xxx",
-  "repo": "xxx",
-  "owner": "xxx",
-  "admin": ["xxx"],
-  "distractionFreeMode": true
+"comment": {
+	"changyan": {
+	  "appid": "",
+	  "conf": ""
+	},
+	"gitalk":{
+	  "clientID": "xxx",
+	  "clientSecret": "xxx",
+	  "repo": "xxx",
+	  "owner": "xxx",
+	  "admin": ["xxx"],
+	  "distractionFreeMode": true
+	}	
 }
 ```
 
@@ -58,10 +53,19 @@ eedoc -n #新建文章(generate a new article.)
 ===
 描述
 
+<!-- eedoc {
+	"banner":true,
+	"create_time":"2019-07-18 21:45",
+	"update_time":"2019-10-07 20:01",
+	"category":"旅拍",
+	"cover":"../assets/single-01.jpg",
+	"tags":["分镜","人物"]
+} eedoc -->
+
 ### 以下都是内容
 ```
 
-### 完整配置
+### 完整配置(config.json)
 ```
 {
 	"title": "风之谷",
@@ -76,14 +80,28 @@ eedoc -n #新建文章(generate a new article.)
 	"user": {
 		"name": "User",
 		"desc": "I'm a boy.",
-		"avatar": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"avatar": "http://img.1991th.com/tuchongeter/statics/default_avatar.jpg",
 		"email": "user@echo.engineer",
 		"social": [{
-			"link": "http://www.1991th.com/",
-			"name": "风之谷",
-			"desc": "Take it Easy & Make it Happen",
-			"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
-			"image": ""
+			"link": "mailto:plucky@echo.engineer",
+			"name": "邮箱",
+			"icon": "icon-email",
+			"target": "_blank"
+		}, {
+			"link": "https://space.bilibili.com/362980071",
+			"name": "B站",
+			"icon": "icon-bilibili",
+			"target": "_blank"
+		}, {
+			"link": "http://plucky.tuchong.com/",
+			"name": "图虫",
+			"icon": "icon-tuchong",
+			"target": "_blank"
+		}, {
+			"link": "https://github.com/Pluckypan",
+			"name": "Github",
+			"icon": "icon-github",
+			"target": "_blank"
 		}]
 	},
 	"links": [{
@@ -92,6 +110,13 @@ eedoc -n #新建文章(generate a new article.)
 		"desc": "Take it Easy & Make it Happen",
 		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
 		"image": ""
+	}, {
+		"link": "http://www.echo.engineer/",
+		"name": "回声嘹亮",
+		"desc": "I'm an Engineer",
+		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"image": "",
+		"visibleTag": "echo"
 	}],
 	"statics": "assets",
 	"deploys": [{
@@ -123,7 +148,18 @@ eedoc -n #新建文章(generate a new article.)
 			"distractionFreeMode": true
 		}
 	},
-	"theme": "nav",
+	"iconfont": {
+		"link": "https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css",
+		"family": "engineer"
+	},
+	"adv": {
+		"link": "http://www.1991th.com/",
+		"name": "天猫导流",
+		"desc": "天猫2019双十一.火热进行中",
+		"image": "assets/default-adv.png",
+		"target": "blank"
+	},
+	"theme": "default",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -131,17 +167,53 @@ eedoc -n #新建文章(generate a new article.)
 			"render": "index.json"
 		},
 		"list.ejs": {
-			"name": "搜索",
-			"render": "index.md"
+			"name": "搜索"
+		},
+		"about.ejs": {
+			"name": "关于我",
+			"render": "about.md"
+		},
+		"message.ejs": {
+			"name": "留言板",
+			"render": "message.json"
 		}
 	},
 	"nav": {
-		"busuanzi": true
+		"busuanzi": true,
+		"topLinks": [{
+			"link": "http://www.1991th.com/",
+			"name": "首页",
+			"target": "_self"
+		}]
+	},
+	"echo": {
+		"stars": {
+			"name": "星球",
+			"links": [{
+				"link": "#",
+				"name": "解忧杂货铺",
+				"target": "_self"
+			}, {
+				"link": "#",
+				"name": "影单",
+				"target": "_self"
+			}, {
+				"link": "#",
+				"name": "歌单",
+				"target": "_self"
+			}]
+		},
+		"galleryAbout": ["./assets/single-01.jpg", "./assets/single-02.jpg"]
 	}
 }
 ```
 
 ### TODO
-- [ ] 分类创建
-- [ ] 中文路径
-- [ ] 文章or页面创建和更新时间
+- [ ] video标签
+- [ ] 支持音乐挂件
+- [ ] 图片相对路径在子目录(如1991th.com/blog/)出错
+- [ ] eedoc -new -theme 指令
+- [ ] ftp 出错
+- [ ] 开发者模式
+- [ ] a标签处理,支持target
+- [ ] 列表样式支持滚动
