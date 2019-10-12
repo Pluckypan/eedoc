@@ -3413,6 +3413,10 @@ footer ul li {
 	margin-top: 0rem;
 }
 
+.about .post-body {
+	text-align: left;
+}
+
 .about .blog-single .tags {
 	margin: 0rem;
 }
@@ -4203,8 +4207,8 @@ h7 {
 }
 
 .fluid-video-wrapper iframe {
-	width: 80%;
-	height: 32rem;
+	width: 90%;
+	height: 36rem;
 }
 
 @media only screen and (max-width:720px) {

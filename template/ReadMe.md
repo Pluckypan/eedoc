@@ -8,7 +8,13 @@
 	postTpl:"detail.ejs",// 文章页需要单独渲染 所以需要单独设置渲染模板	
 	renderIntro:false // 是否渲染 postTpl 文档的前三行(一般用作标题,简述)
 	iframeTpl:"_iframe.ejs",  // markdown 中通过 [iframe](xxx) 即可渲染 iframe 标签
-	galleryTpl:"_gallery.ejs" // markdown 中通过 ![gallery](xxx1) ![gallery](xxx2) ![gallery](xxx3) 即可渲染Banner
+	"videoTpl":"_video.ejs", // 解析 [video](xxx)
+	galleryTpl:"_gallery.ejs", // markdown 中通过 ![gallery](xxx1) ![gallery](xxx2) ![gallery](xxx3) 即可渲染Banner
+	"markedRender":{			// markdown render 配置 目前可自定义 H 标签,table,a
+		"heading":null, 
+		"table":null,
+		"link":null
+	}
 }
 ```
 
@@ -123,12 +129,17 @@ eedoc // eedoc
 ## 视频
 [iframe](https://player.bilibili.com/player.html?aid=64229242&cid=111520559&page=1)
 
+## 美拍
+[video](https://mvvideoshare1.meitudata.com/56e87e924624c7779.mp4?k=993de5b4fc32644e7d594a638116c9e3&t=5da53729)
+
 ## 画廊
 ![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg)
 ![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-02.jpg)
 ![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-03.jpg)
 ```
 
+## 在新页面打开 URL
+在url中加上`target`参数即可 [在新页面打开](http://www.baidu.com?target=blank)
 
 ### 参考
 - eedoc 参考主题 [flex-blog](http://infinitythemes.ge/flex-blog/)

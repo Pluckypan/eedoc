@@ -167,7 +167,6 @@ function getQueryString(name) {
 		return unescape(r[2]);
 	}
 	return null;
-	return false;
 }
 
 // 文章目录锚链接滑动

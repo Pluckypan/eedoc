@@ -56,11 +56,12 @@
 		"message": "Compiler generation page "
 	}],
 	"ftp": {
-		"host": "",
+		"host": "xxx",
 		"port": 21,
-		"user": "",
-		"pass": "",
-		"cwd": ""
+		"user": "xxx",
+		"pass": "xxx",
+		"cwd": "xxx",
+		"deleteRemote": false
 	},
 	"cname": "",
 	"comment": {
@@ -90,7 +91,7 @@
 		"image": "assets/default-adv.png",
 		"target": "blank"
 	},
-	"theme": "default",
+	"theme": "echo",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -134,13 +135,13 @@
 				"target": "_self"
 			}]
 		},
-		"photograph":{
+		"photograph": {
 			"name": "photograph",
 			"links": [{
 				"link": "http://www.1991th.com/photos/index.html",
 				"name": "香山红叶落满天",
 				"target": "_blank",
-				"image":"http://infinitythemes.ge/images/instagram/5.jpg"
+				"image": "http://infinitythemes.ge/images/instagram/5.jpg"
 			}]
 		},
 		"galleryAbout": ["./assets/single-01.jpg", "./assets/single-02.jpg"]

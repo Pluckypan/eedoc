@@ -27,7 +27,7 @@
 ![web](http://img.1991th.com/tuchongeter/statics/single-gallery-03.jpg)
 
 ## 链接
-[天空之城](#)以另一种视角看世界 **我去看世界** **风之谷**
+[天空之城](#)以另一种视角看世界 **我去看世界** **风之谷** [在新页面打开](http://www.baidu.com?target=blank)
 
 ## 列表
 |Name|Age|Gender|Location|
@@ -63,6 +63,9 @@ code {
 
 ## 视频
 [iframe](https://player.bilibili.com/player.html?aid=64229242&cid=111520559&page=1)
+
+## 美拍
+[video](https://mvvideoshare1.meitudata.com/56e87e924624c7779.mp4?k=993de5b4fc32644e7d594a638116c9e3&t=5da53729)
 
 ## 画廊
 ![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg)
