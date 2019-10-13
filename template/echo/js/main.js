@@ -694,7 +694,6 @@
 		$(".year").html(new Date().getFullYear());
 	}
 
-
 	/* Initialize
 	 * ------------------------------------------------------ */
 	(function ssInit() {

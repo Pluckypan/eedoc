@@ -209,7 +209,6 @@ eedoc -n #新建文章(generate a new article.)
 ```
 
 ### TODO
-- [ ] 搜索
 - [ ] 图片相对路径在子目录(如1991th.com/blog/)出错
 - [ ] eedoc -new -theme 指令
 - [ ] 支持音乐挂件

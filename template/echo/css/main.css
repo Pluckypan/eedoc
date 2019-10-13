@@ -2166,7 +2166,7 @@ header .logo a {
 }
 
 .search-wrap .search-form::after {
-	content: "Press Enter to begin your search.";
+	content: "";
 	display: block;
 	letter-spacing: 0.6px;
 	font-size: 1.6rem;
@@ -3740,6 +3740,22 @@ footer ul li {
 	padding: 0px;
 }
 
+.search-result{
+	margin-top: 20px;
+}
+.search-result .article-date{
+	font-family: "montserrat-bold", sans-serif;
+	color: #939393;
+}
+.search-result .article-title {
+	margin-left: 10px;
+	font-family: "muli-regular", sans-serif;
+	font-size: 1.6rem;
+	color: rgba(0, 0, 0, 0.5);
+	line-height: 1.8rem;
+	letter-spacing: 2px;
+}
+
 .article-daily {
 	position: relative;
 	background-color: #FFFFFF;
@@ -4138,7 +4154,9 @@ h7 {
 	margin-top: 2rem;
 	font-family: "muli-regular", sans-serif;
 }
-
+.post-body p{
+	margin-bottom: 0.5rem;
+}
 .post-body blockquote p {
 	font-size: 2.1rem;
 	line-height: 2.4rem;
