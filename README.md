@@ -2,12 +2,29 @@ eedoc
 ===
 基于Node.js Markdown静态网站生成器;专注于创作
 
-### 功能
-- 支持全站搜索
-- 支持代码高亮
-- 支持评论
+### 特点
+- 轻量、简易、简洁、高颜值
+- 专注于写作
+- 支持`gitalk`、`畅言`评论
+- 支持全文检索
+- 支持分类、归档
+- 可扩展：可以参考系统内置主题自行扩展
 
-[预览界面](http://www.1991th.com/blog/)
+### 主题
+目前内置三种主题: `default`、`echo`、`nav`,可以在 `config.json` 中配置 `theme` 字段
+#### 博客类主题 echo 
+<div align="center">
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080wp)
+
+[echo主题](http://www.1991th.com/blog/)
+</div>
+
+#### 导航类主题 nav 
+<div align="center">
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080wp)
+
+[nav主题](http://www.1991th.com/nav/)
+</div>
 
 ### 安装
 ```
@@ -63,7 +80,14 @@ eedoc -n #新建文章(generate a new article.)
 } eedoc -->
 
 ### 以下都是内容
+Hi,我是静静
 ```
+
+### Markdown 格式参考
+[点这里](doc/post.md),然后打开编辑器,参考文章该如何写作
+
+### 自定义主题说明
+[点这里](template/ReadMe.md),具体参数如何使用,可参考 `template/echo` 主题 
 
 ### 完整配置(config.json)
 ```
