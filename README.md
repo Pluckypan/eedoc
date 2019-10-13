@@ -12,18 +12,21 @@ eedoc
 
 ### 主题
 目前内置三种主题: `default`、`echo`、`nav`,可以在 `config.json` 中配置 `theme` 字段
-#### 博客类主题 echo 
-<div align="center">
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080wp)
 
-[echo主题](http://www.1991th.com/blog/)
+<div align="center">
+
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!720wp)
+
+[博客主题@echo](http://www.1991th.com/blog/)
+
 </div>
 
-#### 导航类主题 nav 
 <div align="center">
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080wp)
 
-[nav主题](http://www.1991th.com/nav/)
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!720wp)
+
+[导航主题@nav](http://www.1991th.com/nav/)
+
 </div>
 
 ### 安装
