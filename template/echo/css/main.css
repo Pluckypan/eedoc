@@ -3740,13 +3740,15 @@ footer ul li {
 	padding: 0px;
 }
 
-.search-result{
+.search-result {
 	margin-top: 20px;
 }
-.search-result .article-date{
+
+.search-result .article-date {
 	font-family: "montserrat-bold", sans-serif;
 	color: #939393;
 }
+
 .search-result .article-title {
 	margin-left: 10px;
 	font-family: "muli-regular", sans-serif;
@@ -3777,8 +3779,8 @@ footer ul li {
 	.article-daily .daily-action i {
 		top: -50px !important;
 	}
-	
-	#comment-card{
+
+	#comment-card {
 		padding: 10px;
 	}
 }
@@ -4033,6 +4035,10 @@ footer ul li {
 	color: #666 !important;
 }
 
+.gt-container .gt-header-controls-tip {
+	display: none;
+}
+
 /* post */
 .post-container {
 	position: relative;
@@ -4107,6 +4113,15 @@ footer ul li {
 	color: #FFFFFF;
 }
 
+.entry-header .post-title a {
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-top: 10px;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
 
 
 .post-container .post-date {
@@ -4134,7 +4149,7 @@ footer ul li {
 
 .post-body {
 	font-family: "muli-regular", sans-serif;
-	font-size: 1.7rem;
+	font-size: 1.8rem;
 	color: rgba(0, 0, 0, 0.6);
 	line-height: 2.4rem;
 	letter-spacing: 3px;
@@ -4154,10 +4169,12 @@ h7 {
 	margin-top: 2rem;
 	font-family: "muli-regular", sans-serif;
 }
-.post-body p{
-	line-height: 2rem;
-	margin-bottom: 1rem;
+
+.post-body p {
+	line-height: 2.2rem;
+	margin-bottom: 1.2rem;
 }
+
 .post-body blockquote p {
 	font-size: 2.1rem;
 	line-height: 2.4rem;
