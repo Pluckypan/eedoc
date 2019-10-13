@@ -11,7 +11,8 @@
 				<div class="row">
 					<div class="col-twelve">
 						<div class="copyright">
-							<span>&copy;1991th.com <span class="year">2016</span>.All Rights Reserved.</span>
+							<%var _icp=config.icp&&config.icp.length>0?(" | "+config.icp):"";%>
+							<span>&copy;<%=config.cname%> <span class="year">2016</span><%=_icp%></span>
 						</div>
 						<div id="go-top">
 							<a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
