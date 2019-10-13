@@ -4155,7 +4155,8 @@ h7 {
 	font-family: "muli-regular", sans-serif;
 }
 .post-body p{
-	margin-bottom: 0.5rem;
+	line-height: 2rem;
+	margin-bottom: 1rem;
 }
 .post-body blockquote p {
 	font-size: 2.1rem;
