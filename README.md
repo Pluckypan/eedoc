@@ -15,7 +15,7 @@ eedoc
 
 <div align="center">
 
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080wp)
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!720jpg)
 
 [博客主题@echo](http://www.1991th.com/blog/)
 
@@ -23,7 +23,7 @@ eedoc
 
 <div align="center">
 
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080wp)
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!720jpg)
 
 [导航主题@nav](http://www.1991th.com/nav/)
 
