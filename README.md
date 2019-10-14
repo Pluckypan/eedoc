@@ -74,7 +74,7 @@ eedoc -n #新建文章(generate a new article.)
 描述
 
 <!-- eedoc {
-	"banner":true,
+	"banner":false,
 	"create_time":"2019-07-18 21:45",
 	"update_time":"2019-10-07 20:01",
 	"category":"旅拍",
