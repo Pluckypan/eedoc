@@ -15,7 +15,7 @@ eedoc
 
 <div align="center">
 
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!720jpg)
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080jpg)
 
 [博客主题@echo](http://www.1991th.com/blog/)
 
@@ -23,7 +23,7 @@ eedoc
 
 <div align="center">
 
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!720jpg)
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080jpg)
 
 [导航主题@nav](http://www.1991th.com/nav/)
 
@@ -63,7 +63,7 @@ eedoc -n #新建文章(generate a new article.)
 	  "owner": "xxx",
 	  "admin": ["xxx"],
 	  "distractionFreeMode": true
-	}	
+	}
 }
 ```
 
@@ -90,7 +90,7 @@ Hi,我是静静
 [点这里](doc/post.md),然后打开编辑器,参考文章该如何写作
 
 ### 自定义主题说明
-[点这里](template/ReadMe.md),具体参数如何使用,可参考 `template/echo` 主题 
+[点这里](template/ReadMe.md),具体参数如何使用,可参考 `template/echo` 主题
 
 ### 完整配置(config.json)
 ```
