@@ -34,7 +34,13 @@ eedoc
 npm install eedoc -g  #创建全局eedoc
 sudo npm install eedoc -g  #mac下以root权限运行
 ```
-
+### 开始使用
+```
+$ eedoc
+$ mkdir sample
+$ cd sample
+$ eedoc init
+```
 ### 使用方法
 ```
 eedoc -V #查看版本
@@ -238,5 +244,5 @@ Hi,我是静静
 ### TODO
 - [ ] 图片相对路径在子目录(如1991th.com/blog/)出错
 - [ ] eedoc -new -theme 指令
-- [ ] 支持音乐挂件
+- [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
 - [ ] 开发者模式
