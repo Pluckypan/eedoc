@@ -92,9 +92,10 @@
 			console.log('config.out=' + config.out);
 			str = islist ? '<a href="' + rootp + '/$out$$url$.html"><strong>$name$</strong> - $des$</a><p></p>' : '<a href="' +
 				rootp + '/$out$$url$.html"><strong>$name$</strong> - $des$</a>';
+				console.log(json.pash);
 			return this.simple(str, {
 				name: name,
-				url: json.pash ? ("/" + json.pash) : json.path,
+				url: config.pash&&json.pash ? ("/" + json.pash) : json.path,
 				des: des,
 				out: config.out
 			});
