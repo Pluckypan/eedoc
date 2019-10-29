@@ -148,8 +148,7 @@ Hi,我是静静
 		"name": "回声嘹亮",
 		"desc": "I'm an Engineer",
 		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
-		"image": "",
-		"visibleTag": "echo"
+		"image": ""
 	}],
 	"statics": "assets",
 	"deploys": [{
