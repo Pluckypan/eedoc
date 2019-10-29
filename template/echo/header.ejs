@@ -27,9 +27,11 @@
 		<script src="https://cdn.bootcss.com/holder/2.9.6/holder.min.js"></script>
 		<%if(config.iconfont&&config.iconfont.link){%>
 			<link rel="stylesheet" href="<%=config.iconfont.link%>">
+		<%}else{%>
+			<link rel="stylesheet" href="https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css">
 		<%}%>
 		<link rel="shortcut icon" href="<%=relative_path%>favicon.ico" type="image/x-icon">
-		<link rel="icon" href="<%=relative_path%>favicon.ico" type="image/x-icon">		
+		<link rel="icon" href="<%=relative_path%>favicon.ico" type="image/x-icon">
 	</head>
 
 	<body id="top">
@@ -43,7 +45,7 @@
 				<nav id="main-nav-wrap">
 					<ul class="main-navigation sf-menu">
 						<li class="<%=type=='index'?'current':''%>">
-							<a href="<%=type!='index'?relative_path+'index.html':'#'%>" title="">首页</a>	
+							<a href="<%=type!='index'?relative_path+'index.html':'#'%>" title="">首页</a>
 						</li>
 						<li class="<%=type=='category'?'current':''%>">
 							<a href="<%=type!='category'?relative_path+'category.html':'#'%>" title="">分类</a>
@@ -55,9 +57,9 @@
 							<a href="<%=type!='message'?relative_path+'message.html':'#'%>" title="">留言板</a>
 						</li>
 						<li class="<%=type=='about'?'current':''%>">
-							<a href="<%=type!='about'?relative_path+'about.html':'#'%>" title="">关于</a>	
+							<a href="<%=type!='about'?relative_path+'about.html':'#'%>" title="">关于</a>
 						</li>
-						<%if(config.echo.stars.links&&config.echo.stars.links.length>0){%>
+						<%if(config.echo&&config.echo.stars&&config.echo.stars.links&&config.echo.stars.links.length>0){%>
 							<li class="has-children">
 								<span class="nav-span"><%=config.echo.stars.name%></span>
 								<ul class="sub-menu">
@@ -66,7 +68,7 @@
 									<%});%>
 								</ul>
 							</li>
-						<%}%>		
+						<%}%>
 					</ul>
 				</nav>
 				<div class="search-wrap">

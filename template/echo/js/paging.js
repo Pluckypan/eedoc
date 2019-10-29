@@ -1,14 +1,16 @@
+var pIndex=1;
 function parsePost(url) {
 	var arr = url.split("#");
 	var books = [];
 	$(".category a").removeClass("current");
 	var cid="allCat";
 	if (arr && arr.length > 1) {
+		var aid=arr[arr.length - 1];
 		var tmp = categoryPost.find(function(item) {
-			return item.group == arr[arr.length - 1];
-		});		
+			return item.group == aid;
+		});
 		if (tmp) {
-			cid=arr[arr.length - 1];
+			cid=aid;
 			books = books.concat(tmp.items);
 		} else {
 			categoryPost.forEach(function(itm) {
@@ -69,7 +71,7 @@ $(function() {
 		this.$oGo_text = this.$oGo.find('input');
 		this.$oGo_btn = this.$oGo.find('button');
 		this.defaults = {
-			nowPage: 1,
+			nowPage: pIndex,
 			allPages: 10,
 			displayPage: 5
 		};

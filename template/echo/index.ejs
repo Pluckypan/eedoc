@@ -36,7 +36,7 @@
 							<%allPost.slice(0,10).forEach(function(post){%>
 								<%-include('article',{'post':post,'type':'index'})%>
 							<%})%>
-						</div>					
+						</div>
 					<%}%>
 				</div>
 				<div class="col-four tab-full">
@@ -57,9 +57,10 @@
 						</div>
 						<div class="social-icons">
 							<%if(config.user.social&&config.user.social.length>0){%>
+								<%var family=config.iconfont&&config.iconfont.family?config.iconfont.family:'engineer'%>
 								<%config.user.social.forEach(function(l,i){%>
 									<a href="<%=l.link%>" target="<%=l.target%>">
-										<i class="<%=config.iconfont.family%> <%=l.icon%>"></i>
+										<i class="<%=family%> <%=l.icon%>"></i>
 									</a>
 								<%})%>
 							<%}%>
@@ -103,5 +104,3 @@
 		</div>
 		<!-- end content -->
 <%- include('footer'); %>
-		
-		

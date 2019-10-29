@@ -5,13 +5,13 @@
 	_js:['js/index.js','js/scroll.js'], // 要压缩的js 对应渲染到 public 目录下,js/index.js
 	_css:['css/index.styl'], // 要渲染的样式 对应渲染到 public 目录下,css/index.css
 	_copy:['img/','favicon.icon'],//拷贝资源文字,可以是文件夹,也可以是文件,如果是文件夹,则默认不拷贝 _ejs,_js,_css中包含的文件
-	postTpl:"detail.ejs",// 文章页需要单独渲染 所以需要单独设置渲染模板	
+	postTpl:"detail.ejs",// 文章页需要单独渲染 所以需要单独设置渲染模板
 	renderIntro:false // 是否渲染 postTpl 文档的前三行(一般用作标题,简述)
 	iframeTpl:"_iframe.ejs",  // markdown 中通过 [iframe](xxx) 即可渲染 iframe 标签
 	"videoTpl":"_video.ejs", // 解析 [video](xxx)
 	galleryTpl:"_gallery.ejs", // markdown 中通过 ![gallery](xxx1) ![gallery](xxx2) ![gallery](xxx3) 即可渲染Banner
 	"markedRender":{			// markdown render 配置 目前可自定义 H 标签,table,a
-		"heading":null, 
+		"heading":null,
 		"table":null,
 		"link":null
 	}
@@ -87,6 +87,22 @@ eedoc // eedoc
 }
 }
 ```
+默认 iconfont 支持
+- icon-view
+- icon-refresh
+- icon-zhihu
+- icon-douban
+- icon-instagram
+- icon-email
+- icon-qq
+- icon-youtube
+- icon-tuchong
+- icon-bilibili
+- icon-github
+- icon-wechat
+- icon-weibo
+- icon-facebook
+
 ### 链接一般格式
 这里所说的链接包括但不限：友情链接、导航链接等 格式如下；
 - `visibleTag` 作用为特定情况下才显示该链接
@@ -112,7 +128,7 @@ eedoc // eedoc
 	"banner":true,
 	"create_time":"2019-07-18 21:45",
 	"update_time":"2019-10-07 20:01",
-	"cover":"../assets/single-01.jpg",	
+	"cover":"../assets/single-01.jpg",
 	"category":"旅拍",
 	"tags":["分镜","人物"]
 } eedoc -->

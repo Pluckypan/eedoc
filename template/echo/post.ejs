@@ -19,7 +19,8 @@
 								<%if(config.nav&&config.nav.busuanzi&&config.nav.busuanzi==true){%>
 								<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 								<li>
-									<span class="<%=config.iconfont.family%> icon-view" style="margin-left:5px;"></span>
+									<%var family=config.iconfont&&config.iconfont.family?config.iconfont.family:'engineer'%>
+									<span class="<%=family%> icon-view" style="margin-left:5px;"></span>
 									<span id="busuanzi_value_page_pv">0</span>
 								</li>
 								<%}%>
@@ -39,7 +40,7 @@
 							<h3>TAGS</h3>
 						</div>
 						<p class="category">
-						<%if(describe.tags&&describe.tags.length>0){%>							
+						<%if(describe.tags&&describe.tags.length>0){%>
 							<%describe.tags.forEach(function(tag){%>
 								<a href="#"><%=tag%></a>
 							<%});%>
@@ -54,5 +55,5 @@
 				</div>
 			</div>
 		</div>
-		<!-- end content -->	
-<%- include('footer');%>	
+		<!-- end content -->
+<%- include('footer');%>

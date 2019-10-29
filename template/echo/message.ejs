@@ -5,7 +5,7 @@
 				<div class="col-eight tab-full add-bottom">
 					<div>
 						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
-						<%const advImage=config.adv?config.adv.image:null%>	
+						<%const advImage=config.adv?config.adv.image:null%>
 						<a href="<%=config.adv?config.adv.link:'#'%>" target="<%=config.adv?config.adv.target:'_self'%>">
 							<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>" style="width: 100%;max-height:140px;object-fit:cover;" draggable="false" alt="<%=config.user.name%>"/>
 						</a>
@@ -31,8 +31,8 @@
 						<div class="article-daily">
 							<%const words=describe._render&&describe._render.words&&describe._render.words.length>0?describe._render.words:null%>
 							<%const word=words?words[Math.floor(Math.random()*(words.length))]:null%>
-							<%const time=word&&word.time?word.time:new Date().getTime()%>	
-							<img class="article-daily-background" src="<%=word.image%>" data-src="<%=word.image?word.image:placeholder%>" />
+							<%const time=word&&word.time?word.time:new Date().getTime()/1000%>
+							<img class="article-daily-background" src="<%=word&&word.image?word.image:''%>" data-src="<%=word&&word.image?word.image:placeholder%>" />
 							<div class="overlay"></div>
 							<div class="date">
 								<h1 class="day">
@@ -45,7 +45,7 @@
 							</div>
 							<div class="words">
 								<p id="words">
-									<%=word.desc%>
+									<%=word&&word.desc?word.desc:''%>
 								</p>
 							</div>
 							<div class="daily-action">
@@ -65,11 +65,13 @@
 			 }
 			 function renderWord(){
 			 	const word=randomWord();
-			 	const time=new Date(word.time*1000);
-			 	$("#day").html(time.getDate());
-			 	$("#month").html(time.getMonth()+1);
-			 	$("#year").html(time.getFullYear());
-			 	$("#words").html(word.desc);
+				if(word){
+						const time=new Date(word.time*1000);
+						$("#day").html(time.getDate());
+						$("#month").html(time.getMonth()+1);
+						$("#year").html(time.getFullYear());
+						$("#words").html(word.desc);
+				}
 			 }
 			 $(function(){
 			 	renderWord();
@@ -78,5 +80,5 @@
 			 	renderWord();
 			 });
 		</script>
-		<!-- end content -->	
-<%- include('footer');%>	
+		<!-- end content -->
+<%- include('footer');%>
