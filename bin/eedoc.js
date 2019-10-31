@@ -21,7 +21,7 @@ commander
 	.option("-d, deploy", "publish static page to git repo.")
 	.option("-f, ftp", "publish static page to ftp server.")
 	.option("-c, clean", "clean the public floder.")
-	.option("-t, time", "generate timestamp for special article.")
+	.option("-t, theme [type]", "select a theme.", 'select')
 	.option("-n, new", "generate a new article.")
 	.option("-w, watch", "watch file state.");
 

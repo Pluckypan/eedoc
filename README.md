@@ -50,7 +50,7 @@ eedoc -s #运行服务(run the page at http://127.0.0.1:1991.)
 eedoc -d #发布至git版本库(publish static page to git repo.)
 eedoc -f #发布至ftp服务器(publish static page to ftp server.)
 eedoc -c #清除缓存及静态页(clean the public floder.)
-eedoc -t #为指定文章生成时间戳(generate timestamp for special article.)
+eedoc -t #选择主题(select a theme.)
 eedoc -n #新建文章(generate a new article.)
 ```
 
@@ -109,6 +109,7 @@ Hi,我是静静
 	"doc": "doc",
 	"out": "i",
 	"pash": true,
+	"excludeDash":true,
 	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
@@ -141,13 +142,13 @@ Hi,我是静静
 		"link": "http://www.1991th.com/",
 		"name": "风之谷",
 		"desc": "Take it Easy & Make it Happen",
-		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"logo": "http://img.1991th.com/tuchongeter/statics/041122",
 		"image": ""
 	}, {
 		"link": "http://www.echo.engineer/",
 		"name": "回声嘹亮",
 		"desc": "I'm an Engineer",
-		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"logo": "http://img.1991th.com/tuchongeter/statics/041122",
 		"image": ""
 	}],
 	"statics": "assets",
@@ -157,11 +158,12 @@ Hi,我是静静
 		"message": "Compiler generation page "
 	}],
 	"ftp": {
-		"host": "",
+		"host": "xxx",
 		"port": 21,
-		"user": "",
-		"pass": "",
-		"cwd": ""
+		"user": "xxx",
+		"pass": "xxx",
+		"cwd": "xxx",
+		"deleteRemote": false
 	},
 	"cname": "",
 	"comment": {
@@ -191,7 +193,7 @@ Hi,我是静静
 		"image": "assets/default-adv.png",
 		"target": "blank"
 	},
-	"theme": "default",
+	"theme": "echo",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -235,6 +237,15 @@ Hi,我是静静
 				"target": "_self"
 			}]
 		},
+		"photograph": {
+			"name": "photograph",
+			"links": [{
+				"link": "http://www.1991th.com/photos/index.html",
+				"name": "香山红叶落满天",
+				"target": "_blank",
+				"image": "http://infinitythemes.ge/images/instagram/5.jpg"
+			}]
+		},
 		"galleryAbout": ["./assets/single-01.jpg", "./assets/single-02.jpg"]
 	}
 }
@@ -246,6 +257,8 @@ Hi,我是静静
 - [ ] eedoc -new -theme 指令
 - [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
 - [x] eedoc -s 后自动打开链接
+- [x] eedoc -t select 支持选择主题
+- [ ] eedoc -t clone 支持 git clone 主题
 - [ ] 开发者模式 50%
 - [x] 优化 init 流程,拷贝最新 config.json
 - [x] build 添加 release 或 debug 模式

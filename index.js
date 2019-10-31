@@ -1,6 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 var init = require('./lib/init');
+var theme = require('./lib/theme');
 var build = require('./lib/build');
 var deploy = require('./lib/deploy');
 var ftp = require('./lib/ftp');
@@ -61,6 +62,8 @@ module.exports = function(commander) {
 		} else {
 			console.log("floder 'public' not exist, please run 'eedoc -b' first!");
 		}
+	} else if ((cmd == 'theme' || cmd == '-t') && commander.theme) {
+		theme(commander,config);
 	} else {
 		console.log('coming soon.')
 	}

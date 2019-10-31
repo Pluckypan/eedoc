@@ -12,18 +12,21 @@ eedoc
 
 ### 主题
 目前内置三种主题: `default`、`echo`、`nav`,可以在 `config.json` 中配置 `theme` 字段
-#### 博客类主题 echo 
-<div align="center">
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080wp)
 
-[echo主题](http://www.1991th.com/blog/)
+<div align="center">
+
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080jpg)
+
+[博客主题@echo](http://www.1991th.com/blog/)
+
 </div>
 
-#### 导航类主题 nav 
 <div align="center">
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080wp)
 
-[nav主题](http://www.1991th.com/nav/)
+![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080jpg)
+
+[导航主题@nav](http://www.1991th.com/nav/)
+
 </div>
 
 ### 安装
@@ -31,7 +34,13 @@ eedoc
 npm install eedoc -g  #创建全局eedoc
 sudo npm install eedoc -g  #mac下以root权限运行
 ```
-
+### 开始使用
+```
+$ eedoc
+$ mkdir sample
+$ cd sample
+$ eedoc init
+```
 ### 使用方法
 ```
 eedoc -V #查看版本
@@ -41,7 +50,7 @@ eedoc -s #运行服务(run the page at http://127.0.0.1:1991.)
 eedoc -d #发布至git版本库(publish static page to git repo.)
 eedoc -f #发布至ftp服务器(publish static page to ftp server.)
 eedoc -c #清除缓存及静态页(clean the public floder.)
-eedoc -t #为指定文章生成时间戳(generate timestamp for special article.)
+eedoc -t #选择主题(select a theme.)
 eedoc -n #新建文章(generate a new article.)
 ```
 
@@ -60,7 +69,7 @@ eedoc -n #新建文章(generate a new article.)
 	  "owner": "xxx",
 	  "admin": ["xxx"],
 	  "distractionFreeMode": true
-	}	
+	}
 }
 ```
 
@@ -71,7 +80,7 @@ eedoc -n #新建文章(generate a new article.)
 描述
 
 <!-- eedoc {
-	"banner":true,
+	"banner":false,
 	"create_time":"2019-07-18 21:45",
 	"update_time":"2019-10-07 20:01",
 	"category":"旅拍",
@@ -80,7 +89,14 @@ eedoc -n #新建文章(generate a new article.)
 } eedoc -->
 
 ### 以下都是内容
+Hi,我是静静
 ```
+
+### Markdown 格式参考
+[点这里](doc/post.md),然后打开编辑器,参考文章该如何写作
+
+### 自定义主题说明
+[点这里](template/ReadMe.md),具体参数如何使用,可参考 `template/echo` 主题
 
 ### 完整配置(config.json)
 ```
@@ -93,6 +109,7 @@ eedoc -n #新建文章(generate a new article.)
 	"doc": "doc",
 	"out": "i",
 	"pash": true,
+	"excludeDash":true,
 	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
@@ -125,15 +142,14 @@ eedoc -n #新建文章(generate a new article.)
 		"link": "http://www.1991th.com/",
 		"name": "风之谷",
 		"desc": "Take it Easy & Make it Happen",
-		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
+		"logo": "http://img.1991th.com/tuchongeter/statics/041122",
 		"image": ""
 	}, {
 		"link": "http://www.echo.engineer/",
 		"name": "回声嘹亮",
 		"desc": "I'm an Engineer",
-		"logo": "http://img.1991th.com/tuchongeter/statics/logo.png",
-		"image": "",
-		"visibleTag": "echo"
+		"logo": "http://img.1991th.com/tuchongeter/statics/041122",
+		"image": ""
 	}],
 	"statics": "assets",
 	"deploys": [{
@@ -142,11 +158,12 @@ eedoc -n #新建文章(generate a new article.)
 		"message": "Compiler generation page "
 	}],
 	"ftp": {
-		"host": "",
+		"host": "xxx",
 		"port": 21,
-		"user": "",
-		"pass": "",
-		"cwd": ""
+		"user": "xxx",
+		"pass": "xxx",
+		"cwd": "xxx",
+		"deleteRemote": false
 	},
 	"cname": "",
 	"comment": {
@@ -176,7 +193,7 @@ eedoc -n #新建文章(generate a new article.)
 		"image": "assets/default-adv.png",
 		"target": "blank"
 	},
-	"theme": "default",
+	"theme": "echo",
 	"page": {
 		"index.ejs": {
 			"name": "首页",
@@ -218,6 +235,15 @@ eedoc -n #新建文章(generate a new article.)
 				"link": "#",
 				"name": "歌单",
 				"target": "_self"
+			}]
+		},
+		"photograph": {
+			"name": "photograph",
+			"links": [{
+				"link": "http://www.1991th.com/photos/index.html",
+				"name": "香山红叶落满天",
+				"target": "_blank",
+				"image": "http://infinitythemes.ge/images/instagram/5.jpg"
 			}]
 		},
 		"galleryAbout": ["./assets/single-01.jpg", "./assets/single-02.jpg"]
