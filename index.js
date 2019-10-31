@@ -24,9 +24,7 @@ var _cache = path.join(root, '.cache');
 module.exports = function(commander) {
 	if (commander.init) {
 		init(commander);
-	} else if (commander.build) {
-		build(commander, null, config);
-	} else if (commander.server) {
+	}else if (commander.server) {
 		if (eeutils.exists(pub_path)) {
 			process.chdir(pub_path);
 			server({
@@ -45,7 +43,9 @@ module.exports = function(commander) {
 		watcher(commander);
 	} else if (commander.ftp) {
 		ftp(commander, config);
-	} else {
+	} else if (commander.build) {
+		build(commander, null, config);
+	}  else {
 		console.log('coming soon.')
 	}
 }
