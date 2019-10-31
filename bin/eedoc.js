@@ -9,10 +9,15 @@ commander
 	.description('a simple document generation tool with a local search engine(version: ' + appInfo.version + ')')
 	.version(appInfo.version);
 
+function doParseInt(value, dummyPrevious) {
+	console.log(value+"dummyPrevious="+dummyPrevious);
+  return parseInt(value);
+}
+
 commander
 	.option('-i, init', 'init a documentation.')
 	.option("-b, build [type]", "build static html page.", 'release')
-	.option("-s, server", "run the page at http://127.0.0.1:1991")
+	.option("-s, server [type]", "run the page at http://127.0.0.1:1991",1991)
 	.option("-d, deploy", "publish static page to git repo.")
 	.option("-f, ftp", "publish static page to ftp server.")
 	.option("-c, clean", "clean the public floder.")

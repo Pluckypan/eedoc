@@ -6,10 +6,23 @@ var deploy = require('./lib/deploy');
 var ftp = require('./lib/ftp');
 var exec = require('child_process').exec;
 var watch = require('watch');
-var server = require('ssr');
 var color = require('colors-cli/safe');
 var eeutils = require("./lib/eeutils");
 var error = color.red.bold;
+// serve
+const handler = require('serve-handler');
+const http = require('http');
+const server = http.createServer((request, response) => {
+	return handler(request, response);
+})
+server.on('error', function(e) {
+	if (e.code == 'EADDRINUSE' && e.port) {
+		console.log('current port ' + e.port + ' is in use. please change it and try again.');
+	} else {
+		console.log('serve error.');
+	}
+});
+const opn = require('opn');
 
 var root = process.cwd();
 var config = parseConfig();
@@ -22,18 +35,9 @@ var pub_path = path.join(root, "public");
 var _cache = path.join(root, '.cache');
 
 module.exports = function(commander) {
+	const cmd = commander.rawArgs[2];
 	if (commander.init) {
 		init(commander);
-	}else if (commander.server) {
-		if (eeutils.exists(pub_path)) {
-			process.chdir(pub_path);
-			server({
-				port: 1991
-			});
-			watcher(commander);
-		} else {
-			console.log("floder 'public' not exist, please run 'eedoc -b' first!");
-		}
 	} else if (commander.deploy) {
 		deploy(commander, config);
 	} else if (commander.clean) {
@@ -43,9 +47,21 @@ module.exports = function(commander) {
 		watcher(commander);
 	} else if (commander.ftp) {
 		ftp(commander, config);
-	} else if (commander.build) {
+	} else if ((cmd == 'build' || cmd == '-b') && commander.build) {
 		build(commander, null, config);
-	}  else {
+	} else if ((cmd == 'server' || cmd == '-s') && commander.server) {
+		if (eeutils.exists(pub_path)) {
+			process.chdir(pub_path);
+			server.listen(commander.server, () => {
+				watcher(commander);
+				const url = "http://localhost:" + commander.server;
+				console.log('Running at ' + url);
+				opn(url);
+			});
+		} else {
+			console.log("floder 'public' not exist, please run 'eedoc -b' first!");
+		}
+	} else {
 		console.log('coming soon.')
 	}
 }
