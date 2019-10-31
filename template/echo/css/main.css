@@ -1,4 +1,4 @@
-/* =================================================================== 
+/* ===================================================================
  *
  *  Abstract v1.0 Main Stylesheet
  *  09-06-2016
@@ -10,7 +10,7 @@
  *  04. preloader
  *  05. forms
  *  06. buttons
- *  07. other components 
+ *  07. other components
  *  08. common and reusable styles
  *  09. header styles
  *  10. page header
@@ -75,8 +75,8 @@ body {
 	color: #111111;
 }
 
-/* ------------------------------------------------------------------- 
- * links - (_document-setup.scss)  
+/* -------------------------------------------------------------------
+ * links - (_document-setup.scss)
  * ------------------------------------------------------------------- */
 a,
 a:visited {
@@ -96,7 +96,7 @@ a:focus {
 }
 
 /* ===================================================================
- *  03. typography & general theme styles - (_document-setup.scss) 
+ *  03. typography & general theme styles - (_document-setup.scss)
  *
  * ------------------------------------------------------------------- */
 h1,
@@ -356,8 +356,8 @@ hr {
 	height: 0;
 }
 
-/* ------------------------------------------------------------------- 
- * Lists - (_document-setup.scss)  
+/* -------------------------------------------------------------------
+ * Lists - (_document-setup.scss)
  * ------------------------------------------------------------------- */
 ol {
 	list-style: decimal;
@@ -421,8 +421,8 @@ dd {
 	margin: 0 0 0 2rem;
 }
 
-/* ------------------------------------------------------------------- 
- * Spacing - (_document-setup)  
+/* -------------------------------------------------------------------
+ * Spacing - (_document-setup)
  * ------------------------------------------------------------------- */
 button,
 .button {
@@ -450,8 +450,8 @@ form,
 	margin-bottom: 2rem;
 }
 
-/* ------------------------------------------------------------------- 
- * floated image - (_document-setup)  
+/* -------------------------------------------------------------------
+ * floated image - (_document-setup)
  * ------------------------------------------------------------------- */
 img.pull-right {
 	margin: 0.9rem 0 0 2.4rem;
@@ -461,7 +461,7 @@ img.pull-left {
 	margin: 0.9rem 2.4rem 0 0;
 }
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * block grids paddings
  * ------------------------------------------------------------------- */
 .bgrid {
@@ -496,8 +496,8 @@ img.pull-left {
 
 }
 
-/* ------------------------------------------------------------------- 
- * tables - (_document-setup.scss)  
+/* -------------------------------------------------------------------
+ * tables - (_document-setup.scss)
  * ------------------------------------------------------------------- */
 table {
 	border-width: 0;
@@ -537,7 +537,7 @@ td:last-child {
 	-webkit-overflow-scrolling: touch;
 }
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * pace.js styles - minimal  - (_document-setup.scss)
  * ------------------------------------------------------------------- */
 .pace {
@@ -753,7 +753,7 @@ label>input[type="radio"] {
 }
 
 /**
- * Style Placeholder Text  
+ * Style Placeholder Text
  */
 ::-webkit-input-placeholder {
 	color: #777777;
@@ -948,7 +948,7 @@ input::-moz-focus-inner {
 /* additional typo styles - (_additional-typo.scss)
  * ------------------------------------------------------------------- */
 
-/* drop cap 
+/* drop cap
  * ----------------------------------------------- */
 .drop-cap:first-letter {
 	float: left;
@@ -967,7 +967,7 @@ input::-moz-focus-inner {
 	margin-bottom: 2rem;
 }
 
-/* line definition style 
+/* line definition style
  * ----------------------------------------------- */
 .lining dt,
 .lining dd {
@@ -994,7 +994,7 @@ input::-moz-focus-inner {
 	margin-left: -0.2em;
 }
 
-/* dictionary definition style 
+/* dictionary definition style
  * ----------------------------------------------- */
 .dictionary-style dt {
 	display: inline;
@@ -1015,7 +1015,7 @@ input::-moz-focus-inner {
 	content: counter(definitions, decimal) ". ";
 }
 
-/** 
+/**
  * Pull Quotes
  * -----------
  * markup:
@@ -1061,7 +1061,7 @@ input::-moz-focus-inner {
 	content: none;
 }
 
-/** 
+/**
  * Stats Tab
  * ---------
  * markup:
@@ -1167,11 +1167,11 @@ input::-moz-focus-inner {
 
 
 /* ===================================================================
- *  08. common and reusable styles 
+ *  08. common and reusable styles
  *
  * ------------------------------------------------------------------- */
 
-/* animation stuff - (_common-styles.scss) 
+/* animation stuff - (_common-styles.scss)
  * ------------------------------------------------------------------- */
 .js .animate-this {
 	opacity: 0;
@@ -1181,7 +1181,7 @@ input::-moz-focus-inner {
 	opacity: 1;
 }
 
-/* masonry entries - (_common-styles.scss) 
+/* masonry entries - (_common-styles.scss)
  * ------------------------------------------------------------------- */
 .bricks-wrapper .entry {
 	margin-bottom: 40px;
@@ -1315,7 +1315,7 @@ input::-moz-focus-inner {
 }
 
 
-/* featured post slider - (_common-styles.scss) 
+/* featured post slider - (_common-styles.scss)
  * ------------------------------------------------------------------- */
 #featured-post-slider {
 	position: relative;
@@ -1525,7 +1525,7 @@ input::-moz-focus-inner {
 }
 
 
-/*  post formats - masonry view - (_common-styles.scss) 
+/*  post formats - masonry view - (_common-styles.scss)
  * ------------------------------------------------------------------- */
 
 /* format quote & format link
@@ -1684,8 +1684,8 @@ header a {
 
 }
 
-/* ------------------------------------------------------------------- 
- * header logo - (_layout.css) 
+/* -------------------------------------------------------------------
+ * header logo - (_layout.css)
  * ------------------------------------------------------------------- */
 header .logo {
 	position: absolute;
@@ -1744,8 +1744,8 @@ header .logo a {
 
 }
 
-/* ------------------------------------------------------------------- 
- * navigation - (_layout.css) 
+/* -------------------------------------------------------------------
+ * navigation - (_layout.css)
  * ------------------------------------------------------------------- */
 .triggers {
 	position: absolute;
@@ -1788,8 +1788,8 @@ header .logo a {
 
 }
 
-/* ------------------------------------------------------------------- 
- * main navigation - (_layout.css) 
+/* -------------------------------------------------------------------
+ * main navigation - (_layout.css)
  * ------------------------------------------------------------------- */
 #main-nav-wrap {
 	display: table;
@@ -2134,8 +2134,8 @@ header .logo a {
 
 }
 
-/* ------------------------------------------------------------------- 
- * search wrap - (_layout.css) 
+/* -------------------------------------------------------------------
+ * search wrap - (_layout.css)
  * ------------------------------------------------------------------- */
 .search-wrap {
 	display: block;
@@ -2511,7 +2511,7 @@ header .logo a {
 	background: #151515;
 }
 
-/* responsive: 
+/* responsive:
 /* bricks masonry
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:1280px) {
@@ -2816,7 +2816,7 @@ footer ul li {
  *
  * ------------------------------------------------------------------- */
 
-/* single post - (_blog.scss) 
+/* single post - (_blog.scss)
  * ------------------------------------------------------------------- */
 .blog-single .entry-meta {
 	font-family: "muli-regular", sans-serif;
@@ -2993,7 +2993,7 @@ footer ul li {
 }
 
 
-/* comments - (_blog.scss) 
+/* comments - (_blog.scss)
  * ------------------------------------------------------------------- */
 .comments-wrap {
 	background-color: rgba(0, 0, 0, 0.08);
@@ -4036,6 +4036,20 @@ footer ul li {
 }
 
 .gt-container .gt-header-controls-tip {
+	display: none;
+}
+
+.gt-container blockquote p{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    margin-top: 0;
+    box-sizing: border-box;
+    padding: 0px;
+    color: #6a737d;
+}
+
+.gt-container blockquote:before{
 	display: none;
 }
 
