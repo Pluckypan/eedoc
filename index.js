@@ -99,7 +99,7 @@ function watcher(commander) {
 			process.chdir(root);
 			build(commander, function(isOK) {
 				process.chdir(pub_path);
-			}), config;
+			}, config);
 		});
 		//monitor.stop();
 	})
