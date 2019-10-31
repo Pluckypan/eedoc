@@ -11,7 +11,7 @@ commander
 
 commander
 	.option('-i, init', 'init a documentation.')
-	.option("-b, build", "build static html page.")
+	.option("-b, build [type]", "build static html page.", 'release')
 	.option("-s, server", "run the page at http://127.0.0.1:1991")
 	.option("-d, deploy", "publish static page to git repo.")
 	.option("-f, ftp", "publish static page to ftp server.")

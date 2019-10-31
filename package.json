@@ -1,6 +1,6 @@
 {
 	"name": "eedoc",
-	"version": "1.8.1",
+	"version": "1.8.2",
 	"description": "a simple document generation tool with a local search engine",
 	"main": "index.js",
 	"_args": [
@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"colors-cli": "^1.0.26",
+		"commander": "^3.0.2",
 		"crypto": "^1.0.1",
 		"ejs": "^2.7.1",
 		"ftp-deploy": "^2.3.5",

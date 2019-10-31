@@ -7,6 +7,7 @@
 	"doc": "doc",
 	"out": "i",
 	"pash": true,
+	"excludeDash":true,
 	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
@@ -46,8 +47,7 @@
 		"name": "回声嘹亮",
 		"desc": "I'm an Engineer",
 		"logo": "http://img.1991th.com/tuchongeter/statics/041122",
-		"image": "",
-		"visibleTag": "echo"
+		"image": ""
 	}],
 	"statics": "assets",
 	"deploys": [{

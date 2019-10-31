@@ -245,4 +245,7 @@ Hi,我是静静
 - [ ] 分类分页点击进入详情再返回出错
 - [ ] eedoc -new -theme 指令
 - [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
-- [ ] 开发者模式
+- [ ] 开发者模式 50%
+- [x] 优化 init 流程,拷贝最新 config.json
+- [x] build 添加 release 或 debug 模式
+- [x] excludeDash：excludeDash = true && build = release 则不编译以下划线开头的 MarkDown 如 `_post.md`
