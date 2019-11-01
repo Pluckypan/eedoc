@@ -254,10 +254,11 @@ Hi,我是静静
 ### TODO
 - [ ] 图片相对路径在子目录(如1991th.com/blog/)出错
 - [ ] 分类分页点击进入详情再返回出错
-- [ ] eedoc -new -theme 指令
+- [ ] eedoc -n new 指令
 - [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
 - [x] eedoc -s 后自动打开链接
 - [x] eedoc -t select 支持选择主题
+- [ ] 代码块字体样式
 - [ ] eedoc -t clone 支持 git clone 主题
 - [ ] 开发者模式 50%
 - [x] 优化 init 流程,拷贝最新 config.json
