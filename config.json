@@ -7,7 +7,7 @@
 	"doc": "doc",
 	"out": "i",
 	"pash": true,
-	"excludeDash":true,
+	"excludeDash": true,
 	"icp": "鲁ICP备 xxxxxx号",
 	"user": {
 		"name": "User",
@@ -112,6 +112,7 @@
 	},
 	"nav": {
 		"busuanzi": true,
+		"baidu": null,
 		"topLinks": [{
 			"link": "http://www.1991th.com/",
 			"name": "首页",

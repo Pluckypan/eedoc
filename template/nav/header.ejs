@@ -14,6 +14,17 @@
 		<script src="js/index.js"></script>
 		<meta name="description" content="<%=config.description%>" />
 		<meta name="generator" content="eedoc" />
+		<%if(config.nav&&config.nav.baidu){%>
+			<script>
+				var _hmt = _hmt || [];
+				(function() {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?<%=config.nav.baidu%>";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();
+			</script>
+		<%}%>
 	</head>
 
 	<body>
