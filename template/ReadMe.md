@@ -13,7 +13,9 @@
 	"markedRender":{			// markdown render 配置 目前可自定义 H 标签,table,a
 		"heading":null,
 		"table":null,
-		"link":null
+		"link":null,
+		"code":null,
+		"highlight":null
 	}
 }
 ```

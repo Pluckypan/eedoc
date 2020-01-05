@@ -1959,6 +1959,9 @@ li.menu-item:nth-of-type(3) a:after {
 	word-wrap: break-word;
 	word-break: break-all;
 	margin: 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .product-desc {
@@ -2139,7 +2142,10 @@ li.menu-item:nth-of-type(3) a:after {
 		width: 200px;
 		height: 20px;
 		word-wrap: break-word;
-		word-break: break-all
+		word-break: break-all;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 
 	.mod-list {

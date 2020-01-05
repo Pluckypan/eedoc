@@ -256,6 +256,8 @@ Hi,我是静静
 - [ ] 分类分页点击进入详情再返回出错
 - [ ] eedoc -n new 指令
 - [ ] eedoc -u update 指令
+- [ ] 创建 template 文件夹和 ignore
+- [ ] styl 支持 eedoc-config
 - [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
 - [x] eedoc -s 后自动打开链接
 - [x] eedoc -t select 支持选择主题
