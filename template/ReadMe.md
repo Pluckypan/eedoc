@@ -15,7 +15,8 @@
 		"table":null,
 		"link":null,
 		"code":null,
-		"highlight":null
+		"highlight":null,
+		"image":null
 	}
 }
 ```
