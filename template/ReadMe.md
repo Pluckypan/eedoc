@@ -150,6 +150,9 @@ eedoc // eedoc
 ## 美拍
 [video](https://mvvideoshare1.meitudata.com/56e87e924624c7779.mp4?k=993de5b4fc32644e7d594a638116c9e3&t=5da53729)
 
+## 图片对齐方式[left,center,right] 需要主题支持
+![01](../assets/single-01.jpg?align=left)
+
 ## 画廊
 ![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg)
 ![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-02.jpg)
