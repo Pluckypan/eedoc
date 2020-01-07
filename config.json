@@ -10,6 +10,7 @@
 	"excludeDash": true,
 	"icp": "鲁ICP备 xxxxxx号",
 	"showTimeFormat": "YYYY-MM-DD HH:mm:ss",
+	"language": "en",
 	"user": {
 		"name": "User",
 		"desc": "I'm a boy.",
