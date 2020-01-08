@@ -1,6 +1,6 @@
 {
 	"name": "eedoc",
-	"version": "1.8.4",
+	"version": "1.8.5",
 	"description": "a simple document generation tool with a local search engine",
 	"main": "index.js",
 	"_args": [
@@ -29,6 +29,7 @@
 		"path": "^0.12.7",
 		"semver": "^5.7.0",
 		"serve": "^11.2.0",
+		"shelljs": "^0.8.3",
 		"stylus": "^0.54.7",
 		"uglify-js": "^2.8.29",
 		"watch": "^1.0.2"
