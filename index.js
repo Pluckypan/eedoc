@@ -5,6 +5,8 @@ var theme = require('./lib/theme');
 var build = require('./lib/build');
 var deploy = require('./lib/deploy');
 var ftp = require('./lib/ftp');
+var newArticle = require('./lib/new');
+var lang = require('./lib/lang');
 var exec = require('child_process').exec;
 var watch = require('watch');
 var color = require('colors-cli/safe');
@@ -63,7 +65,11 @@ module.exports = function(commander) {
 			console.log("floder 'public' not exist, please run 'eedoc -b' first!");
 		}
 	} else if ((cmd == 'theme' || cmd == '-t') && commander.theme) {
-		theme(commander,config);
+		theme(commander, config);
+	} else if ((cmd == 'new' || cmd == '-n') && commander.new) {
+		newArticle(commander, config);
+	} else if ((cmd == 'lang' || cmd == '-l') && commander.lang) {
+		lang(commander, config);
 	} else {
 		console.log('coming soon.')
 	}
