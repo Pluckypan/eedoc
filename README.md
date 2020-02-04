@@ -2,6 +2,9 @@ eedoc
 ===
 基于Node.js Markdown静态网站生成器;专注于创作
 
+[![NPM version](https://badge.fury.io/js/eedoc.svg)](https://www.npmjs.com/package/eedoc)
+
+
 ### 特点
 - 轻量、简易、简洁、高颜值
 - 专注于写作
@@ -52,6 +55,7 @@ eedoc -f #发布至ftp服务器(publish static page to ftp server.)
 eedoc -c #清除缓存及静态页(clean the public floder.)
 eedoc -t #选择主题(select a theme.)
 eedoc -n #新建文章(generate a new article.)
+eedoc -l #选择语言(select website language.)
 ```
 
 ### gitalk 评论功能 `since 1.5.4`
@@ -254,10 +258,11 @@ Hi,我是静静
 ### TODO
 - [ ] 图片相对路径在子目录(如1991th.com/blog/)出错
 - [ ] 分类分页点击进入详情再返回出错
-- [ ] eedoc -n new 指令
 - [ ] styl 支持 eedoc-config
 - [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
 - [ ] 开发者模式 50%
+- [x] eedoc -n new 指令
+- [x] eedoc -l lang 指令
 - [x] 创建 template 文件夹和 ignore
 - [x] eedoc -s 后自动打开链接
 - [x] eedoc -t select 支持选择主题
