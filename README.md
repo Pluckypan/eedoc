@@ -261,6 +261,7 @@ Hi,我是静静
 - [ ] styl 支持 eedoc-config
 - [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
 - [ ] 开发者模式 50%
+- [ ] eedoc theme [type] 新增 update
 - [x] eedoc -n new 指令
 - [x] eedoc -l lang 指令
 - [x] 创建 template 文件夹和 ignore
