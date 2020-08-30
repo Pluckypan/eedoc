@@ -4039,17 +4039,17 @@ footer ul li {
 	display: none;
 }
 
-.gt-container blockquote p{
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    margin-top: 0;
-    box-sizing: border-box;
-    padding: 0px;
-    color: #6a737d;
+.gt-container blockquote p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 16px;
+	margin-top: 0;
+	box-sizing: border-box;
+	padding: 0px;
+	color: #6a737d;
 }
 
-.gt-container blockquote:before{
+.gt-container blockquote:before {
 	display: none;
 }
 
@@ -4163,7 +4163,7 @@ footer ul li {
 
 .post-body {
 	font-family: "muli-regular", sans-serif;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	color: rgba(0, 0, 0, 0.6);
 	line-height: 2.4rem;
 	letter-spacing: 3px;
@@ -4185,12 +4185,13 @@ h7 {
 }
 
 .post-body p {
-	line-height: 2.2rem;
-	margin-bottom: 1.2rem;
+	line-height: 2.4rem;
+	margin-bottom: 2.2rem;
+	font-size: 1.6rem;
 }
 
 .post-body blockquote p {
-	font-size: 2.1rem;
+	font-size: 1.8rem;
 	line-height: 2.4rem;
 	margin-bottom: 1rem;
 	color: rgba(0, 0, 0, 0.6);

@@ -50,7 +50,10 @@
 						</p>
 					</div>
 					<div>
-						<img src="https://pandapro.demo.nicetheme.xyz/wp-content/uploads/2019/07/2019072006470679.png" style="width: 100%;" />
+						<%const advImage=config.adv?config.adv.image:null%>	
+						<a href="<%=config.adv?config.adv.link:'#'%>" target="<%=config.adv?config.adv.target:'_self'%>">
+							<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>" style="width: 100%;max-height:140px;object-fit:cover;" draggable="false" alt="<%=config.user.name%>"/>
+						</a>
 					</div>
 				</div>
 			</div>

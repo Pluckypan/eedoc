@@ -90,7 +90,7 @@
 		"link": "http://www.1991th.com/",
 		"name": "天猫导流",
 		"desc": "天猫2019双十一.火热进行中",
-		"image": "assets/default-adv.png",
+		"image": "http://img.1991th.com/tuchongeter/statics/default-adv.png",
 		"target": "blank"
 	},
 	"theme": "echo",
