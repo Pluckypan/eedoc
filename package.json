@@ -29,10 +29,11 @@
 		"path": "^0.12.7",
 		"semver": "^5.7.0",
 		"serve": "^11.2.0",
-		"shelljs": "^0.8.3",
+		"shelljs": "^0.8.4",
 		"stylus": "^0.54.7",
 		"uglify-js": "^2.8.29",
-		"watch": "^1.0.2"
+		"watch": "^1.0.2",
+		"cheerio": "^1.0.0-rc.3"
 	},
 	"devDependencies": {},
 	"scripts": {
