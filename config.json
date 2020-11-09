@@ -10,6 +10,7 @@
 	"excludeDash": true,
 	"icp": "鲁ICP备 xxxxxx号",
 	"showTimeFormat": "YYYY-MM-DD HH:mm:ss",
+	"favicon": "http://img.1991th.com/tuchongeter/statics/favicon.ico",
 	"language": "en",
 	"user": {
 		"name": "User",

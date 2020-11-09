@@ -113,8 +113,11 @@ Hi,我是静静
 	"doc": "doc",
 	"out": "i",
 	"pash": true,
-	"excludeDash":true,
+	"excludeDash": true,
 	"icp": "鲁ICP备 xxxxxx号",
+	"showTimeFormat": "YYYY-MM-DD HH:mm:ss",
+	"favicon": "http://img.1991th.com/tuchongeter/statics/favicon.ico",
+	"language": "en",
 	"user": {
 		"name": "User",
 		"desc": "I'm a boy.",
@@ -194,7 +197,7 @@ Hi,我是静静
 		"link": "http://www.1991th.com/",
 		"name": "天猫导流",
 		"desc": "天猫2019双十一.火热进行中",
-		"image": "assets/default-adv.png",
+		"image": "http://img.1991th.com/tuchongeter/statics/default-adv.png",
 		"target": "blank"
 	},
 	"theme": "echo",
@@ -218,6 +221,7 @@ Hi,我是静静
 	},
 	"nav": {
 		"busuanzi": true,
+		"baidu": null,
 		"topLinks": [{
 			"link": "http://www.1991th.com/",
 			"name": "首页",
@@ -260,10 +264,10 @@ Hi,我是静静
 - [ ] 分类分页点击进入详情再返回出错
 - [ ] styl 支持 eedoc-config
 - [ ] 支持音乐挂件: 网易云音乐 2006年发行的音乐,样式侵入
-- [ ] 开发者模式 50%
 - [ ] eedoc theme [type] 新增 update
 - [x] eedoc -n new 指令
 - [x] eedoc -l lang 指令
+- [ ] ~~开发者模式 50%~~
 - [x] 创建 template 文件夹和 ignore
 - [x] eedoc -s 后自动打开链接
 - [x] eedoc -t select 支持选择主题
