@@ -13,12 +13,12 @@
 		"eedoc": "bin/eedoc.js"
 	},
 	"dependencies": {
+		"cheerio": "^1.0.0-rc.3",
 		"colors-cli": "^1.0.26",
 		"commander": "^3.0.2",
 		"crypto": "^1.0.1",
 		"ejs": "^2.7.1",
-		"ftp-deploy": "^2.3.5",
-		"ftp-upload": "^1.1.4",
+		"ftp-deploy": "^2.3.8",
 		"gh-pages": "^1.2.0",
 		"highlight.js": "^9.15.10",
 		"inquirer": "^0.9.0",
@@ -32,8 +32,7 @@
 		"shelljs": "^0.8.4",
 		"stylus": "^0.54.7",
 		"uglify-js": "^2.8.29",
-		"watch": "^1.0.2",
-		"cheerio": "^1.0.0-rc.3"
+		"watch": "^1.0.2"
 	},
 	"devDependencies": {},
 	"scripts": {
