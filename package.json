@@ -20,7 +20,7 @@
 		"ejs": "^2.7.1",
 		"ftp-deploy": "^2.3.8",
 		"gh-pages": "^1.2.0",
-		"highlight.js": "^9.15.10",
+		"highlight.js": "^10.1.2",
 		"inquirer": "^0.9.0",
 		"loading-cli": "^1.0.8",
 		"marked": "^0.3.19",
