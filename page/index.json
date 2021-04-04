@@ -5,7 +5,7 @@
 			"link": "https://www.sigoo.com/",
 			"name": "极像素",
 			"desc": "超高像素看世界",
-			"image": "http://img.1991th.com/tuchongeter/statics/banner.jpg"
+			"image": "http://img.1991.wiki/tuchongeter/statics/banner.jpg"
 		},{
 				"link": "https://tuchong.com/",
 				"name": "图虫",
@@ -20,33 +20,33 @@
 			"link": "https://www.sigoo.com/",
 			"name": "极像素",
 			"desc": "超高像素看世界",
-			"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+			"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 			"image": ""
 		}, {
 			"link": "https://www.skypixel.com/",
 			"name": "天空之城",
 			"desc": "超高像素看世界",
-			"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+			"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 			"image": ""
 		}, {
 			"link": "http://www.dgtle.com/",
 			"name": "数字尾巴",
 			"desc": "分享美好数字生活",
-			"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+			"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 			"image": ""
 		},
 		{
 			"link": "https://www.zhaiup.com/",
 			"name": "宅站",
 			"desc": "自由职业者交流学习社区(Z站)",
-			"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+			"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 			"image": ""
 		},
 		{
 			"link": "https://luolei.org/",
 			"name": "罗磊的独立博客",
 			"desc": "ZUOLUOTV™ 制作人,左左文化创始人.",
-			"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+			"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 			"image": ""
 		}
 	]
@@ -57,19 +57,19 @@
 		"link": "https://unsplash.com/",
 		"name": "Unsplash",
 		"desc": "高品质图片素材 可免费用在任何地方",
-		"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+		"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 		"image": ""
 	}, {
 		"link": "https://www.pexels.com/",
 		"name": "Pexels",
 		"desc": "免费图片分享",
-		"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+		"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 		"image": ""
 	}, {
 		"link": "https://www.hellorf.com/",
 		"name": "海洛创意",
 		"desc": "海量图片下载 收费",
-		"logo": "http://img.1991th.com/tuchongeter/statics/unsplash.png",
+		"logo": "http://img.1991.wiki/tuchongeter/statics/unsplash.png",
 		"image": ""
 	}]
 }]

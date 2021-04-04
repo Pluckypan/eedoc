@@ -155,9 +155,9 @@ eedoc // eedoc
 ![01](../assets/single-01.jpg?align=left)
 
 ## 画廊
-![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg)
-![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-02.jpg)
-![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-03.jpg)
+![gallery](http://img.1991.wiki/tuchongeter/statics/single-gallery-01.jpg)
+![gallery](http://img.1991.wiki/tuchongeter/statics/single-gallery-02.jpg)
+![gallery](http://img.1991.wiki/tuchongeter/statics/single-gallery-03.jpg)
 ```
 
 ## 在新页面打开 URL

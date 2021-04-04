@@ -7,11 +7,11 @@
 	"create_time":"2019-07-18 21:45",
 	"update_time":"2019-10-07 20:01",
 	"category":"样板",
-	"cover":"http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg",
+	"cover":"http://img.1991.wiki/tuchongeter/statics/single-gallery-01.jpg",
 	"tags":["画廊","示例","表格","自定义参数","引用","封面","代码","视频"]
 } eedoc -->
 
-![cover](http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg)
+![cover](http://img.1991.wiki/tuchongeter/statics/single-gallery-01.jpg)
 
 ## 每日精选
 > 没有不可治愈的伤痛，没有不能结束的沉沦，所有失去的，会以另一种方式归来。<cite>约翰•肖尔斯《许愿树》</cite>
@@ -25,7 +25,7 @@
 ![assets](../assets/tuchong.png)
 
 ## 网络图片
-![web](http://img.1991th.com/tuchongeter/statics/single-gallery-03.jpg)
+![web](http://img.1991.wiki/tuchongeter/statics/single-gallery-03.jpg)
 
 ## 链接
 [天空之城](#)以另一种视角看世界 **我去看世界** **风之谷** [在新页面打开](http://www.baidu.com?target=blank)
@@ -69,12 +69,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consequuntu
 [iframe](https://player.bilibili.com/player.html?aid=64229242&cid=111520559&page=1)
 
 ## 美拍
-[video](http://img.1991th.com/tuchongeter/article/56e87e924624c7779.mp4)
+[video](http://img.1991.wiki/tuchongeter/article/56e87e924624c7779.mp4)
 
 ## 画廊
-![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-01.jpg)
-![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-02.jpg)
-![gallery](http://img.1991th.com/tuchongeter/statics/single-gallery-03.jpg)
+![gallery](http://img.1991.wiki/tuchongeter/statics/single-gallery-01.jpg)
+![gallery](http://img.1991.wiki/tuchongeter/statics/single-gallery-02.jpg)
+![gallery](http://img.1991.wiki/tuchongeter/statics/single-gallery-03.jpg)
 
 ## 本地画廊
 ![gallery](../assets/single-01.jpg)

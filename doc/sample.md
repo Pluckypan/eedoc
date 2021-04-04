@@ -15,7 +15,7 @@ eedoc
 
 <div align="center">
 
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@echo.home.png!1080jpg)
+![eedoc](http://img.1991.wiki/tuchongeter/statics/eedoc@echo.home.png!1080jpg)
 
 [博客主题@echo](http://www.1991th.com/blog/)
 
@@ -23,7 +23,7 @@ eedoc
 
 <div align="center">
 
-![eedoc](http://img.1991th.com/tuchongeter/statics/eedoc@nav.png!1080jpg)
+![eedoc](http://img.1991.wiki/tuchongeter/statics/eedoc@nav.png!1080jpg)
 
 [导航主题@nav](http://www.1991th.com/nav/)
 
@@ -114,7 +114,7 @@ Hi,我是静静
 	"user": {
 		"name": "User",
 		"desc": "I'm a boy.",
-		"avatar": "http://img.1991th.com/tuchongeter/statics/default_avatar.jpg",
+		"avatar": "http://img.1991.wiki/tuchongeter/statics/default_avatar.jpg",
 		"email": "user@echo.engineer",
 		"social": [{
 			"link": "mailto:plucky@echo.engineer",
@@ -142,13 +142,13 @@ Hi,我是静静
 		"link": "http://www.1991th.com/",
 		"name": "风之谷",
 		"desc": "Take it Easy & Make it Happen",
-		"logo": "http://img.1991th.com/tuchongeter/statics/041122",
+		"logo": "http://img.1991.wiki/tuchongeter/statics/041122",
 		"image": ""
 	}, {
 		"link": "http://www.echo.engineer/",
 		"name": "回声嘹亮",
 		"desc": "I'm an Engineer",
-		"logo": "http://img.1991th.com/tuchongeter/statics/041122",
+		"logo": "http://img.1991.wiki/tuchongeter/statics/041122",
 		"image": ""
 	}],
 	"statics": "assets",
