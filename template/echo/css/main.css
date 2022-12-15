@@ -4185,9 +4185,13 @@ h7 {
 }
 
 .post-body p {
-	line-height: 2.4rem;
+	line-height: 2.6rem;
 	margin-bottom: 2.2rem;
 	font-size: 1.6rem;
+}
+
+.post-body li {
+	margin-bottom: 10px !important;
 }
 
 .post-body blockquote p {
