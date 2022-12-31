@@ -1,67 +1,73 @@
 <%- include('header',{'type':'about','pname':'关于'});%>
-		<!-- begin content -->
-		<div id="content-wrap">
-			<div class="row">
-				<%if(config.echo&&config.echo.galleryAbout&&config.echo.galleryAbout.length>0){%>
-					<div class="col-full format-gallery about-body">
-						<div class="content-media">
-							<div class="post-slider flexslider">
-								<ul class="slides">
+	<!-- begin content -->
+	<div id="content-wrap">
+		<div class="row">
+			<%if(config.echo&&config.echo.galleryAbout&&config.echo.galleryAbout.length>0){%>
+				<div class="col-full format-gallery about-body">
+					<div class="content-media">
+						<div class="post-slider flexslider">
+							<ul class="slides">
 								<%config.echo.galleryAbout.forEach(function(img,i){%>
 									<li>
 										<img src="<%=img%>">
-									</li>					
-								<%});%>
-								</ul>
-							</div>
-						</div>
-					</div>					
-				<%}%>
-				<div class="col-full blog-single">
-					<div class="author-profile">
-						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
-						<img src="<%=config.user.avatar%>" data-src="<%=config.user&&config.user.avatar&&config.user.avatar.length>0?'':placeholder%>" draggable="false" alt="<%=config.user.name%>">
-						<div class="about">
-							<h4>
-								<a href="#"><%=config.user.name%></a>
-								<span style="color:#999;font-size:12px!important;display:block;">
-									<%=config.user.desc%>
-								</span>
-							</h4>
-							<div class="post-body">
-								<%-describe._render%>
-							</div>
-							<%if(config.user&&config.user.social&&config.user.social.length>0){%>
-								<ul class="author-social animate-this">
-									<%config.user.social.forEach(function(l,i){%>
-										<li><a href="<%=l.link%>" target="<%=l.target%>"><%=l.name%></a></li>
+									</li>
 									<%});%>
-								</ul>
-							<%}%>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<%if(config.links&&config.links.length>0){%>
-					<div class="col-full blog-single animate-this">
-						<p class="tags">
-							<span>友情链接 :</span>
-							<%config.links.forEach(function(l,i){%>
-								<%if(l.visibleTag&&l.visibleTag.length>0){%>
-									<a class="<%=l.visibleTag?'visibleTag':''%>" 
-									target="<%=l.target?l.target:'_blank'%>" style="display:none;" 
-									visibleTag="<%=l.visibleTag%>" href="<%=l.link%>">
-										<%=l.name%>
-									</a>
-								<%}else{%>
-									<a target="<%=l.target?l.target:'_blank'%>" href="<%=l.link%>">
-										<%=l.name%>
-									</a>
-								<%} %>
-							<%})%>
-						</p>
-					</div>
 				<%}%>
-			</div>
+					<div class="col-full blog-single">
+						<div class="author-profile">
+							<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=EasyDoc' %>
+								<img src="<%=config.user.avatar%>"
+									data-src="<%=config.user&&config.user.avatar&&config.user.avatar.length>0?'':placeholder%>"
+									draggable="false" alt="<%=config.user.name%>">
+								<div class="about">
+									<h4>
+										<a href="#">
+											<%=config.user.name%>
+										</a>
+										<span style="color:#999;font-size:12px!important;display:block;">
+											<%=config.user.desc%>
+										</span>
+									</h4>
+									<div class="post-body">
+										<%-describe._render%>
+									</div>
+									<%if(config.user&&config.user.social&&config.user.social.length>0){%>
+										<ul class="author-social animate-this">
+											<%config.user.social.forEach(function(l,i){%>
+												<li><a href="<%=l.link%>" target="<%=l.target%>">
+														<%=l.name%>
+													</a></li>
+												<%});%>
+										</ul>
+										<%}%>
+								</div>
+						</div>
+					</div>
+					<%if(config.links&&config.links.length>0){%>
+						<div class="col-full blog-single animate-this">
+							<p class="tags">
+								<span>友情链接 :</span>
+								<%config.links.forEach(function(l,i){%>
+									<%if(l.visibleTag&&l.visibleTag.length>0){%>
+										<a class="<%=l.visibleTag?'visibleTag':''%>"
+											target="<%=l.target?l.target:'_blank'%>" style="display:none;"
+											visibleTag="<%=l.visibleTag%>" href="<%=l.link%>">
+											<%=l.name%>
+										</a>
+										<%}else{%>
+											<a target="<%=l.target?l.target:'_blank'%>" href="<%=l.link%>">
+												<%=l.name%>
+											</a>
+											<%} %>
+												<%})%>
+							</p>
+						</div>
+						<%}%>
 		</div>
-		<!-- end content -->	
-<%- include('footer');%>	
+	</div>
+	<!-- end content -->
+	<%- include('footer');%>

@@ -3,92 +3,99 @@
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="zh"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="zh">
-	<!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<title><%=describe.name?describe.name:pname%> - <%=config.title%></title>
-		<meta name="description" content="<%=describe.desc%>">
-		<meta name="author" content="<%=config.user.name%>">
+<!--<![endif]-->
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+	<meta charset="utf-8">
+	<title>
+		<%=describe.name?describe.name:pname%> - <%=config.title%>
+	</title>
+	<meta name="description" content="<%=describe.desc%>">
+	<meta name="author" content="<%=config.user.name%>">
 
-		<link rel="stylesheet" href="<%=relative_path%>css/base.css">
-		<link rel="stylesheet" href="<%=relative_path%>css/vendor.css">
-		<link rel="stylesheet" href="<%=relative_path%>css/main.css">
-		<script>
-			var relative_path='<%=relative_path%>';
-		</script>
-		<script src="<%=relative_path%>js/jquery-2.1.3.min.js"></script>
-		<script src="<%=relative_path%>js/modernizr.js"></script>
-		<script src="<%=relative_path%>js/pace.min.js"></script>
-		<script src="<%=relative_path%>js/dt.js"></script>
-		<script src="<%=relative_path%>js/ejs.min.js"></script>
-		<script src="<%=relative_path%>js/search.js"></script>
-		<script src="https://cdn.bootcss.com/holder/2.9.6/holder.min.js"></script>
-		<%if(config.iconfont&&config.iconfont.link){%>
-			<link rel="stylesheet" href="<%=config.iconfont.link%>">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="<%=relative_path%>css/base.css">
+	<link rel="stylesheet" href="<%=relative_path%>css/vendor.css">
+	<link rel="stylesheet" href="<%=relative_path%>css/main.css">
+	<script>
+		var relative_path = '<%=relative_path%>';
+	</script>
+	<script src="<%=relative_path%>js/jquery-2.1.3.min.js"></script>
+	<script src="<%=relative_path%>js/modernizr.js"></script>
+	<script src="<%=relative_path%>js/pace.min.js"></script>
+	<script src="<%=relative_path%>js/dt.js"></script>
+	<script src="<%=relative_path%>js/ejs.min.js"></script>
+	<script src="<%=relative_path%>js/search.js"></script>
+	<script src="https://cdn.bootcss.com/holder/2.9.6/holder.min.js"></script>
+	<%if(config.iconfont&&config.iconfont.link){%>
+		<link rel="stylesheet" href="<%=config.iconfont.link%>">
 		<%}else{%>
 			<link rel="stylesheet" href="https://at.alicdn.com/t/font_1427835_zgyohh6l1si.css">
-		<%}%>
-		<link rel="shortcut icon" href="<%=relative_path%>favicon.ico" type="image/x-icon">
-		<link rel="icon" href="<%=relative_path%>favicon.ico" type="image/x-icon">
-	</head>
+			<%}%>
+				<link rel="shortcut icon" href="<%=relative_path%>favicon.ico" type="image/x-icon">
+				<link rel="icon" href="<%=relative_path%>favicon.ico" type="image/x-icon">
+</head>
 
-	<body id="top">
-		<!-- begin header -->
-		<header class="short-header">
-			<div class="gradient-block"></div>
-			<div class="row header-content">
-				<div class="logo">
-					<a href="<%=type!='index'?relative_path+'index.html':'#'%>">Plucky</a>
-				</div>
-				<nav id="main-nav-wrap">
-					<ul class="main-navigation sf-menu">
-						<li class="<%=type=='index'?'current':''%>">
-							<a href="<%=type!='index'?relative_path+'index.html':'#'%>" title="">首页</a>
-						</li>
-						<li class="<%=type=='category'?'current':''%>">
-							<a href="<%=type!='category'?relative_path+'category.html':'#'%>" title="">分类</a>
-						</li>
-						<li class="<%=type=='archives'?'current':''%>">
-							<a href="<%=type!='archives'?relative_path+'archives.html':'#'%>" title="">存档</a>
-						</li>
-						<li class="<%=type=='message'?'current':''%>">
-							<a href="<%=type!='message'?relative_path+'message.html':'#'%>" title="">留言板</a>
-						</li>
-						<li class="<%=type=='about'?'current':''%>">
-							<a href="<%=type!='about'?relative_path+'about.html':'#'%>" title="">关于</a>
-						</li>
-						<%if(config.echo&&config.echo.stars&&config.echo.stars.links&&config.echo.stars.links.length>0){%>
-							<li class="has-children">
-								<span class="nav-span"><%=config.echo.stars.name%></span>
-								<ul class="sub-menu">
-									<%config.echo.stars.links.forEach(function(l,i){%>
-										<li><a href="<%=l.link%>" target="<%=l.target%>"><%=l.name%></a></li>
-									<%});%>
-								</ul>
-							</li>
-						<%}%>
-					</ul>
-				</nav>
-				<div class="search-wrap">
-					<form role="search" method="get" class="search-form" action="#">
-						<label>
-							<span class="hide-content">Search for:</span>
-							<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:"
-							 autocomplete="off" id="search-input">
-						</label>
-						<input type="submit" class="search-submit" value="Search">
-						<ul class="search-result" id="search-result">
-
-						</ul>
-					</form>
-					<a href="#" id="close-search" class="close-btn">Close</a>
-				</div>
-				<div class="triggers">
-					<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
-					<a class="menu-toggle" href="#"><span>Menu</span></a>
-				</div>
+<body id="top">
+	<!-- begin header -->
+	<header class="short-header">
+		<div class="gradient-block"></div>
+		<div class="row header-content">
+			<div class="logo">
+				<a href="<%=type!='index'?relative_path+'index.html':'#'%>">Plucky</a>
 			</div>
-		</header>
-		<!-- end header -->
+			<nav id="main-nav-wrap">
+				<ul class="main-navigation sf-menu">
+					<li class="<%=type=='index'?'current':''%>">
+						<a href="<%=type!='index'?relative_path+'index.html':'#'%>" title="">首页</a>
+					</li>
+					<li class="<%=type=='category'?'current':''%>">
+						<a href="<%=type!='category'?relative_path+'category.html':'#'%>" title="">分类</a>
+					</li>
+					<li class="<%=type=='archives'?'current':''%>">
+						<a href="<%=type!='archives'?relative_path+'archives.html':'#'%>" title="">存档</a>
+					</li>
+					<li class="<%=type=='message'?'current':''%>">
+						<a href="<%=type!='message'?relative_path+'message.html':'#'%>" title="">留言板</a>
+					</li>
+					<li class="<%=type=='about'?'current':''%>">
+						<a href="<%=type!='about'?relative_path+'about.html':'#'%>" title="">关于</a>
+					</li>
+					<%if(config.echo&&config.echo.stars&&config.echo.stars.links&&config.echo.stars.links.length>0){%>
+						<li class="has-children">
+							<span class="nav-span">
+								<%=config.echo.stars.name%>
+							</span>
+							<ul class="sub-menu">
+								<%config.echo.stars.links.forEach(function(l,i){%>
+									<li><a href="<%=l.link%>" target="<%=l.target%>">
+											<%=l.name%>
+										</a></li>
+									<%});%>
+							</ul>
+						</li>
+						<%}%>
+				</ul>
+			</nav>
+			<div class="search-wrap">
+				<form role="search" method="get" class="search-form" action="#">
+					<label>
+						<span class="hide-content">Search for:</span>
+						<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s"
+							title="Search for:" autocomplete="off" id="search-input">
+					</label>
+					<input type="submit" class="search-submit" value="Search">
+					<ul class="search-result" id="search-result">
+
+					</ul>
+				</form>
+				<a href="#" id="close-search" class="close-btn">Close</a>
+			</div>
+			<div class="triggers">
+				<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+				<a class="menu-toggle" href="#"><span>Menu</span></a>
+			</div>
+		</div>
+	</header>
+	<!-- end header -->

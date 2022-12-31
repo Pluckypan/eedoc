@@ -1,19 +1,19 @@
 <div class="message-card add-top" id="comment-card">
 	<div class="gitalk_container">
-	  <div id="gitalk-container"></div>
-	  <link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
-	  <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-	  <script type="text/javascript">
-		var gitalk = new Gitalk({
-		  clientID: "<%=config.comment.gitalk.clientID%>",
-		  clientSecret: "<%=config.comment.gitalk.clientSecret%>",
-		  repo: "<%=config.comment.gitalk.repo%>",
-		  owner: "<%=config.comment.gitalk.owner%>",
-		  admin: "<%=config.comment.gitalk.admin%>",
-		  distractionFreeMode: "<%=config.comment.gitalk.distractionFreeMode%>",
-		  labels:['<%=type%>']
-		});
-		gitalk.render('gitalk-container');
-	  </script>
+		<div id="gitalk-container"></div>
+		<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+		<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+		<script type="text/javascript">
+			var gitalk = new Gitalk({
+				clientID: "<%=config.comment.gitalk.clientID%>",
+				clientSecret: "<%=config.comment.gitalk.clientSecret%>",
+				repo: "<%=config.comment.gitalk.repo%>",
+				owner: "<%=config.comment.gitalk.owner%>",
+				admin: "<%=config.comment.gitalk.admin%>",
+				distractionFreeMode: "<%=config.comment.gitalk.distractionFreeMode%>",
+				labels: ['<%=type%>']
+			});
+			gitalk.render('gitalk-container');
+		</script>
 	</div>
 </div>

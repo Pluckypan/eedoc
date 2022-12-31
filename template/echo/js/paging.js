@@ -216,7 +216,7 @@ $(function() {
 
 var ejsTmp = "";
 ejsTmp += "<article class=\"col-six tab-full article animate-this animated fadeIn\">";
-ejsTmp += "	<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>	";
+ejsTmp += "	<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=EasyDoc'%>	";
 ejsTmp += "	<div class=\"entry-media\">";
 ejsTmp += "		<a href=\"<%=relative_path%><%=post.url%>\" target=\"_self\">";
 ejsTmp +=

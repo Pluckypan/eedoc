@@ -1,47 +1,58 @@
 <%- include('header',{'type':'archives','pname':'存档'});%>
-		<!-- begin content -->
-		<div id="content-wrap" class="styles">
-			<div class="row wide">
-				<div class="col-eight tab-full archive">
-					<%if(archivePost&&archivePost.length>0){%>
-						<%archivePost.forEach(function(itm){%>
-							<div class="animate-this message-card">
-								<h1 class="archive-year" id="<%=itm.group%>"><%=itm.group%></h1>
-								<ul>
-									<%itm.items.forEach(function(post){%>
-										<li class="">
-											<div class="article-date"><%=post.day%></div>
-											<a href="<%=relative_path%><%=post.url%>" class="article-title"><%=post.name%></a>
-										</li>
+	<!-- begin content -->
+	<div id="content-wrap" class="styles">
+		<div class="row wide">
+			<div class="col-eight tab-full archive">
+				<%if(archivePost&&archivePost.length>0){%>
+					<%archivePost.forEach(function(itm){%>
+						<div class="animate-this message-card">
+							<h1 class="archive-year" id="<%=itm.group%>">
+								<%=itm.group%>
+							</h1>
+							<ul>
+								<%itm.items.forEach(function(post){%>
+									<li class="">
+										<div class="article-date">
+											<%=post.day%>
+										</div>
+										<a href="<%=relative_path%><%=post.url%>" class="article-title">
+											<%=post.name%>
+										</a>
+									</li>
 									<%});%>
-								</ul>
-							</div>
-						<%});%>
-					<%}%>
-				</div>
-				<div class="col-four tab-full">
-					<div class="infinity-widget widget_archives">
-						<div class="widget-title">
-							<h3>Archives</h3>
+							</ul>
 						</div>
-						<p class="archives">
-							<a href="#top">全部</a>
-							<%if(archivePost&&archivePost.length>0){%>
-								<%archivePost.forEach(function(itm){%>
-									<a href="#<%=itm.group%>" title="<%=itm.group%>"><%=itm.group%></a>
-								<%});%>
+						<%});%>
 							<%}%>
-						</p>
+			</div>
+			<div class="col-four tab-full">
+				<div class="infinity-widget widget_archives">
+					<div class="widget-title">
+						<h3>Archives</h3>
 					</div>
-					<div>
-						<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
-						<%const advImage=config.adv?config.adv.image:null%>	
-						<a href="<%=config.adv?config.adv.link:'#'%>" target="<%=config.adv?config.adv.target:'_self'%>">
-							<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>" style="width: 100%;max-height:140px;object-fit:cover;" draggable="false" alt="<%=config.user.name%>"/>
-						</a>
-					</div>
+					<p class="archives">
+						<a href="#top">全部</a>
+						<%if(archivePost&&archivePost.length>0){%>
+							<%archivePost.forEach(function(itm){%>
+								<a href="#<%=itm.group%>" title="<%=itm.group%>">
+									<%=itm.group%>
+								</a>
+								<%});%>
+									<%}%>
+					</p>
+				</div>
+				<div>
+					<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=EasyDoc' %>
+						<%const advImage=config.adv?config.adv.image:null%>
+							<a href="<%=config.adv?config.adv.link:'#'%>"
+								target="<%=config.adv?config.adv.target:'_self'%>">
+								<img src="<%=advImage%>" data-src="<%=advImage?advImage:placeholder%>"
+									style="width: 100%;max-height:140px;object-fit:cover;" draggable="false"
+									alt="<%=config.user.name%>" />
+							</a>
 				</div>
 			</div>
 		</div>
-		<!-- end content -->	
-<%- include('footer');%>
+	</div>
+	<!-- end content -->
+	<%- include('footer');%>

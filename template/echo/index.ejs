@@ -1,5 +1,5 @@
 <%- include('header',{type: "index",'pname':'首页'}); %>
-		<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=Mira.Sofia~'%>
+		<%const placeholder='holder.js/10x10?auto=yes&random=yes&text=EasyDoc'%>
 		<!-- begin content -->
 		<div id="content-wrap">
 			<div class="row wide">
@@ -33,7 +33,7 @@
 					<%}%>
 					<%if(allPost&&allPost.length>0){%>
 						<div class="row add-bottom">
-							<%allPost.slice(0,10).forEach(function(post){%>
+							<%allPost.slice(0,12).forEach(function(post){%>
 								<%-include('article',{'post':post,'type':'index'})%>
 							<%})%>
 						</div>
