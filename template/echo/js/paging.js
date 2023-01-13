@@ -1,39 +1,66 @@
-var pIndex=1;
+var pIndex = 1;
+
+function compareTime(startTime, endTime) {
+	try {
+		var startTimes = startTime.substring(0, 10).split('-');
+		var endTimes = endTime.substring(0, 10).split('-');
+		startTime = startTimes[1] + '-' + startTimes[2] + '-' + startTimes[0] + ' ' + startTime.substring(10, 19);
+		endTime = endTimes[1] + '-' + endTimes[2] + '-' + endTimes[0] + ' ' + endTime.substring(10, 19);
+		var thisResult = (Date.parse(endTime) - Date.parse(startTime)) / 3600 / 1000;
+		if (thisResult < 0) {
+			return -1;
+		} else if (thisResult > 0) {
+			return 1;
+		} else if (thisResult == 0) {
+			return -0;
+		} else {
+			return -2;
+		}
+	} catch (error) {
+		return -3;
+	}
+}
+
 function parsePost(url) {
 	var arr = url.split("#");
 	var books = [];
 	$(".category a").removeClass("current");
-	var cid="allCat";
+	var cid = "allCat";
 	if (arr && arr.length > 1) {
-		var aid=arr[arr.length - 1];
-		var tmp = categoryPost.find(function(item) {
+		var aid = arr[arr.length - 1];
+		var tmp = categoryPost.find(function (item) {
 			return item.group == aid;
 		});
 		if (tmp) {
-			cid=aid;
+			cid = aid;
 			books = books.concat(tmp.items);
 		} else {
-			categoryPost.forEach(function(itm) {
+			categoryPost.forEach(function (itm) {
 				books = books.concat(itm.items);
 			});
 		}
 	} else {
-		categoryPost.forEach(function(itm) {
+		categoryPost.forEach(function (itm) {
 			books = books.concat(itm.items);
 		});
 	}
-	$(".category ."+cid).addClass("current");
-	return books;
+	var result = books.sort(function (a, b) {
+		return compareTime(a.create_time, b.create_time);
+	});
+	console.log(cid);
+	$(".category ." + cid).addClass("current");
+	// console.log(books);
+	return result;
 }
 
 function doPaging(dataArr) {
 	$(".list").html("");
-	const _num=6;
+	const _num = 6;
 	$('#paging').paging({
 		nowPage: 1,
 		allPages: Math.ceil(dataArr.length / _num),
 		displayPage: 6,
-		callBack: function(now) {
+		callBack: function (now) {
 			var currentPages = now * _num < dataArr.length ? _num : dataArr.length - (now - 1) * _num;
 			$('#resultBox').html('');
 			for (var i = 0; i < currentPages; i++) {
@@ -50,15 +77,15 @@ function doPaging(dataArr) {
 		}
 	});
 }
-$(function() {
+$(function () {
 	var books = parsePost(window.location.href);
 	doPaging(books)
-	$(".categoryClick").click(function() {
+	$(".categoryClick").click(function () {
 		doPaging(parsePost("cid=" + this.href))
 	});
 });;
-(function($, window, document, undefined) {
-	var Paging = function(elem, options) {
+(function ($, window, document, undefined) {
+	var Paging = function (elem, options) {
 		var self = this;
 		this.$oPaging = elem;
 		this.$oFirst = this.$oPaging.find('.first');
@@ -84,16 +111,16 @@ $(function() {
 		this.big_halfPage = Math.ceil(this.displayPage / 2);
 	};
 	Paging.prototype = {
-		clickFn: function() {
+		clickFn: function () {
 			this.cleanClassName();
 			this.setPaging(this.iNum);
 			this.detectionPage(this.iNum);
 			this.opts.callBack && this.opts.callBack(this.iNum);
 		},
-		cleanClassName: function() {
+		cleanClassName: function () {
 			this.$aItem.removeClass('current');
 		},
-		detectionPage: function(currentPage) {
+		detectionPage: function (currentPage) {
 			if (currentPage >= this.big_halfPage + 1) {
 				this.$oFirst.removeClass('inactive');
 			} else {
@@ -115,7 +142,7 @@ $(function() {
 				this.$oNext.addClass('inactive');
 			}
 		},
-		setPaging: function(currentPage) {
+		setPaging: function (currentPage) {
 			this.$aItem = this.$oList.find('li');
 			for (var i = 1; i <= this.displayPage; i++) {
 				if (currentPage <= this.min_halfPage) {
@@ -142,7 +169,7 @@ $(function() {
 				}
 			}
 		},
-		initalPaging: function() {
+		initalPaging: function () {
 			for (var i = 1; i <= this.displayPage; i++) {
 				var $create_li = $('<li></li>');
 				$create_li.text(i).attr('index', '#' + i);
@@ -160,41 +187,41 @@ $(function() {
 			this.setPaging(this.nowPage);
 			this.detectionPage(this.nowPage);
 		},
-		inital: function() {
+		inital: function () {
 			var self = this;
 			this.initalPaging();
 			this.opts.callBack && this.opts.callBack(this.iNum);
-			this.$aItem.click(function() {
+			this.$aItem.click(function () {
 				if (!$(this).hasClass('current')) {
 					self.iNum = parseInt($(this).attr('index').substring(1));
 					self.clickFn();
 				}
 			});
-			this.$oFirst.click(function() {
+			this.$oFirst.click(function () {
 				if (!$(this).hasClass('inactive')) {
 					self.iNum = 1;
 					self.clickFn();
 				}
 			});
-			this.$oLast.click(function() {
+			this.$oLast.click(function () {
 				if (!$(this).hasClass('inactive')) {
 					self.iNum = self.allPages;
 					self.clickFn();
 				}
 			});
-			this.$oPrev.click(function() {
+			this.$oPrev.click(function () {
 				if (!$(this).hasClass('inactive')) {
 					self.iNum--;
 					self.clickFn();
 				}
 			});
-			this.$oNext.click(function() {
+			this.$oNext.click(function () {
 				if (!$(this).hasClass('inactive')) {
 					self.iNum++;
 					self.clickFn();
 				}
 			});
-			this.$oGo_btn.click(function() {
+			this.$oGo_btn.click(function () {
 				var value = self.$oGo_text.val();
 				var reg = new RegExp(/^[0-9]*[1-9][0-9]*$/);
 				if (value !== '' && reg.test(value) && value <= self.allPages) {
@@ -208,7 +235,7 @@ $(function() {
 		},
 		constructor: Paging
 	};
-	$.fn.paging = function(options) {
+	$.fn.paging = function (options) {
 		var paging = new Paging(this, options);
 		return paging.inital();
 	};
