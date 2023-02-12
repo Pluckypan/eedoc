@@ -32,8 +32,9 @@
 						</div>
 					<%}%>
 					<%if(allPost&&allPost.length>0){%>
+					<%let tPosts=allPost.sort((a,b)=>b.timestamp-a.timestamp);%>
 						<div class="row add-bottom">
-							<%allPost.slice(0,12).forEach(function(post){%>
+							<%tPosts.slice(0,12).forEach(function(post){%>
 								<%-include('article',{'post':post,'type':'index'})%>
 							<%})%>
 						</div>
