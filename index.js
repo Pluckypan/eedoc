@@ -7,11 +7,8 @@ var deploy = require('./lib/deploy');
 var ftp = require('./lib/ftp');
 var newArticle = require('./lib/new');
 var lang = require('./lib/lang');
-var exec = require('child_process').exec;
 var watch = require('watch');
-var color = require('colors-cli/safe');
 var eeutils = require("./lib/eeutils");
-var error = color.red.bold;
 // serve
 const handler = require('serve-handler');
 const http = require('http');
