@@ -9,9 +9,7 @@
 			""
 		]
 	],
-	"bin": {
-		"eedoc": "bin/eedoc.js"
-	},
+	"bin": "bin/eedoc.js",
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.3",
 		"colors-cli": "^1.0.26",
@@ -34,7 +32,6 @@
 		"uglify-js": "^2.8.29",
 		"watch": "^1.0.2"
 	},
-	"devDependencies": {},
 	"scripts": {
 		"test": "echo \"error: no test specified\" && exit 1",
 		"dev": "node bin/eedoc.js"
